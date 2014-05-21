@@ -87,21 +87,18 @@ println m;
 
 def partition = new Partition(0);
 def insert = data.getInserter(contrast, partition);
-def dir = 'data'+java.io.File.separator+'sentiment/train'+java.io.File.separator;
+def dir = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'train'+java.io.File.separator;
 InserterUtils.loadDelimitedData(insert, dir+"contrast.txt");
 
 insert = data.getInserter(prev, partition)
- dir = 'data'+java.io.File.separator+'sentiment/train'+java.io.File.separator;
 InserterUtils.loadDelimitedData(insert, dir+"previous.txt");
 
 
 insert = data.getInserter(possentiment, partition)
-dir = 'data'+java.io.File.separator+'sentiment/train'+java.io.File.separator;
 InserterUtils.loadDelimitedData(insert, dir+"positive.txt");
 
 
 insert = data.getInserter(negsentiment, partition)
-dir = 'data'+java.io.File.separator+'sentiment/train'+java.io.File.separator;
 InserterUtils.loadDelimitedData(insert, dir+"negative.txt");
 
 /*
@@ -155,7 +152,7 @@ println m
  * Test data
  */
 Partition testData = new Partition(2);
-dir = 'data'+java.io.File.separator+'sentiment/test'+java.io.File.separator;
+dir = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'test'+java.io.File.separator;
 insert = data.getInserter(contrast, testData);
 InserterUtils.loadDelimitedData(insert, dir+"contrast.txt");
 
@@ -176,15 +173,17 @@ inferenceApp = new LazyMPEInference(m, db2, config);
 result = inferenceApp.mpeInference();
 inferenceApp.close();
 
+println "test results";
+
 count = 0
 println "Inference results with hand-defined weights:"
-for (GroundAtom atom : Queries.getAllAtoms(db, possentiment)){
+for (GroundAtom atom : Queries.getAllAtoms(db2, possentiment)){
 	println atom.toString() + "\t" + atom.getValue();
 	count = count+1;}
 println count
 
 println "Inference results with hand-defined weights:"
-for (GroundAtom atom : Queries.getAllAtoms(db, negsentiment))
+for (GroundAtom atom : Queries.getAllAtoms(db2, negsentiment))
 	println atom.toString() + "\t" + atom.getValue();
 
 	
