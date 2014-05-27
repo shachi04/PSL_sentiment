@@ -72,20 +72,20 @@ m.add rule : (priorneg(A) ) >> negsentiment(A), weight :1
 
 /*
  * Without ^
- */
-/*
+ 
 m.add rule : (prev(A,B) & possentiment(B) ) >> possentiment(A), weight :1
 m.add rule : (prev(A,B) & negsentiment(B) ) >> negsentiment(A), weight :1
-*/
+/*
 m.add rule : (prev(A,B) & possentiment(B) & (A ^ B)) >> possentiment(A), weight :1
 m.add rule : (prev(A,B) & negsentiment(B) & (A ^ B)) >> negsentiment(A), weight :1
-/*
-m.add rule : (contrast(A,B) & possentiment(A) & (A ^ B)) >> negsentiment(B)  , weight :1
+/*m.add rule : (contrast(A,B) & possentiment(A) & (A ^ B)) >> negsentiment(B)  , weight :1
 m.add rule : (contrast(A,B) & negsentiment(B) & (A ^ B)) >> possentiment(B)  , weight :1
 */
 /*
  * Printing model
  */
+
+
 println m;
 
 
@@ -109,13 +109,7 @@ def dir8 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fol
 def dir9 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold9'+java.io.File.separator;
 def dir10 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold10'+java.io.File.separator;
 
-/*
- * Constraints on predicates
- *//*
-m.add PredicateConstraint.PartialFunctional , on : possentiment
-m.add PredicateConstraint.PartialFunctional, on :negsentiment
-//m.add PredicateConstraint.PartialInverseFunctional , on : samePerson
-//m.add PredicateConstraint.Symmetric, on : samePerson
+
 
 /*
  * loading the predicates from the data files
@@ -190,7 +184,6 @@ Database trainDb = data.getDatabase(trainPartition, [ Prev,Priorpos, Priorneg, A
 /*
  * Setting the predicates possentiment and negsentiment to an initial value for all groundings
  */
-
 ResultList allGroundings = trainDb.executeQuery(Queries.getQueryForAllAtoms(all))
 print allGroundings.size();
 for (int i = 0; i < allGroundings.size(); i++) {
@@ -207,8 +200,8 @@ for (int i = 0; i < allGroundings.size(); i++) {
 FullInferenceResult result = mpe.mpeInference()
 System.out.println("Objective: " + result.getTotalWeightedIncompatibility())
 */
-MPEInference inferenceApp = new MPEInference(m,trainDb, config)
-//LazyMPEInference inferenceApp = new LazyMPEInference(m, trainDb, config);
+
+LazyMPEInference inferenceApp = new LazyMPEInference(m, trainDb, config);
 inferenceApp.mpeInference();
 inferenceApp.close();
 
@@ -318,12 +311,9 @@ for (int i = 0; i < groundings.size(); i++) {
 /*
  * Try and run non-lazy, MPE inference.
  */
-//inferenceApp = new LazyMPEInference(m, testDB, config);
-inferenceApp = new MPEInference(m, testDB,config)
+inferenceApp = new LazyMPEInference(m, testDB, config);
 result = inferenceApp.mpeInference();
 inferenceApp.close();
-
-//inferenceApp = new 
 
 
 println "test results";
@@ -454,8 +444,7 @@ catch (ArrayIndexOutOfBoundsException e) {
 comparator = new DiscretePredictionComparator(testDB)
 comparator.setBaseline(trueTestPosDB)
 comparator.setResultFilter(new MaxValueFilter(possentiment, 1))
-println "With threshold 0.005"
-comparator.setThreshold(0.005) // treat best value as true as long as it is nonzero
+comparator.setThreshold(0.1) // treat best value as true as long as it is nonzero
 
 groundings1 = Queries.getAllAtoms(trueTestPosDB, possentiment)
  totalTestExamples = groundings1.size()
@@ -466,24 +455,9 @@ System.out.println("F1: " + stats.getF1(DiscretePredictionStatistics.BinaryClass
 System.out.println("Precision: " + stats.getPrecision(DiscretePredictionStatistics.BinaryClass.POSITIVE))
 System.out.println("Recall: " + stats.getRecall(DiscretePredictionStatistics.BinaryClass.POSITIVE))
 
-println "With threshold 0.5"
-comparator.setThreshold(0.5) // treat best value as true as long as it is nonzero
-
-groundings1 = Queries.getAllAtoms(trueTestPosDB, possentiment)
- totalTestExamples = groundings1.size()
-println "printing totalTestExamples:Possentiment"+totalTestExamples
-stats = comparator.compare(possentiment, totalTestExamples)
-System.out.println("Accuracy: " + stats.getAccuracy())
-System.out.println("F1: " + stats.getF1(DiscretePredictionStatistics.BinaryClass.POSITIVE))
-System.out.println("Precision: " + stats.getPrecision(DiscretePredictionStatistics.BinaryClass.POSITIVE))
-System.out.println("Recall: " + stats.getRecall(DiscretePredictionStatistics.BinaryClass.POSITIVE))
-
-
-
 comparator = new DiscretePredictionComparator(testDB)
 comparator.setBaseline(trueTestNegDB)
 comparator.setResultFilter(new MaxValueFilter(negsentiment, 1))
-println "negsentiment with threshold 0.5"
 comparator.setThreshold(0.5) // treat best value as true as long as it is nonzero
 
  groundings1 = Queries.getAllAtoms(trueTestNegDB, negsentiment)

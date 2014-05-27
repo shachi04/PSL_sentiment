@@ -79,10 +79,10 @@ m.add rule : (prev(A,B) & negsentiment(B) ) >> negsentiment(A), weight :1
 */
 m.add rule : (prev(A,B) & possentiment(B) & (A ^ B)) >> possentiment(A), weight :1
 m.add rule : (prev(A,B) & negsentiment(B) & (A ^ B)) >> negsentiment(A), weight :1
-/*
+
 m.add rule : (contrast(A,B) & possentiment(A) & (A ^ B)) >> negsentiment(B)  , weight :1
 m.add rule : (contrast(A,B) & negsentiment(B) & (A ^ B)) >> possentiment(B)  , weight :1
-*/
+
 /*
  * Printing model
  */
@@ -90,7 +90,7 @@ println m;
 
 
 /*
- * Partitions 
+ * Partitions
  */
 def trainPartition = new Partition(0);
 Partition trueDataPartition = new Partition(1);
@@ -120,7 +120,7 @@ m.add PredicateConstraint.PartialFunctional, on :negsentiment
 /*
  * loading the predicates from the data files
  */
-/*
+
 def insert = data.getInserter(contrast, trainPartition);
 InserterUtils.loadDelimitedData(insert, dir1+"contrast_ids.csv");
 InserterUtils.loadDelimitedData(insert, dir2+"contrast_ids.csv");
@@ -131,7 +131,7 @@ InserterUtils.loadDelimitedData(insert, dir6+"contrast_ids.csv");
 InserterUtils.loadDelimitedData(insert, dir7+"contrast_ids.csv");
 InserterUtils.loadDelimitedData(insert, dir8+"contrast_ids.csv");
 InserterUtils.loadDelimitedData(insert, dir9+"contrast_ids.csv");
-*/
+
 
 insert = data.getInserter(prev, trainPartition)
 InserterUtils.loadDelimitedData(insert, dir10+"all_prev.csv");
@@ -183,10 +183,7 @@ InserterUtils.loadDelimitedData(insert, dir9+"allID.csv");
  * Inference
  */
 
-//Database trainDb = data.getDatabase(trainPartition, [Contrast, Prev,Priorpos, Priorneg, All] as Set);
-
-// Without contrast
-Database trainDb = data.getDatabase(trainPartition, [ Prev,Priorpos, Priorneg, All] as Set);
+Database trainDb = data.getDatabase(trainPartition, [Contrast, Prev,Priorpos, Priorneg, All] as Set);
 /*
  * Setting the predicates possentiment and negsentiment to an initial value for all groundings
  */
@@ -203,10 +200,10 @@ for (int i = 0; i < allGroundings.size(); i++) {
 	atom2.commitToDB();
 }
 
-/*MPEInference mpe = new MPEInference(m, trainDb,config)
+MPEInference mpe = new MPEInference(m, trainDb,config)
 FullInferenceResult result = mpe.mpeInference()
 System.out.println("Objective: " + result.getTotalWeightedIncompatibility())
-*/
+
 MPEInference inferenceApp = new MPEInference(m,trainDb, config)
 //LazyMPEInference inferenceApp = new LazyMPEInference(m, trainDb, config);
 inferenceApp.mpeInference();
@@ -276,10 +273,10 @@ println m
  * Test data
  */
 
-/*
+
 insert = data.getInserter(contrast, testData);
 InserterUtils.loadDelimitedData(insert, dir1+"contrast_ids.csv");
-*/
+
 insert = data.getInserter(prev, testData)
 InserterUtils.loadDelimitedData(insert, dir1+"all_prev.csv");
 
@@ -296,12 +293,7 @@ InserterUtils.loadDelimitedData(insert, dir1+"allID.csv");
 
 
 
-//Database testDB = data.getDatabase(testData, [Prev, Contrast, Priorpos,Priorneg, All] as Set);
-
-/*
- * without contrast
- */
-Database testDB = data.getDatabase(testData, [Prev, Priorpos, Priorneg, All] as Set);
+Database testDB = data.getDatabase(testData, [Prev, Contrast, Priorpos,Priorneg, All] as Set);
 
 
 ResultList groundings = testDB.executeQuery(Queries.getQueryForAllAtoms(all))
@@ -323,7 +315,7 @@ inferenceApp = new MPEInference(m, testDB,config)
 result = inferenceApp.mpeInference();
 inferenceApp.close();
 
-//inferenceApp = new 
+//inferenceApp = new
 
 
 println "test results";
