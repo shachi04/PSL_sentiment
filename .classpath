@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry including="**/*.groovy|**/*.java" kind="src" path="src/main/java"/>
 	<classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
+	<classpathentry excluding="main/java/|main/resources/" kind="src" path="src"/>
 	<classpathentry kind="var" path="M2_REPO/net/sourceforge/collections/collections-generic/4.01/collections-generic-4.01.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/healthmarketscience/common/common-util/1.0.2/common-util-1.0.2.jar"/>
 	<classpathentry kind="var" path="M2_REPO/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar"/>
