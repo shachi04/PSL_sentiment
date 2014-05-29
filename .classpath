@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry including="**/*.groovy|**/*.java" kind="src" path="src/main/java"/>
 	<classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
-	<classpathentry excluding="main/java/|main/resources/" kind="src" path="src"/>
 	<classpathentry kind="var" path="M2_REPO/net/sourceforge/collections/collections-generic/4.01/collections-generic-4.01.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/healthmarketscience/common/common-util/1.0.2/common-util-1.0.2.jar"/>
 	<classpathentry kind="var" path="M2_REPO/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar"/>
@@ -23,13 +22,12 @@
 	<classpathentry kind="var" path="M2_REPO/mysql/mysql-connector-java/5.0.5/mysql-connector-java-5.0.5.jar"/>
 	<classpathentry kind="var" path="M2_REPO/edu/emory/mathcs/parallelcolt/0.9.4/parallelcolt-0.9.4.jar"/>
 	<classpathentry kind="var" path="M2_REPO/edu/umd/cs/psl-core/1.1/psl-core-1.1.jar" sourcepath="/psl_src"/>
-	<classpathentry kind="var" path="M2_REPO/edu/umd/cs/psl-groovy/1.1/psl-groovy-1.1.jar" sourcepath="/psl_groovy"/>
+	<classpathentry kind="var" path="M2_REPO/edu/umd/cs/psl-groovy/1.1/psl-groovy-1.1.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/wcohen/secondstring/20120620/secondstring-20120620.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-log4j12/1.5.8/slf4j-log4j12-1.5.8.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/healthmarketscience/sqlbuilder/sqlbuilder/2.0.6/sqlbuilder-2.0.6.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/ujmp/ujmp-complete/0.2.4/ujmp-complete-0.2.4.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry exported="true" kind="con" path="GROOVY_DSL_SUPPORT"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -77,6 +77,7 @@ m.add rule : (priorneg(A) ) >> negsentiment(A), weight :1
 m.add rule : (prev(A,B) & possentiment(B) ) >> possentiment(A), weight :1
 m.add rule : (prev(A,B) & negsentiment(B) ) >> negsentiment(A), weight :1
 */
+
 m.add rule : (prev(A,B) & possentiment(B) & (A ^ B)) >> possentiment(A), weight :1
 m.add rule : (prev(A,B) & negsentiment(B) & (A ^ B)) >> negsentiment(A), weight :1
 /*
@@ -88,16 +89,6 @@ m.add rule : (contrast(A,B) & negsentiment(B) & (A ^ B)) >> possentiment(B)  , w
  */
 println m;
 
-
-/*
- * Partitions 
- */
-def trainPartition = new Partition(0);
-Partition trueDataPartition = new Partition(1);
-Partition testData = new Partition(2);
-Partition trueTestPos = new Partition(3);
-Partition trueTestNeg = new Partition(4);
-
 def dir1 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold1'+java.io.File.separator;
 def dir2 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold2'+java.io.File.separator;
 def dir3 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold3'+java.io.File.separator;
@@ -108,7 +99,7 @@ def dir7 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fol
 def dir8 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold8'+java.io.File.separator;
 def dir9 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold9'+java.io.File.separator;
 def dir10 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold10'+java.io.File.separator;
-
+	
 /*
  * Constraints on predicates
  *//*
@@ -120,6 +111,12 @@ m.add PredicateConstraint.PartialFunctional, on :negsentiment
 /*
  * loading the predicates from the data files
  */
+def trainPartition = new Partition(0);
+Partition trueDataPartition = new Partition(1);
+Partition testData = new Partition(2);
+Partition trueTestPos = new Partition(3);
+Partition trueTestNeg = new Partition(4);
+
 /*
 def insert = data.getInserter(contrast, trainPartition);
 InserterUtils.loadDelimitedData(insert, dir1+"contrast_ids.csv");
@@ -133,16 +130,16 @@ InserterUtils.loadDelimitedData(insert, dir8+"contrast_ids.csv");
 InserterUtils.loadDelimitedData(insert, dir9+"contrast_ids.csv");
 */
 
-insert = data.getInserter(prev, trainPartition)
+def insert = data.getInserter(prev, trainPartition)
 InserterUtils.loadDelimitedData(insert, dir10+"all_prev.csv");
 InserterUtils.loadDelimitedData(insert, dir2+"all_prev.csv");
 InserterUtils.loadDelimitedData(insert, dir3+"all_prev.csv");
 InserterUtils.loadDelimitedData(insert, dir4+"all_prev.csv");
 InserterUtils.loadDelimitedData(insert, dir5+"all_prev.csv");
 InserterUtils.loadDelimitedData(insert, dir6+"all_prev.csv");
-InserterUtils.loadDelimitedData(insert, dir7+"all_prev.csv");
-InserterUtils.loadDelimitedData(insert, dir8+"all_prev.csv");
 InserterUtils.loadDelimitedData(insert, dir9+"all_prev.csv");
+InserterUtils.loadDelimitedData(insert, dir8+"all_prev.csv");
+InserterUtils.loadDelimitedData(insert, dir1+"all_prev.csv");
 
 
 insert = data.getInserter(priorpos, trainPartition)
@@ -152,9 +149,9 @@ InserterUtils.loadDelimitedData(insert, dir3+"positive.csv");
 InserterUtils.loadDelimitedData(insert, dir4+"positive.csv");
 InserterUtils.loadDelimitedData(insert, dir5+"positive.csv");
 InserterUtils.loadDelimitedData(insert, dir6+"positive.csv");
-InserterUtils.loadDelimitedData(insert, dir7+"positive.csv");
-InserterUtils.loadDelimitedData(insert, dir8+"positive.csv");
 InserterUtils.loadDelimitedData(insert, dir9+"positive.csv");
+InserterUtils.loadDelimitedData(insert, dir8+"positive.csv");
+InserterUtils.loadDelimitedData(insert, dir1+"positive.csv");
 
 
 insert = data.getInserter(priorneg, trainPartition)
@@ -164,9 +161,9 @@ InserterUtils.loadDelimitedData(insert, dir3+"negative.csv");
 InserterUtils.loadDelimitedData(insert, dir4+"negative.csv");
 InserterUtils.loadDelimitedData(insert, dir5+"negative.csv");
 InserterUtils.loadDelimitedData(insert, dir6+"negative.csv");
-InserterUtils.loadDelimitedData(insert, dir7+"negative.csv");
-InserterUtils.loadDelimitedData(insert, dir8+"negative.csv");
 InserterUtils.loadDelimitedData(insert, dir9+"negative.csv");
+InserterUtils.loadDelimitedData(insert, dir8+"negative.csv");
+InserterUtils.loadDelimitedData(insert, dir1+"negative.csv");
 
 insert = data.getInserter(all, trainPartition)
 InserterUtils.loadDelimitedData(insert, dir10+"allID.csv");
@@ -175,9 +172,9 @@ InserterUtils.loadDelimitedData(insert, dir3+"allID.csv");
 InserterUtils.loadDelimitedData(insert, dir4+"allID.csv");
 InserterUtils.loadDelimitedData(insert, dir5+"allID.csv");
 InserterUtils.loadDelimitedData(insert, dir6+"allID.csv");
-InserterUtils.loadDelimitedData(insert, dir7+"allID.csv");
-InserterUtils.loadDelimitedData(insert, dir8+"allID.csv");
 InserterUtils.loadDelimitedData(insert, dir9+"allID.csv");
+InserterUtils.loadDelimitedData(insert, dir8+"allID.csv");
+InserterUtils.loadDelimitedData(insert, dir1+"allID.csv");
 
 /*
  * Inference
@@ -242,9 +239,9 @@ InserterUtils.loadDelimitedData(insert, dir3+"truepos.csv");
 InserterUtils.loadDelimitedData(insert, dir4+"truepos.csv");
 InserterUtils.loadDelimitedData(insert, dir5+"truepos.csv");
 InserterUtils.loadDelimitedData(insert, dir6+"truepos.csv");
-InserterUtils.loadDelimitedData(insert, dir7+"truepos.csv");
-InserterUtils.loadDelimitedData(insert, dir8+"truepos.csv");
 InserterUtils.loadDelimitedData(insert, dir9+"truepos.csv");
+InserterUtils.loadDelimitedData(insert, dir8+"truepos.csv");
+InserterUtils.loadDelimitedData(insert, dir1+"truepos.csv");
 
 
 insert = data.getInserter(negsentiment, trueDataPartition)
@@ -254,9 +251,9 @@ InserterUtils.loadDelimitedData(insert, dir3+"trueneg.csv");
 InserterUtils.loadDelimitedData(insert, dir4+"trueneg.csv");
 InserterUtils.loadDelimitedData(insert, dir5+"trueneg.csv");
 InserterUtils.loadDelimitedData(insert, dir6+"trueneg.csv");
-InserterUtils.loadDelimitedData(insert, dir7+"trueneg.csv");
-InserterUtils.loadDelimitedData(insert, dir8+"trueneg.csv");
 InserterUtils.loadDelimitedData(insert, dir9+"trueneg.csv");
+InserterUtils.loadDelimitedData(insert, dir8+"trueneg.csv");
+InserterUtils.loadDelimitedData(insert, dir1+"trueneg.csv");
 
 
 	
@@ -281,18 +278,18 @@ insert = data.getInserter(contrast, testData);
 InserterUtils.loadDelimitedData(insert, dir1+"contrast_ids.csv");
 */
 insert = data.getInserter(prev, testData)
-InserterUtils.loadDelimitedData(insert, dir1+"all_prev.csv");
+InserterUtils.loadDelimitedData(insert, dir7+"all_prev.csv");
 
 
 insert = data.getInserter(priorpos, testData)
-InserterUtils.loadDelimitedData(insert, dir1+"positive.csv");
+InserterUtils.loadDelimitedData(insert, dir7+"positive.csv");
 
 
 insert = data.getInserter(priorneg, testData)
-InserterUtils.loadDelimitedData(insert, dir1+"negative.csv");
+InserterUtils.loadDelimitedData(insert, dir7+"negative.csv");
 
 insert = data.getInserter(all, testData)
-InserterUtils.loadDelimitedData(insert, dir1+"allID.csv");
+InserterUtils.loadDelimitedData(insert, dir7+"allID.csv");
 
 
 
@@ -354,10 +351,10 @@ println count
 
 
 insert = data.getInserter(possentiment, trueTestPos)
-InserterUtils.loadDelimitedData(insert, dir1+"truepos.csv");
+InserterUtils.loadDelimitedData(insert, dir7+"truepos.csv");
 
 insert = data.getInserter(negsentiment, trueTestNeg)
-InserterUtils.loadDelimitedData(insert, dir1+"trueneg.csv");
+InserterUtils.loadDelimitedData(insert, dir7+"trueneg.csv");
 
 Database trueTestPosDB = data.getDatabase(trueTestPos, [possentiment] as Set);
 Database trueTestNegDB = data.getDatabase(trueTestNeg, [negsentiment] as Set);
@@ -494,6 +491,20 @@ System.out.println("Accuracy: " + stats.getAccuracy())
 System.out.println("F1: " + stats.getF1(DiscretePredictionStatistics.BinaryClass.POSITIVE))
 System.out.println("Precision: " + stats.getPrecision(DiscretePredictionStatistics.BinaryClass.POSITIVE))
 System.out.println("Recall: " + stats.getRecall(DiscretePredictionStatistics.BinaryClass.POSITIVE))
+
+println "negsentiment with threshold 0.005"
+comparator.setThreshold(0.005) // treat best value as true as long as it is nonzero
+
+ groundings1 = Queries.getAllAtoms(trueTestNegDB, negsentiment)
+totalTestExamples = groundings1.size()
+println "printing totalTestExamples: Negsentiment"+totalTestExamples
+stats = comparator.compare(negsentiment, totalTestExamples)
+System.out.println("Accuracy: " + stats.getAccuracy())
+System.out.println("F1: " + stats.getF1(DiscretePredictionStatistics.BinaryClass.POSITIVE))
+System.out.println("Precision: " + stats.getPrecision(DiscretePredictionStatistics.BinaryClass.POSITIVE))
+System.out.println("Recall: " + stats.getRecall(DiscretePredictionStatistics.BinaryClass.POSITIVE))
+
+
 
 /* We close the Databases to flush writes */
 trainDb.close();

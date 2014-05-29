@@ -1,126 +1,5 @@
-package example.edu.umd;
-import edu.umd.cs.psl.application.inference.LazyMPEInference;
-import edu.umd.cs.psl.application.inference.MPEInference;
-import edu.umd.cs.psl.application.learning.weight.maxlikelihood.LazyMaxLikelihoodMPE;
-import edu.umd.cs.psl.application.learning.weight.random.GroundSliceRandOM;
-import edu.umd.cs.psl.application.learning.weight.maxmargin.MaxMargin;
-import edu.umd.cs.psl.application.learning.weight.maxlikelihood.MaxLikelihoodMPE;
-import edu.umd.cs.psl.application.learning.weight.maxmargin.PositiveMinNormProgram;
-import edu.umd.cs.psl.config.*
-import edu.umd.cs.psl.database.DataStore
-import edu.umd.cs.psl.database.Database;
-import edu.umd.cs.psl.database.Partition;
-import edu.umd.cs.psl.database.ReadOnlyDatabase;
-import edu.umd.cs.psl.database.ResultList
-import edu.umd.cs.psl.database.rdbms.RDBMSDataStore
-import edu.umd.cs.psl.database.rdbms.driver.H2DatabaseDriver
-import edu.umd.cs.psl.database.rdbms.driver.H2DatabaseDriver.Type
-import edu.umd.cs.psl.evaluation.result.FullInferenceResult
-import edu.umd.cs.psl.evaluation.statistics.DiscretePredictionComparator
-import edu.umd.cs.psl.evaluation.statistics.DiscretePredictionStatistics
-import edu.umd.cs.psl.evaluation.statistics.SimpleRankingComparator
-import edu.umd.cs.psl.groovy.PSLModel;
-import edu.umd.cs.psl.groovy.PredicateConstraint;
-import edu.umd.cs.psl.groovy.SetComparison;
-import edu.umd.cs.psl.model.argument.ArgumentType;
-import edu.umd.cs.psl.model.argument.GroundTerm;
-import edu.umd.cs.psl.model.atom.GroundAtom;
-import edu.umd.cs.psl.model.atom.RandomVariableAtom
-import edu.umd.cs.psl.model.function.ExternalFunction;
-import edu.umd.cs.psl.ui.functions.textsimilarity.*
-import edu.umd.cs.psl.ui.loading.InserterUtils;
-import edu.umd.cs.psl.util.database.Queries;
-import edu.umd.cs.psl.evaluation.statistics.RankingScore;
-import edu.umd.cs.psl.evaluation.statistics.filter.MaxValueFilter
 
 /*
- * Config bundle changed to accept String as UniqueID
- */
-ConfigManager cm = ConfigManager.getManager()
-ConfigBundle config = cm.getBundle("fine-grained")
-File file1 = new File("/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Results/possentiment.csv");
-File file2 = new File("/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Results/negsentiment.csv");
-/* Uses H2 as a DataStore and stores it in a temp. directory by default */
-def defaultPath = System.getProperty("java.io.tmpdir")
-String dbpath = config.getString("dbpath", defaultPath + File.separator + "fine-grained")
-DataStore data = new RDBMSDataStore(new H2DatabaseDriver(Type.Disk, dbpath, true), config)
-
-/*
- * Initialize PSL model
- */
-PSLModel m = new PSLModel(this, data)
-
-
-/*
- * Predicates
- */
-m.add predicate: "prev" , types: [ArgumentType.UniqueID, ArgumentType.UniqueID]
-m.add predicate: "contrast" , types: [ArgumentType.UniqueID, ArgumentType.UniqueID]
-m.add predicate: "priorpos", types: [ArgumentType.UniqueID]
-m.add predicate: "priorneg", types: [ArgumentType.UniqueID]
-m.add predicate: "possentiment", types: [ArgumentType.UniqueID]
-m.add predicate: "negsentiment", types: [ArgumentType.UniqueID]
-m.add predicate: "all", types: [ArgumentType.UniqueID]
-
-/*
- * Adding rules
- */
-m.add rule : (possentiment(A) ) >> ~negsentiment(A), weight :1
-m.add rule : (negsentiment(A) ) >> ~possentiment(A), weight :1
-m.add rule : (priorpos(A) ) >> possentiment(A), weight :1
-m.add rule : (priorneg(A) ) >> negsentiment(A), weight :1
-
-/*
- * Without ^
- */
-/*
-m.add rule : (prev(A,B) & possentiment(B) ) >> possentiment(A), weight :1
-m.add rule : (prev(A,B) & negsentiment(B) ) >> negsentiment(A), weight :1
-*/
-m.add rule : (prev(A,B) & possentiment(B) & (A ^ B)) >> possentiment(A), weight :1
-m.add rule : (prev(A,B) & negsentiment(B) & (A ^ B)) >> negsentiment(A), weight :1
-
-m.add rule : (contrast(A,B) & possentiment(A) & (A ^ B)) >> negsentiment(B)  , weight :1
-m.add rule : (contrast(A,B) & negsentiment(B) & (A ^ B)) >> possentiment(B)  , weight :1
-
-/*
- * Printing model
- */
-println m;
-
-
-/*
- * Partitions
- */
-def trainPartition = new Partition(0);
-Partition trueDataPartition = new Partition(1);
-Partition testData = new Partition(2);
-Partition trueTestPos = new Partition(3);
-Partition trueTestNeg = new Partition(4);
-
-def dir1 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold1'+java.io.File.separator;
-def dir2 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold2'+java.io.File.separator;
-def dir3 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold3'+java.io.File.separator;
-def dir4 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold4'+java.io.File.separator;
-def dir5 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold5'+java.io.File.separator;
-def dir6 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold6'+java.io.File.separator;
-def dir7 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold7'+java.io.File.separator;
-def dir8 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold8'+java.io.File.separator;
-def dir9 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold9'+java.io.File.separator;
-def dir10 = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold10'+java.io.File.separator;
-
-/*
- * Constraints on predicates
- *//*
-m.add PredicateConstraint.PartialFunctional , on : possentiment
-m.add PredicateConstraint.PartialFunctional, on :negsentiment
-//m.add PredicateConstraint.PartialInverseFunctional , on : samePerson
-//m.add PredicateConstraint.Symmetric, on : samePerson
-
-/*
- * loading the predicates from the data files
- */
-
 def insert = data.getInserter(contrast, trainPartition);
 InserterUtils.loadDelimitedData(insert, dir1+"contrast_ids.csv");
 InserterUtils.loadDelimitedData(insert, dir2+"contrast_ids.csv");
@@ -131,9 +10,9 @@ InserterUtils.loadDelimitedData(insert, dir6+"contrast_ids.csv");
 InserterUtils.loadDelimitedData(insert, dir7+"contrast_ids.csv");
 InserterUtils.loadDelimitedData(insert, dir8+"contrast_ids.csv");
 InserterUtils.loadDelimitedData(insert, dir9+"contrast_ids.csv");
-
-
-insert = data.getInserter(prev, trainPartition)
+*/
+/*
+def insert = data.getInserter(prev, trainPartition)
 InserterUtils.loadDelimitedData(insert, dir10+"all_prev.csv");
 InserterUtils.loadDelimitedData(insert, dir2+"all_prev.csv");
 InserterUtils.loadDelimitedData(insert, dir3+"all_prev.csv");
@@ -183,7 +62,14 @@ InserterUtils.loadDelimitedData(insert, dir9+"allID.csv");
  * Inference
  */
 
-Database trainDb = data.getDatabase(trainPartition, [Contrast, Prev,Priorpos, Priorneg, All] as Set);
+
+
+
+
+//Database trainDb = data.getDatabase(trainPartition, [Contrast, Prev,Priorpos, Priorneg, All] as Set);
+
+// Without contrast
+Database trainDb = data.getDatabase(trainPartition, [ Prev,Priorpos, Priorneg, All] as Set);
 /*
  * Setting the predicates possentiment and negsentiment to an initial value for all groundings
  */
@@ -200,16 +86,13 @@ for (int i = 0; i < allGroundings.size(); i++) {
 	atom2.commitToDB();
 }
 
-
-/*
-MPEInference mpe = new MPEInference(m, trainDb,config)
+/*MPEInference mpe = new MPEInference(m, trainDb,config)
 FullInferenceResult result = mpe.mpeInference()
 System.out.println("Objective: " + result.getTotalWeightedIncompatibility())
 */
 MPEInference inferenceApp = new MPEInference(m,trainDb, config)
 //LazyMPEInference inferenceApp = new LazyMPEInference(m, trainDb, config);
-println "printing mpe inference"
-println inferenceApp.mpeInference().totalWeightedIncompatibility();
+inferenceApp.mpeInference();
 inferenceApp.close();
 
 /*
@@ -276,10 +159,10 @@ println m
  * Test data
  */
 
-
+/*
 insert = data.getInserter(contrast, testData);
 InserterUtils.loadDelimitedData(insert, dir1+"contrast_ids.csv");
-
+*/
 insert = data.getInserter(prev, testData)
 InserterUtils.loadDelimitedData(insert, dir1+"all_prev.csv");
 
@@ -296,7 +179,12 @@ InserterUtils.loadDelimitedData(insert, dir1+"allID.csv");
 
 
 
-Database testDB = data.getDatabase(testData, [Prev, Contrast, Priorpos,Priorneg, All] as Set);
+//Database testDB = data.getDatabase(testData, [Prev, Contrast, Priorpos,Priorneg, All] as Set);
+
+/*
+ * without contrast
+ */
+Database testDB = data.getDatabase(testData, [Prev, Priorpos, Priorneg, All] as Set);
 
 
 ResultList groundings = testDB.executeQuery(Queries.getQueryForAllAtoms(all))
