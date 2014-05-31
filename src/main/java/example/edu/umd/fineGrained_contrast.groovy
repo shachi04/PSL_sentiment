@@ -79,9 +79,9 @@ m.add rule : (prev(A,B) & negsentiment(B) ) >> negsentiment(A), weight :1
 */
 m.add rule : (prev(A,B) & possentiment(B) & (A ^ B)) >> possentiment(A), weight :1
 m.add rule : (prev(A,B) & negsentiment(B) & (A ^ B)) >> negsentiment(A), weight :1
-
+/*
 m.add rule : (contrast(A,B) & possentiment(A) & (A ^ B)) >> negsentiment(B)  , weight :1
-m.add rule : (contrast(A,B) & negsentiment(B) & (A ^ B)) >> possentiment(B)  , weight :1
+m.add rule : (contrast(A,B) & negsentiment(A) & (A ^ B)) >> possentiment(B)  , weight :1
 
 /*
  * Printing model
@@ -209,7 +209,7 @@ System.out.println("Objective: " + result.getTotalWeightedIncompatibility())
 MPEInference inferenceApp = new MPEInference(m,trainDb, config)
 //LazyMPEInference inferenceApp = new LazyMPEInference(m, trainDb, config);
 println "printing mpe inference"
-println inferenceApp.mpeInference().totalWeightedIncompatibility();
+ inferenceApp.mpeInference();
 inferenceApp.close();
 
 /*

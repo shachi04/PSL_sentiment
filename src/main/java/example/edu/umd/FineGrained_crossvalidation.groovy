@@ -1,11 +1,16 @@
 package example.edu.umd;
 import edu.umd.cs.psl.application.inference.LazyMPEInference;
 import edu.umd.cs.psl.application.inference.MPEInference;
+import edu.umd.cs.psl.application.learning.weight.maxlikelihood.MaxPseudoLikelihood;
 import edu.umd.cs.psl.application.learning.weight.maxlikelihood.LazyMaxLikelihoodMPE;
 import edu.umd.cs.psl.application.learning.weight.random.GroundSliceRandOM;
 import edu.umd.cs.psl.application.learning.weight.maxmargin.MaxMargin;
 import edu.umd.cs.psl.application.learning.weight.maxlikelihood.MaxLikelihoodMPE;
 import edu.umd.cs.psl.application.learning.weight.maxmargin.PositiveMinNormProgram;
+//import edu.umd.cs.psl.application.learning.weight.em.HardEM;
+import edu.umd.cs.psl.application.learning.weight.maxlikelihood.VotedPerceptron;
+import edu.umd.cs.psl.application.learning.weight.random.FirstOrderMetropolisRandOM
+import edu.umd.cs.psl.application.learning.weight.random.HardEMRandOM
 import edu.umd.cs.psl.config.*
 import edu.umd.cs.psl.database.DataStore
 import edu.umd.cs.psl.database.Database;
@@ -67,27 +72,33 @@ m.add predicate: "all", types: [ArgumentType.UniqueID]
 /*
  * Adding rules
  */
-m.add rule : (possentiment(A) ) >> ~negsentiment(A), weight :1
-m.add rule : (negsentiment(A) ) >> ~possentiment(A), weight :1
-m.add rule : (priorpos(A) ) >> possentiment(A), weight :1
-m.add rule : (priorneg(A) ) >> negsentiment(A), weight :1
-
+//
+m.add rule : (possentiment(A) ) >> ~negsentiment(A), weight :5
+m.add rule : (negsentiment(A) ) >> ~possentiment(A), weight :5
+m.add rule : (priorpos(A) ) >> possentiment(A), weight :5
+m.add rule : (priorneg(A) ) >> negsentiment(A), weight :5
+/*
+m.add rule : possentiment(A)>> (priorpos(A) ) , weight :1
+m.add rule : negsentiment(A)>> (priorneg(A) ) , weight :1
 /*
  * Without ^
- *//*
-m.add rule : (prev(A,B) & possentiment(B)) >> possentiment(A), weight :1
-m.add rule : (prev(A,B) & negsentiment(B)) >> negsentiment(A), weight :1
-*/
-m.add rule : (prev(A,B) & possentiment(B) & (A ^ B)) >> possentiment(A), weight :1
-m.add rule : (prev(A,B) & negsentiment(B) & (A ^ B)) >> negsentiment(A), weight :1
-/*
-m.add rule : (contrast(A,B) & possentiment(A) & (A ^ B)) >> negsentiment(B)  , weight :1
-m.add rule : (contrast(A,B) & negsentiment(B) & (A ^ B)) >> possentiment(B)  , weight :1
-*/
-/*
- * Printing model
  */
-println m;
+
+m.add rule : (prev(A,B) & possentiment(B)) >> possentiment(A), weight :10
+m.add rule : (prev(A,B) & negsentiment(B)) >> negsentiment(A), weight :10
+
+//
+//m.add rule : (prev(A,B) & possentiment(B) & (A ^ B)) >> possentiment(A), weight :100
+//m.add rule : (prev(A,B) & negsentiment(B) & (A ^ B)) >> negsentiment(A), weight :100
+
+/*
+m.add rule : (contrast(A,B) & possentiment(B) & ( A ^ B)) >> negsentiment(A)  , weight :50
+m.add rule : (contrast(A,B) & negsentiment(B) & ( A ^ B)) >> possentiment(A)  , weight :50
+*/
+/*
+m.add rule : (contrast(A,B) & possentiment(B) ) >> negsentiment(A)  , weight :50
+m.add rule : (contrast(A,B) & negsentiment(B) ) >> possentiment(A)  , weight :50
+
 
 /*
  * loading the predicates from the data files
@@ -98,87 +109,100 @@ List<Partition> trueDataPartition = new ArrayList<Partition>(folds)
 List<Partition> testDataPartition = new ArrayList<Partition>(folds)
 List<Partition> trueTestDataPartition = new ArrayList<Partition>(folds)
 //List<Partition> trueTestNeg = new ArrayList<Partition>(folds)
-int i = 0, j = 0;
 
-for ( i = 0; i <folds; i++) {
-	trainPartition.add(i, new Partition(i))
-	trueDataPartition.add(i, new Partition(i + folds))
-	testDataPartition.add(i, new Partition(i + 2*folds))
-	trueTestDataPartition.add(i, new Partition(i + 3*folds))
+
+
+for(cvSet =0 ;cvSet<10;++cvSet)
+{
+trainPartition.add(cvSet, new Partition(cvSet))
+trueDataPartition.add(cvSet, new Partition(cvSet + folds))
+testDataPartition.add(cvSet, new Partition(cvSet + 2*folds))
+trueTestDataPartition.add(cvSet, new Partition(cvSet + 3*folds))
 }
 
-for(i =0 ;i<10;++i)
-{
-//i = 5;
+cvSet = 7
+//for(cvSet =0 ;cvSet<10;++cvSet)
+//{
 	/*
 	 * Train data partition, each partition has 9 folders, one kept aside for testing... 
 	 */
-	for (j = 1 ; j<=9;++j)
+	for (trainSet = 1 ; trainSet<=9;++trainSet)
 	{
-		k = (i+j)%10
-		if(k==0) k = 10;
-			
-		filename = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold'+k+java.io.File.separator;
-		println "accessing directory "+filename+ "and train partition " +trainPartition.get(i)
+		dirToUse = 0;
+		dirToUse = (cvSet+trainSet)%10
+		if(dirToUse==0) dirToUse = 10;
 		
-		insert = data.getInserter(prev, trainPartition.get(i))
-		InserterUtils.loadDelimitedData(insert, filename+"all_prev.csv");
-		insert = data.getInserter(priorpos, trainPartition.get(i))
-		InserterUtils.loadDelimitedData(insert, filename+"positive.csv");
-		insert = data.getInserter(priorneg, trainPartition.get(i))
-		InserterUtils.loadDelimitedData(insert,filename+"negative.csv");
-		insert = data.getInserter(all, trainPartition.get(i))
-		InserterUtils.loadDelimitedData(insert, filename+"allID.csv");
-		insert = data.getInserter(contrast, trainPartition.get(i))
-		InserterUtils.loadDelimitedData(insert, filename+"contrast_ids.csv");
+		
+		filename = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold'+dirToUse+java.io.File.separator;
+		//println "accessing directory "+filename+ "and train partition " +trainPartition.get(cvSet)
+		
+		//insert = data.getInserter(prev, trainPartition.get(i))
+		//println "Train Partition === "+ data.getInserter(prev, trainPartition.get(cvSet));
+		
+		InserterUtils.loadDelimitedData(data.getInserter(prev, trainPartition.get(cvSet)), filename+"all_prev.csv");
+		//insert = data.getInserter(priorpos, trainPartition.get(i))
+		InserterUtils.loadDelimitedDataTruth(data.getInserter(priorpos, trainPartition.get(cvSet)), filename+"softpos.csv","\t");
+		//insert = data.getInserter(priorneg, trainPartition.get(i))
+		InserterUtils.loadDelimitedDataTruth(data.getInserter(priorneg, trainPartition.get(cvSet)),filename+"softneg.csv","\t");
+		//insert = data.getInserter(all, trainPartition.get(i))
+		InserterUtils.loadDelimitedData(data.getInserter(all, trainPartition.get(cvSet)), filename+"allID.csv");
+		//insert = data.getInserter(contrast, trainPartition.get(i))
+		InserterUtils.loadDelimitedData(data.getInserter(contrast, trainPartition.get(cvSet)), filename+"contrast_ids.csv");
 		
 //		println "directory :"+filename+"trueneg.csv, truedataPartition : " + trueDataPartition.get(i)
 //		println "accessing directory "+filename+ "and truedata partition " +trueDataPartition.get(i)
-		insert = data.getInserter(negsentiment, trueDataPartition.get(i))
-		InserterUtils.loadDelimitedData(insert, filename+"trueneg.csv");
-		insert = data.getInserter(possentiment, trueDataPartition.get(i))
-		InserterUtils.loadDelimitedData(insert, filename+"truepos.csv");
+		//insert = data.getInserter(negsentiment, trueDataPartition.get(i))
+		InserterUtils.loadDelimitedData(data.getInserter(negsentiment, trueDataPartition.get(cvSet)), filename+"trueneg.csv");
+		//insert = data.getInserter(possentiment, trueDataPartition.get(i))
+		InserterUtils.loadDelimitedData(data.getInserter(possentiment, trueDataPartition.get(cvSet)), filename+"truepos.csv");
 		
 	}
 	/*
 	 * For test data partition - it needs only one fold in each partition.... Start with 10,1,2,3.... so on. 
 	 */
-	k = (i+10)%10
-	if(k==0) k = 10;
-	filename = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold'+k+java.io.File.separator;
-	println "accessing directory "+filename+ "and TestDatapartition " +testDataPartition.get(i)
+	testSet = 0;
+	testSet = (cvSet+10)%10
+	if(testSet==0) testSet = 10;
+	filename = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold'+testSet+java.io.File.separator;
+	//println "accessing directory "+filename+ "and TestDatapartition " +testDataPartition.get(cvSet)
 	
-	insert = data.getInserter(prev, testDataPartition.get(i))
-	InserterUtils.loadDelimitedData(insert, filename+"all_prev.csv");
+	//insert = data.getInserter(prev, testDataPartition.get(i))
+	InserterUtils.loadDelimitedData(data.getInserter(prev, testDataPartition.get(cvSet)), filename+"all_prev.csv");
 	
-	insert = data.getInserter(priorpos, testDataPartition.get(i))
-	InserterUtils.loadDelimitedData(insert, filename+"positive.csv");
+	//insert = data.getInserter(priorpos, testDataPartition.get(i))
+	InserterUtils.loadDelimitedDataTruth(data.getInserter(priorpos, testDataPartition.get(cvSet)), filename+"softpos.csv","\t");
 	
-	insert = data.getInserter(priorneg, testDataPartition.get(i))
-	InserterUtils.loadDelimitedData(insert,filename+"negative.csv");
+	//insert = data.getInserter(priorneg, testDataPartition.get(i))
+	InserterUtils.loadDelimitedDataTruth(data.getInserter(priorneg, testDataPartition.get(cvSet)),filename+"softneg.csv","\t");
 	
-	insert = data.getInserter(all, testDataPartition.get(i))
-	InserterUtils.loadDelimitedData(insert, filename+"allID.csv");
+	//insert = data.getInserter(all, testDataPartition.get(i))
+	InserterUtils.loadDelimitedData(data.getInserter(all, testDataPartition.get(cvSet)), filename+"allID.csv");
 	
-	insert = data.getInserter(contrast, testDataPartition.get(i))
-	InserterUtils.loadDelimitedData(insert, filename+"contrast_ids.csv");
+	//insert = data.getInserter(contrast, testDataPartition.get(i))
+	InserterUtils.loadDelimitedData(data.getInserter(contrast, testDataPartition.get(cvSet)), filename+"contrast_ids.csv");
 
 //	println "accessing directory "+filename+ "and trueTestData partition " +trueTestDataPartition.get(i)
-	insert = data.getInserter(possentiment, trueTestDataPartition.get(i))
-	InserterUtils.loadDelimitedData(insert, filename+"truepos.csv");
+	//insert = data.getInserter(possentiment, trueTestDataPartition.get(i))
+	InserterUtils.loadDelimitedData(data.getInserter(possentiment, trueTestDataPartition.get(cvSet)), filename+"truepos.csv");
 	
-	insert = data.getInserter(negsentiment, trueTestDataPartition.get(i))
-	InserterUtils.loadDelimitedData(insert, filename+"trueneg.csv");
+	//insert = data.getInserter(negsentiment, trueTestDataPartition.get(i))
+	InserterUtils.loadDelimitedData(data.getInserter(negsentiment, trueTestDataPartition.get(cvSet)), filename+"trueneg.csv");
 
 	
-	Database trainDB = data.getDatabase(trainPartition.get(i), [Contrast, Prev,Priorpos, Priorneg, All] as Set);
+	Database trainDB = data.getDatabase(trainPartition.get(cvSet), [Contrast, Prev,Priorpos, Priorneg, All] as Set);
+	
+	ResultList allGroundings1 = trainDB.executeQuery(Queries.getQueryForAllAtoms(contrast))
+	println "groundings for contrast" +allGroundings1.size();
+	allGroundings1 = trainDB.executeQuery(Queries.getQueryForAllAtoms(prev))
+	println "groundings for prev" +allGroundings1.size();
+
 
 	/*
 	 * Setting the predicates possentiment and negsentiment to an initial value for all groundings
 	 */
 	
 	ResultList allGroundings = trainDB.executeQuery(Queries.getQueryForAllAtoms(all))
-	print allGroundings.size();
+	println "groundings for all"+ allGroundings.size();
 	for (j = 0; j < allGroundings.size(); j++) {
 		GroundTerm [] grounding = allGroundings.get(j)
 		RandomVariableAtom atom1 = trainDB.getAtom(possentiment, grounding);
@@ -193,25 +217,26 @@ for(i =0 ;i<10;++i)
 	//LazyMPEInference inferenceApp = new LazyMPEInference(m, trainDB, config);
 	inferenceApp.mpeInference();
 	inferenceApp.close();
-	println "trudatapartition : "+trueDataPartition.get(i)
-	Database trueDataDB = data.getDatabase(trueDataPartition.get(i), [possentiment,negsentiment] as Set);
+	println "trudatapartition : "+trueDataPartition.get(cvSet)
+	Database trueDataDB = data.getDatabase(trueDataPartition.get(cvSet), [possentiment,negsentiment] as Set);
 	MaxLikelihoodMPE weightLearning = new MaxLikelihoodMPE(m, trainDB, trueDataDB, config);
+	//MaxMargin weightLearning = new MaxMargin(m, trainDB, trueDataDB, config);
+	
 	//LazyMaxLikelihoodMPE weightLearning = new LazyMaxLikelihoodMPE(m, db, trueDataDB, config);
+	//MaxPseudoLikelihood weightLearning = new MaxPseudoLikelihood(m, trainDB, trueDataDB, config);
 	weightLearning.learn();
 	weightLearning.close();
 	/*
 	 * Newly learned weights
 	 */
 	
-	println "Learned model:"
-	println m
+	file3.append( "Learned model:\n")
+	file3.append(m)
 	
 	
 	/*Test database setup*/
 
-	Database testDB = data.getDatabase(testDataPartition.get(i), [Contrast, Prev, Priorpos, Priorneg, All] as Set);
-	
-	
+	Database testDB = data.getDatabase(testDataPartition.get(cvSet), [Contrast, Prev, Priorpos, Priorneg, All] as Set);
 	ResultList groundings = testDB.executeQuery(Queries.getQueryForAllAtoms(all))
 	print groundings.size();
 	for (j = 0; j < groundings.size(); j++) {
@@ -228,8 +253,10 @@ for(i =0 ;i<10;++i)
 	inferenceApp.close();
 	
 	
+	
+
 	println "test results";
-	file1.append("Partition:" + testDataPartition.get(i)+"\n")
+	file1.append("Partition:" + testDataPartition.get(cvSet)+"\n")
 	count = 0
 	println "Inference results with hand-defined weights:"
 	for (GroundAtom atom : Queries.getAllAtoms(testDB, possentiment)){
@@ -240,7 +267,7 @@ for(i =0 ;i<10;++i)
 	println count
 	
 	count = 0
-	file2.append("Partition:" + testDataPartition.get(i)+"\n")
+	file2.append("Partition:" + testDataPartition.get(cvSet)+"\n")
 	println "Inference results with hand-defined weights:"
 	for (GroundAtom atom : Queries.getAllAtoms(testDB, negsentiment))
 	{
@@ -249,8 +276,8 @@ for(i =0 ;i<10;++i)
 		count = count + 1
 	}
 	println count
-	println "Truetestdatapartition "+trueTestDataPartition.get(i)
-	Database trueTestDB = data.getDatabase(trueTestDataPartition.get(i), [possentiment, negsentiment] as Set);
+	println "Truetestdatapartition "+trueTestDataPartition.get(cvSet)
+	Database trueTestDB = data.getDatabase(trueTestDataPartition.get(cvSet), [possentiment, negsentiment] as Set);
 	
 	
 	
@@ -262,9 +289,9 @@ for(i =0 ;i<10;++i)
 	int totalNegTestExamples = groundings1.size()
 	println "negsentiment total: "+totalNegTestExamples
 	
-	def comparator = new SimpleRankingComparator(testDB)
+/*	def comparator = new SimpleRankingComparator(testDB)
 	comparator.setBaseline(trueTestDB)
-	file3.append("\n\n TEST RESULTS FOR TESTING ON FOLD "+(i+1) +"\n")
+	file3.append("\n\n TEST RESULTS FOR TESTING ON FOLD "+(cvSet+1) +"\n")
 	// Choosing what metrics to report
 	def metrics = [ RankingScore.AUPRC, RankingScore.NegAUPRC,  RankingScore.AreaROC]
 	double [] score = new double[metrics.size()]
@@ -274,7 +301,6 @@ for(i =0 ;i<10;++i)
 				comparator.setRankingScore(metrics.get(j))
 				score[j] = comparator.compare(possentiment)
 		}
-		println "Written pos AUC to file3!! "
 		file3.append("\n \n Writing possentiment AUC scores"+"\n")
 		file3.append("\nArea under positive-class PR curve: " + score[0]+"\n")
 		file3.append("Area under negetive-class PR curve: " + score[1]+"\n")
@@ -294,7 +320,6 @@ for(i =0 ;i<10;++i)
 				score2[j] = comparator.compare(negsentiment)
 		}
 		
-		file3.append("\n \n Writing negsentiment AUC scores"+"\n")
 		file3.append("\nArea under positive-class PR curve: " + score2[0]+"\n")
 		file3.append("Area under negetive-class PR curve: " + score2[1]+"\n")
 		file3.append("Area under ROC curve: " + score2[2]+"\n")
@@ -303,74 +328,135 @@ for(i =0 ;i<10;++i)
 	catch (ArrayIndexOutOfBoundsException e) {
 		System.out.println("No evaluation data! Terminating!");
 	}
+	*/
+	Set<GroundAtom> groundings3 = Queries.getAllAtoms(trueTestDB, possentiment)
+	int totalPosTestExamples3 = groundings3.size()
+	
+	groundings3 = Queries.getAllAtoms(trueTestDB, negsentiment)
+	int totalNegTestExamples3 = groundings3.size()
+	
+	Set<GroundAtom> groundings2 = Queries.getAllAtoms(trueDataDB, possentiment)
+	int totalPosTrainExamples = groundings2.size()
+	
+	groundings2 = Queries.getAllAtoms(trueDataDB, negsentiment)
+	int totalNegTrainExamples = groundings2.size()
+	
+	int total =  totalNegTrainExamples+totalPosTestExamples3+totalNegTestExamples3+totalPosTrainExamples
+	println "Total ###"+total
+	println "Pos ###"+totalPosTrainExamples
+	println "Ned ###"+totalNegTrainExamples
+	
 	
 	
 	/*
 	 * Accuracy
 	 */
 	
+	groundings1 = Queries.getAllAtoms(trueTestDB, possentiment)
+	totalPosTestExamples = groundings1.size()
+	println "printing totalTestExamples:Possentiment"+totalPosTestExamples
+	groundings2 = Queries.getAllAtoms(trueTestDB, negsentiment)
+	totalNegTestExamples = groundings2.size()
+	println "printing totalTestExamples: Negsentiment"+totalNegTestExamples
+	
+	
 	file3.append("\n \n Writing Accuracy, F1, P and R scores for possentiment"+"\n")
-	comparator = new DiscretePredictionComparator(testDB)
-	comparator.setBaseline(trueTestDB)
-	comparator.setResultFilter(new MaxValueFilter(possentiment, 1))
-	file3.append( "With threshold 0.005 \n")
-	comparator.setThreshold(0.005) // treat best value as true as long as it is nonzero
-	
-	groundings1 = Queries.getAllAtoms(trueTestDB, possentiment)
-	 totalTestExamples = groundings1.size()
-	println "printing totalTestExamples:Possentiment"+totalTestExamples
-	DiscretePredictionStatistics stats = comparator.compare(possentiment, totalTestExamples)
+	poscomparator = new DiscretePredictionComparator(testDB)
+	poscomparator.setBaseline(trueTestDB)
+	poscomparator.setResultFilter(new MaxValueFilter(possentiment, 1))
+
+//	
+	DiscretePredictionStatistics stats = poscomparator.compare(possentiment, totalNegTestExamples+totalPosTestExamples)
+	file3.append("\n With threshold ====" +0.5+"\n")
+	poscomparator.setThreshold(0.5) // treat best value as true as long as it is nonzero
+
+	stats = poscomparator.compare(possentiment, totalNegTestExamples+totalPosTestExamples)
 	file3.append("Accuracy: " + stats.getAccuracy()+"\n")
 	file3.append("F1: " + stats.getF1(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
 	file3.append("Precision: " + stats.getPrecision(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
 	file3.append("Recall: " + stats.getRecall(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
 	
-	file3.append("With threshold 0.5\n")
-	comparator.setThreshold(0.5) // treat best value as true as long as it is nonzero
 	
-	groundings1 = Queries.getAllAtoms(trueTestDB, possentiment)
-	 totalTestExamples = groundings1.size()
-	println "printing totalTestExamples:Possentiment"+totalTestExamples
-	stats = comparator.compare(possentiment, totalTestExamples)
+	file3.append("\n With threshold ====" +0.4+"\n")
+	poscomparator.setThreshold(0.4) // treat best value as true as long as it is nonzero
+
+	stats = poscomparator.compare(possentiment, totalNegTestExamples+totalPosTestExamples)
 	file3.append("Accuracy: " + stats.getAccuracy()+"\n")
 	file3.append("F1: " + stats.getF1(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
 	file3.append("Precision: " + stats.getPrecision(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
 	file3.append("Recall: " + stats.getRecall(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
-	println "Written pos scores to file3!! "
+	
+	
+	file3.append("\n With threshold ====" +0.3+"\n")
+	poscomparator.setThreshold(0.3) // treat best value as true as long as it is nonzero
+	stats = poscomparator.compare(possentiment, totalNegTestExamples+totalPosTestExamples)
+	file3.append("Accuracy: " + stats.getAccuracy()+"\n")
+	file3.append("F1: " + stats.getF1(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
+	file3.append("Precision: " + stats.getPrecision(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
+	file3.append("Recall: " + stats.getRecall(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
+	
+	file3.append( "\n With threshold 0.005 \n")
+	poscomparator.setThreshold(0.005) // treat best value as true as long as it is nonzero	
+	stats = poscomparator.compare(possentiment, totalNegTestExamples+totalPosTestExamples)
+	file3.append("Accuracy: " + stats.getAccuracy()+"\n")
+	file3.append("F1: " + stats.getF1(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
+	file3.append("Precision: " + stats.getPrecision(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
+	file3.append("Recall: " + stats.getRecall(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
+	
 	
 	file3.append("\n\n Writing Accuracy, F1, P and R scores for negsentiment"+"\n")
-	comparator = new DiscretePredictionComparator(testDB)
-	comparator.setBaseline(trueTestDB)
-	comparator.setResultFilter(new MaxValueFilter(negsentiment, 1))
-	file3.append("negsentiment with threshold 0.5 \n")
-	comparator.setThreshold(0.5) // treat best value as true as long as it is nonzero
+	negcomparator = new DiscretePredictionComparator(testDB)
+	negcomparator.setBaseline(trueTestDB)
+	negcomparator.setResultFilter(new MaxValueFilter(negsentiment, 1))
+	file3.append("\n negsentiment with threshold =====" + 0.5+"\n")
 	
-	 groundings1 = Queries.getAllAtoms(trueTestDB, negsentiment)
-	totalTestExamples = groundings1.size()
-	println "printing totalTestExamples: Negsentiment"+totalTestExamples
-	stats = comparator.compare(negsentiment, totalTestExamples)
-	file3.append("Accuracy: " + stats.getAccuracy())
+	negcomparator.setThreshold(0.5) // treat best value as true as long as it is nonzero
+	stats = negcomparator.compare(negsentiment, totalNegTestExamples+totalPosTestExamples)
+	file3.append("Accuracy: " + stats.getAccuracy()+"\n")
 	file3.append("F1: " + stats.getF1(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
 	file3.append("Precision: " + stats.getPrecision(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
 	file3.append("Recall: " + stats.getRecall(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
 	
-	file3.append("negsentiment with threshold 0.005 \n")
-	comparator.setThreshold(0.005) // treat best value as true as long as it is nonzero
+	all_tn = negcomparator.tn+ poscomparator.tn;
+	all_tp = negcomparator.tp+ poscomparator.tp;
+	all_fp = negcomparator.fp+ poscomparator.fp;
+	all_fn = negcomparator.fn+ poscomparator.fn;
+	all_accuracy = (all_tn+all_tp)/(all_tn+all_tp+all_fp+all_fn)
+	println "Overall accuracy = " +all_accuracy
 	
-	 groundings1 = Queries.getAllAtoms(trueTestDB, negsentiment)
-	totalTestExamples = groundings1.size()
-	println "printing totalTestExamples: Negsentiment"+totalTestExamples
-	stats = comparator.compare(negsentiment, totalTestExamples)
+	file3.append("\n negsentiment with threshold 0.4 \n")
+	negcomparator.setThreshold(0.4) // treat best value as true as long as it is nonzero
+	stats = negcomparator.compare(negsentiment, totalNegTestExamples+totalPosTestExamples)
 	file3.append("Accuracy: " + stats.getAccuracy() +"\n")
 	file3.append("F1: " + stats.getF1(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
 	file3.append("Precision: " + stats.getPrecision(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
 	file3.append("Recall: " + stats.getRecall(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
-	println "Written neg scores to file3!! "
+	
+	
+	
+	file3.append("\n negsentiment with threshold ===== " + 0.3+"\n")
+	
+	negcomparator.setThreshold(0.3) // treat best value as true as long as it is nonzero
+	stats = negcomparator.compare(negsentiment, totalNegTestExamples+totalPosTestExamples)
+	file3.append("Accuracy: " + stats.getAccuracy()+"\n")
+	file3.append("F1: " + stats.getF1(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
+	file3.append("Precision: " + stats.getPrecision(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
+	file3.append("Recall: " + stats.getRecall(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
 
+	file3.append("\n negsentiment with threshold 0.005 \n")
+	negcomparator.setThreshold(0.005) // treat best value as true as long as it is nonzero
+	stats = negcomparator.compare(negsentiment, totalNegTestExamples+totalPosTestExamples)
+	file3.append("Accuracy: " + stats.getAccuracy() +"\n")
+	file3.append("F1: " + stats.getF1(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
+	file3.append("Precision: " + stats.getPrecision(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
+	file3.append("Recall: " + stats.getRecall(DiscretePredictionStatistics.BinaryClass.POSITIVE)+"\n")
+
+	
+	
 	
 	trueDataDB.close();
 	trainDB.close();
 	testDB.close();
 	trueTestDB.close();
 
-}
+//}
