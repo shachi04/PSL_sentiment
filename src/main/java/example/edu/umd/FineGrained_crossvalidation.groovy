@@ -75,6 +75,7 @@ m.add predicate: "all", types: [ArgumentType.UniqueID]
 //
 m.add rule : (possentiment(A) ) >> ~negsentiment(A), weight :5
 m.add rule : (negsentiment(A) ) >> ~possentiment(A), weight :5
+
 m.add rule : (priorpos(A) ) >> possentiment(A), weight :5
 m.add rule : (priorneg(A) ) >> negsentiment(A), weight :5
 /*
@@ -88,8 +89,8 @@ m.add rule : (prev(A,B) & possentiment(B)) >> possentiment(A), weight :10
 m.add rule : (prev(A,B) & negsentiment(B)) >> negsentiment(A), weight :10
 
 //
-//m.add rule : (prev(A,B) & possentiment(B) & (A ^ B)) >> possentiment(A), weight :100
-//m.add rule : (prev(A,B) & negsentiment(B) & (A ^ B)) >> negsentiment(A), weight :100
+//m.add rule : (prev(A,B) & possentiment(B) & (A ^ B)) >> possentiment(A), weight :10
+//m.add rule : (prev(A,B) & negsentiment(B) & (A ^ B)) >> negsentiment(A), weight :10
 
 /*
 m.add rule : (contrast(A,B) & possentiment(B) & ( A ^ B)) >> negsentiment(A)  , weight :50
@@ -98,6 +99,13 @@ m.add rule : (contrast(A,B) & negsentiment(B) & ( A ^ B)) >> possentiment(A)  , 
 /*
 m.add rule : (contrast(A,B) & possentiment(B) ) >> negsentiment(A)  , weight :50
 m.add rule : (contrast(A,B) & negsentiment(B) ) >> possentiment(A)  , weight :50
+
+*/
+
+//m.add PredicateConstraint.PartialFunctional , on : samePerson
+//m.add PredicateConstraint.PartialInverseFunctional , on : samePerson
+//m.add PredicateConstraint.Symmetric, on : prev
+
 
 
 /*
@@ -120,7 +128,7 @@ testDataPartition.add(cvSet, new Partition(cvSet + 2*folds))
 trueTestDataPartition.add(cvSet, new Partition(cvSet + 3*folds))
 }
 
-cvSet = 7
+cvSet = 8
 //for(cvSet =0 ;cvSet<10;++cvSet)
 //{
 	/*
@@ -219,11 +227,11 @@ cvSet = 7
 	inferenceApp.close();
 	println "trudatapartition : "+trueDataPartition.get(cvSet)
 	Database trueDataDB = data.getDatabase(trueDataPartition.get(cvSet), [possentiment,negsentiment] as Set);
-	MaxLikelihoodMPE weightLearning = new MaxLikelihoodMPE(m, trainDB, trueDataDB, config);
+	//MaxLikelihoodMPE weightLearning = new MaxLikelihoodMPE(m, trainDB, trueDataDB, config);
 	//MaxMargin weightLearning = new MaxMargin(m, trainDB, trueDataDB, config);
 	
 	//LazyMaxLikelihoodMPE weightLearning = new LazyMaxLikelihoodMPE(m, db, trueDataDB, config);
-	//MaxPseudoLikelihood weightLearning = new MaxPseudoLikelihood(m, trainDB, trueDataDB, config);
+	MaxPseudoLikelihood weightLearning = new MaxPseudoLikelihood(m, trainDB, trueDataDB, config);
 	weightLearning.learn();
 	weightLearning.close();
 	/*

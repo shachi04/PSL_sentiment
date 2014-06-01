@@ -21,7 +21,7 @@
 	<classpathentry kind="var" path="M2_REPO/de/mathnbits/mathnbitsSTL/1.0/mathnbitsSTL-1.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/mysql/mysql-connector-java/5.0.5/mysql-connector-java-5.0.5.jar"/>
 	<classpathentry kind="var" path="M2_REPO/edu/emory/mathcs/parallelcolt/0.9.4/parallelcolt-0.9.4.jar"/>
-	<classpathentry kind="var" path="M2_REPO/edu/umd/cs/psl-core/1.1/psl-core-1.1.jar" sourcepath="/psl_src"/>
+	<classpathentry kind="var" path="M2_REPO/edu/umd/cs/psl-core/1.1/psl-core-1.1.jar" sourcepath="/psl-core-jar"/>
 	<classpathentry kind="var" path="M2_REPO/edu/umd/cs/psl-groovy/1.1/psl-groovy-1.1.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/wcohen/secondstring/20120620/secondstring-20120620.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8.jar"/>
