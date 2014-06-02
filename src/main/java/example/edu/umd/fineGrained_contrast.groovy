@@ -24,6 +24,7 @@ import edu.umd.cs.psl.groovy.PredicateConstraint;
 import edu.umd.cs.psl.groovy.SetComparison;
 import edu.umd.cs.psl.model.argument.ArgumentType;
 import edu.umd.cs.psl.model.argument.GroundTerm;
+import edu.umd.cs.psl.model.predicate.Predicate;
 import edu.umd.cs.psl.model.atom.GroundAtom;
 import edu.umd.cs.psl.model.atom.RandomVariableAtom
 import edu.umd.cs.psl.model.function.ExternalFunction;
