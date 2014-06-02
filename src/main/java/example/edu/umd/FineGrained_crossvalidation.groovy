@@ -139,9 +139,10 @@ for(cvSet =0 ;cvSet<10;++cvSet)
 	trueTestDataPartition.add(cvSet, new Partition(cvSet + 3*folds))
 }
 thresholdList = [0.5,0.45,0.4,0.3]
-cvSet = 0
+
 //for(cvSet =0 ;cvSet<10;++cvSet)
 //{
+cvSet = 9
 /*
  * Train data partition, each partition has 9 folders, one kept aside for testing... 
  */
@@ -507,6 +508,7 @@ for (threshold in thresholdList)
 
 
 trueDataDB.close();
+
 trainDB.close();
 testDB.close();
 trueTestDB.close();
