@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 
-readpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/NRC-Emotion-Lexicon-v0.92/NRC-emotion-lexicon.txt"
+readpath = "~/Documents/Shachi/CMPS209C/reviews/NRC-Emotion-Lexicon-v0.92/NRC-emotion-lexicon.txt"
 
 
 nrcdf = pd.read_table(readpath, sep = '\t', names = ["Word","Polarity","Value"])
@@ -70,8 +70,8 @@ def countnonzero(x):
             nonzero = nonzero +1 
     return nonzero
 
-path = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
-write = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds2/fold"
+path = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
+write = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds2/fold"
 for i in range(1,11):
 
     readpath = path+str(i)+"/all_text.csv"
@@ -96,10 +96,10 @@ for i in range(1,11):
     df.to_csv(writepath2, sep='\t', cols = header,index=False,header=False)
 
 
-#path = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
-path = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds2/fold"
-writepath2 = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
-writepath = "/Users/girishsk/Documents/Shachi/CMPS209C/psl-example/data/sentiment/fold"
+#path = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
+path = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds2/fold"
+writepath2 = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
+writepath = "~/Documents/Shachi/CMPS209C/psl-example/data/sentiment/fold"
 
 for i in range(1,11):
     readpath = path+str(i)+"/all_NRC_lexicon_negation.csv"

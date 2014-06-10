@@ -1,10 +1,10 @@
 import pandas as pd
-adjpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/SODictionariesV1.11Eng/adj_dictionary1.11.txt"
-writepath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/SODictionariesV1.11Eng/all_TGL.csv"
-advpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/SODictionariesV1.11Eng/adv_dictionary1.11.txt"
-nounpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/SODictionariesV1.11Eng/noun_dictionary1.11.txt"
-verbpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/SODictionariesV1.11Eng/verb_dictionary1.11.txt"
-intpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/SODictionariesV1.11Eng/int_dictionary1.11.txt"
+adjpath = "~/Documents/Shachi/CMPS209C/reviews/SODictionariesV1.11Eng/adj_dictionary1.11.txt"
+writepath = "~/Documents/Shachi/CMPS209C/reviews/SODictionariesV1.11Eng/all_TGL.csv"
+advpath = "~/Documents/Shachi/CMPS209C/reviews/SODictionariesV1.11Eng/adv_dictionary1.11.txt"
+nounpath = "~/Documents/Shachi/CMPS209C/reviews/SODictionariesV1.11Eng/noun_dictionary1.11.txt"
+verbpath = "~/Documents/Shachi/CMPS209C/reviews/SODictionariesV1.11Eng/verb_dictionary1.11.txt"
+intpath = "~/Documents/Shachi/CMPS209C/reviews/SODictionariesV1.11Eng/int_dictionary1.11.txt"
 
 def convert_posscore(x):
     if (x==5):

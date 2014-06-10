@@ -67,7 +67,7 @@ def countnonzero(x):
     return nonzero
 
 
-path = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
+path = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
 
 for i in range(1,11):
     #i = 5
@@ -116,8 +116,8 @@ for i in range(1,11):
 
 for i in range(1,11):
     readpath = path+str(i)+"/all_unigram_lexicon_negation.csv"
-    writepathneg = "/Users/girishsk/Documents/Shachi/CMPS209C/psl-example/data/sentiment/fold"+str(i)+"/unigram_neg_negation.csv"
-    writepathpos = "/Users/girishsk/Documents/Shachi/CMPS209C/psl-example/data/sentiment/fold" + str(i) + "/unigram_pos_negation.csv"
+    writepathneg = "~/Documents/Shachi/CMPS209C/psl-example/data/sentiment/fold"+str(i)+"/unigram_neg_negation.csv"
+    writepathpos = "~/Documents/Shachi/CMPS209C/psl-example/data/sentiment/fold" + str(i) + "/unigram_pos_negation.csv"
     if os.path.isfile(writepathneg):
         os.remove(writepathneg)
     if os.path.isfile(writepathpos):

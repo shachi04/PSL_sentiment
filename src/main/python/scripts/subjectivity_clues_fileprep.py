@@ -14,8 +14,8 @@ def pos_code(tag):
         return ''
 
 
-readpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/subjectivity_clues_hltemnlp05/subjclueslen1-HLTEMNLP05.tff"
-writepath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/subjectivity_clues.csv"
+readpath = "~/Documents/Shachi/CMPS209C/reviews/subjectivity_clues_hltemnlp05/subjclueslen1-HLTEMNLP05.tff"
+writepath = "~/Documents/Shachi/CMPS209C/reviews/subjectivity_clues.csv"
 
 df = pd.read_table(readpath, sep = " ", names = ["type","len", "word", "pos", "stemmed", "polarity"])
 df["strength"] = df.type.map(lambda x: 0.5 if((x.split("=")[1])=="weaksubj") 

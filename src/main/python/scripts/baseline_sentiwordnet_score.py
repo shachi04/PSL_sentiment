@@ -9,7 +9,7 @@ from nltk.corpus import wordnet
 import numpy
 import operator
 
-write =  "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Baseline_data/fold"
+write =  "~/Documents/Shachi/CMPS209C/reviews/Baseline_data/fold"
 
 
 negtrainall=[]
@@ -135,7 +135,7 @@ class SentiWordNet(object):
 
         return senti_scores
 
-sw=SentiWordNet("/Users/girishsk/Documents/Shachi/CMPS209C/home/swn/www/admin/dump/SentiWordNet_3.0.0_20130122.txt")
+sw=SentiWordNet("~/Documents/Shachi/CMPS209C/home/swn/www/admin/dump/SentiWordNet_3.0.0_20130122.txt")
 
 
 

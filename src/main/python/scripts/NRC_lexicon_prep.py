@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 
-readpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/NRC-Emotion-Lexicon-v0.92/NRC-emotion-lexicon.txt"
+readpath = "~/Documents/Shachi/CMPS209C/reviews/NRC-Emotion-Lexicon-v0.92/NRC-emotion-lexicon.txt"
 
 
 nrcdf = pd.read_table(readpath, sep = '\t', names = ["Word","Polarity","Value"])
@@ -28,7 +28,7 @@ for i in range(0,len(pos)):
         posdict[pos[i]] = valuepos[i]
 
 
-path = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
+path = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
 
 
 for i in range(1,11):
@@ -52,8 +52,8 @@ for i in range(1,11):
     header = ["PhraseID","avgneg","avgpos"]
     df.to_csv(writepath, sep='\t', cols = header,index=False,header=False)
 
-writepath = "/Users/girishsk/Documents/Shachi/CMPS209C/psl-example/data/sentiment/fold"
-read = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
+writepath = "~/Documents/Shachi/CMPS209C/psl-example/data/sentiment/fold"
+read = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
 for i in range(1,11):
     readpath = read+str(i)+"/all_NRC_lexicon.csv"
     writepathneg = writepath+str(i)+"/NRC_neg.csv"

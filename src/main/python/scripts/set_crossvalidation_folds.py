@@ -2,8 +2,8 @@ import os
 import csv
 import shutil
 
-path = r'/Users/girishsk/Documents/Shachi/CMPS209C/reviews/GoldStd' 
-#writepath = r'/Users/girishsk/Documents/Shachi/CMPS209C/reviews/phrases_all/kitchen_neg'
+path = r'~/Documents/Shachi/CMPS209C/reviews/GoldStd' 
+#writepath = r'~/Documents/Shachi/CMPS209C/reviews/phrases_all/kitchen_neg'
 data = {}
 cell_neg_list = []
 cell_pos_list = []
@@ -41,7 +41,7 @@ random.shuffle(kitchen_pos_list)
 
 
 for j in range(1,11):
-    writepath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"+str(j)+"/all.csv"
+    writepath = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"+str(j)+"/all.csv"
     ofile = open(writepath, "wb")   
     c = csv.writer(ofile, delimiter='\t',quotechar=' ')
     for i in range((2*j-2),2*j): 

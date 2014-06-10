@@ -9,10 +9,10 @@ from nltk.classify import NaiveBayesClassifier
 from nltk.classify.scikitlearn import SklearnClassifier
 
 
-path = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds2/fold"
-goldstdpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/GoldStd/Goldstd3/"
-baselinepath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Baseline_data/all_phrases_polarity.csv"
-baseline_shuffle = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Baseline_data/all_phrases_polarity_shuffled.csv"
+path = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds2/fold"
+goldstdpath = "~/Documents/Shachi/CMPS209C/reviews/GoldStd/Goldstd3/"
+baselinepath = "~/Documents/Shachi/CMPS209C/reviews/Baseline_data/all_phrases_polarity.csv"
+baseline_shuffle = "~/Documents/Shachi/CMPS209C/reviews/Baseline_data/all_phrases_polarity_shuffled.csv"
 
 
 def word_feats(words):

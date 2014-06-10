@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import nltk
 from nltk.corpus import wordnet
-path = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds2/fold"
+path = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds2/fold"
 readpath = path+str(i)+"/all_wordnet_polarity_soft.csv"
 writepathneg = path+str(i)+"/softneg.csv"
 writepathpos = path + str(i) + "/softpos.csv"
@@ -81,7 +81,7 @@ class SentiWordNet(object):
 
 
 
-sw=SentiWordNet("/Users/girishsk/Documents/Shachi/CMPS209C/home/swn/www/admin/dump/SentiWordNet_3.0.0_20130122.txt")
+sw=SentiWordNet("~/Documents/Shachi/CMPS209C/home/swn/www/admin/dump/SentiWordNet_3.0.0_20130122.txt")
 
 
 

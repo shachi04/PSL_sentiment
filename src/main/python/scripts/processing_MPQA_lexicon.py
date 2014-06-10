@@ -2,9 +2,9 @@ scores = {}
 
 import numpy as np
 import os
-path = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
+path = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
 
-readpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/subjectivity_clues.csv"
+readpath = "~/Documents/Shachi/CMPS209C/reviews/subjectivity_clues.csv"
 f = open(readpath, "rb")
 lines = f.readlines()
 for i in range(0,len(lines)):

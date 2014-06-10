@@ -1,6 +1,6 @@
 import pandas as pd
 
-readpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Results/unigram_negation_contrast/auc.csv"
+readpath = "~/Documents/Shachi/CMPS209C/reviews/Results/unigram_negation_contrast/auc.csv"
 df = pd.read_csv(readpath, sep = '\t')
 dfpos = df[df["sentiment"] == "possentiment"]
 dfneg = df[df["sentiment"] == "negsentiment"]

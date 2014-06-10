@@ -3,7 +3,7 @@ import os
 negation_words = ["none","no","cannot","n't", "never", "nowhere", "not", "nothing", "nor", "neither", "nobody","hardly",
                   "least", "merely"]
 
-path = "/Users/girishsk/Documents/Shachi/CMPS209C/psl-example/data/sentiment/fold"
+path = "~/Documents/Shachi/CMPS209C/psl-example/data/sentiment/fold"
 
 # count_negation = 0
 

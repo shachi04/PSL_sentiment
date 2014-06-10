@@ -1,6 +1,6 @@
 import pandas as pd
 
-genpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Results/unigram_otherpos_negation/fold10/"
+genpath = "~/Documents/Shachi/CMPS209C/reviews/Results/unigram_otherpos_negation/fold10/"
 threshold=0.4
 neg = genpath+"negsentiment.csv"
 pos = genpath+"possentiment.csv"

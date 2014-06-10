@@ -2,7 +2,7 @@ import nltk
 from nltk.corpus import stopwords
 from collections import Counter
 
-readpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/all_other_reviews/gourmet_negative_reviews.csv"
+readpath = "~/Documents/Shachi/CMPS209C/reviews/all_other_reviews/gourmet_negative_reviews.csv"
 
 cnt_gourmetneg = Counter()
 f = open(readpath, "rb")
@@ -13,7 +13,7 @@ for i in range(0, len(lines)):
             cnt_gourmetneg[word] += 1
 
 
-readpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/all_other_reviews/gourmet_positive_reviews.csv"
+readpath = "~/Documents/Shachi/CMPS209C/reviews/all_other_reviews/gourmet_positive_reviews.csv"
 
 cnt_gourmetpos = Counter()
 f = open(readpath, "rb")
@@ -50,7 +50,7 @@ for word_freq in cnt_gourmetpos.items():
 
 
 
-readpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/all_other_reviews/kitchen_positive_reviews.csv"
+readpath = "~/Documents/Shachi/CMPS209C/reviews/all_other_reviews/kitchen_positive_reviews.csv"
 
 cnt_kitchenpos = Counter()
 f = open(readpath, "rb")
@@ -61,7 +61,7 @@ for i in range(0, len(lines)):
             cnt_kitchenpos[word] += 1
             
         
-readpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/all_other_reviews/kitchen_negative_reviews.csv"
+readpath = "~/Documents/Shachi/CMPS209C/reviews/all_other_reviews/kitchen_negative_reviews.csv"
 
 cnt_kitchenneg = Counter()
 f = open(readpath, "rb")
@@ -97,7 +97,7 @@ for word_freq in cnt_kitchenpos.items():
     poskitchendict[word_freq[0]] = ratio
 
 
-readpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/all_other_reviews/cellphone_positive_reviews.csv"
+readpath = "~/Documents/Shachi/CMPS209C/reviews/all_other_reviews/cellphone_positive_reviews.csv"
 
 cnt_cellpos = Counter()
 f = open(readpath, "rb")
@@ -108,7 +108,7 @@ for i in range(0, len(lines)):
             cnt_cellpos[word] += 1
             
         
-readpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/all_other_reviews/cellphone_negative_reviews.csv"
+readpath = "~/Documents/Shachi/CMPS209C/reviews/all_other_reviews/cellphone_negative_reviews.csv"
 
 cnt_cellneg = Counter()
 f = open(readpath, "rb")

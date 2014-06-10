@@ -2,14 +2,14 @@ import os
 import shutil
 import csv
 
-src = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Goldstd/Goldstd3/"
-destdir = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds2/"
+src = "~/Documents/Shachi/CMPS209C/reviews/Goldstd/Goldstd3/"
+destdir = "~/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds2/"
 
 
 #collect data folds :
 
 def collect_data_folds():
-	path = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds/"
+	path = "~/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds/"
 
 	list_data = []
 	for i in range(10) :
@@ -27,8 +27,8 @@ def collect_data_folds():
 
 def combine():
 	for j in range(1,11):  
-	    writedir = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds2/fold"+str(j)
-	    writepath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds2/fold"+str(j)+"/all.csv"
+	    writedir = "~/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds2/fold"+str(j)
+	    writepath = "~/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds2/fold"+str(j)+"/all.csv"
 	    ofile = open(writepath, "wb")   
 	    c = csv.writer(ofile, delimiter='\t',quotechar=' ')
 	    for dir_entry in os.listdir(writedir):
@@ -44,8 +44,8 @@ def combine():
 	    ofile.close()
 
 def extract_constant():
-	path = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds/fold"
-	path2 = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
+	path = "~/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds/fold"
+	path2 = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
 	for i in range(1,11):
     readpath = path+str(i)+"/all.csv"
     df = pd.read_csv(readpath, 
@@ -62,7 +62,7 @@ def extract_constant():
               index=False)
 
 def extract_polarity():
-	path = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds2/fold"
+	path = "~/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds2/fold"
 	for i in range(1,11):
 	    readpath = path+str(i)+"/all.csv"
 	    df = pd.read_csv(readpath, 
@@ -78,8 +78,8 @@ def extract_polarity():
 	              sep='\t',
 	              cols = header,
 	              index=False)
-	path1 = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds2/fold"
-	path2 = "/Users/girishsk/Documents/Shachi/CMPS209C/psl-example/data/sentiment/fold"
+	path1 = "~/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds2/fold"
+	path2 = "~/Documents/Shachi/CMPS209C/psl-example/data/sentiment/fold"
 	for i in range(1,11):
 	    readpath = path+str(i)+"/polarity.csv"
 	    df = pd.read_csv(readpath,  
@@ -103,7 +103,7 @@ def extract_polarity():
 	              index=False)
 
 def extract_contrast():
-	path2 = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
+	path2 = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
 	for i in range(1,11):
 
     readpath = path2+str(i)+"/all_contrast.csv"
@@ -128,7 +128,7 @@ def extract_contrast():
               index=False)
         
 def get_allIDs():
-	path2 = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
+	path2 = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
 	for i in range(1,11):
 
     readpath = path2+str(i)+"/all_contrast.csv"
@@ -145,7 +145,7 @@ def get_allIDs():
               index=False)
 
 def contrast_for_psl():
-	path2 = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
+	path2 = "~/Documents/Shachi/CMPS209C/reviews/PSL_data_folds/fold"
 	for i in range(1,11):
     readpath = path2+str(i)+"/contrast.csv"
     writepath = path2+str(i)+"/contrast_ids.csv"
@@ -164,7 +164,7 @@ def contrast_for_psl():
     ofile.close()
     
 def previous_for_psl():
-	path = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds/fold"
+	path = "~/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds/fold"
 	for i in range(1,11):
     readpath = path+str(i)+"/all.csv"
     df = pd.read_csv(readpath, 
@@ -181,7 +181,7 @@ def previous_for_psl():
               index=False)
  
 def text_for_psl():
-	path = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds/fold"
+	path = "~/Documents/Shachi/CMPS209C/reviews/Goldstd_data_folds/fold"
 	for i in range(1,11):
     readpath = path+str(i)+"/all.csv"
     df = pd.read_csv(readpath, 

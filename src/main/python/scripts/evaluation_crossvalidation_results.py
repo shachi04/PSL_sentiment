@@ -1,6 +1,6 @@
 import pandas as pd
 
-readpath = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Results/results.csv"
+readpath = "~/Documents/Shachi/CMPS209C/reviews/Results/results.csv"
 result = pd.read_csv(readpath, sep = '\t')
 
 
