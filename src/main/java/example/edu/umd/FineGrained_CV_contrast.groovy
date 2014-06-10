@@ -44,9 +44,9 @@ import edu.umd.cs.psl.evaluation.statistics.filter.MaxValueFilter
  */
 ConfigManager cm = ConfigManager.getManager()
 ConfigBundle config = cm.getBundle("fine-grained")
-File file1 = new File("/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Results/without_nrc_negation_other_positve/possentiment.csv");
-File file2 = new File("/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Results/without_nrc_negation_other_positve/negsentiment.csv");
-File file3 = new File("/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Results/without_nrc_negation_other_positve/results.csv");
+
+File file3 = new File("/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Results/unigram_negation_contrast/results.csv");
+filename4 = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Results/unigram_negation_contrast/auc.csv"
 /* Uses H2 as a DataStore and stores it in a temp. directory by default */
 def defaultPath = System.getProperty("java.io.tmpdir")
 String dbpath = config.getString("dbpath", defaultPath + File.separator + "fine-grained")
@@ -61,17 +61,22 @@ PSLModel m = new PSLModel(this, data)
 /*
  * Predicates
  */
-m.add predicate: "prev" , types: [ArgumentType.UniqueID, ArgumentType.UniqueID]
 m.add predicate: "contrast" , types: [ArgumentType.UniqueID, ArgumentType.UniqueID]
+m.add predicate: "noncontrast", types:[ArgumentType.UniqueID, ArgumentType.UniqueID]
+
 m.add predicate: "priorpos", types: [ArgumentType.UniqueID]
 m.add predicate: "priorneg", types: [ArgumentType.UniqueID]
 m.add predicate: "subjectivitypos", types: [ArgumentType.UniqueID]
 m.add predicate: "subjectivityneg", types: [ArgumentType.UniqueID]
 m.add predicate: "possentiment", types: [ArgumentType.UniqueID]
 m.add predicate: "negsentiment", types: [ArgumentType.UniqueID]
-m.add predicate: "all", types: [ArgumentType.UniqueID]
 m.add predicate: "nrclexiconpos", types: [ArgumentType.UniqueID]
 m.add predicate: "nrclexiconneg", types: [ArgumentType.UniqueID]
+m.add predicate: "unigrampos", types: [ArgumentType.UniqueID]
+m.add predicate: "unigramneg", types: [ArgumentType.UniqueID]
+
+m.add predicate: "all", types: [ArgumentType.UniqueID]
+
 
 /*
  * Adding rules
@@ -92,6 +97,8 @@ m.add rule : subjectivityneg(A) >> negsentiment(A), weight : 5
 m.add rule : nrclexiconpos(A) >> possentiment(A), weight : 5
 m.add rule : nrclexiconneg(A) >> negsentiment(A), weight : 5
 
+m.add rule : unigrampos(A) >> possentiment(A), weight : 5
+m.add rule : unigramneg(A) >> negsentiment(A), weight : 5
 
 /*
  * Relational feature - contrast
@@ -100,8 +107,11 @@ m.add rule : nrclexiconneg(A) >> negsentiment(A), weight : 5
 // m.add rule : (contrast(A,B) & negsentiment(A) & ( B^A)) >> possentiment(B)  , weight :50
 //
 
-// m.add rule : (contrast(A,B) & possentiment(B) ) >> negsentiment(A)  , weight :50
-// m.add rule : (contrast(A,B) & negsentiment(B) ) >> possentiment(A)  , weight :50
+m.add rule : (contrast(A,B) & possentiment(B) ) >> negsentiment(A)  , weight :10
+m.add rule : (contrast(A,B) & negsentiment(B) ) >> possentiment(A)  , weight :10
+
+m.add rule : (noncontrast(A,B) & possentiment(B) ) >> possentiment(A)  , weight :10
+m.add rule : (noncontrast(A,B) & negsentiment(B) ) >> negsentiment(A)  , weight :10
 
 
 /*
@@ -125,7 +135,16 @@ thresholdList = [0.5,0.45,0.4,0.3]
 
 //for(cvSet =0 ;cvSet<10;++cvSet)
 //{
-cvSet = 0
+cvSet = 9
+folder = (cvSet+10)%10;
+if (folder ==0) folder = 10
+filename1 = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Results/unigram_negation_contrast/fold"+folder+"/possentiment.csv"
+filename2 = "/Users/girishsk/Documents/Shachi/CMPS209C/reviews/Results/unigram_negation_contrast/fold"+folder+"/negsentiment.csv"
+
+
+File file1 = new File(filename1);
+File file2 = new File(filename2);
+File file4 = new File(filename4);
 /*
  * Train data partition, each partition has 9 folders, one kept aside for testing...
  */
@@ -142,21 +161,29 @@ for (trainSet = 1 ; trainSet<=9;++trainSet)
 			filename+"NRC_negation_pos.csv","\t");
 	InserterUtils.loadDelimitedDataTruth(data.getInserter(nrclexiconneg, trainPartition.get(cvSet)),
 			filename+"NRC_negation_neg.csv","\t");
-	InserterUtils.loadDelimitedData(data.getInserter(prev, trainPartition.get(cvSet)), filename+"all_prev.csv");
 
 	InserterUtils.loadDelimitedDataTruth(data.getInserter(subjectivitypos, trainPartition.get(cvSet)),
 			filename+"subjectivity_pos.csv");
-
 	InserterUtils.loadDelimitedDataTruth(data.getInserter(subjectivityneg, trainPartition.get(cvSet)),
 			filename+"subjectivity_neg.csv");
+		
+	InserterUtils.loadDelimitedDataTruth(data.getInserter(unigrampos, trainPartition.get(cvSet)),
+			filename+"unigram_pos_negation.csv","\t");
+	InserterUtils.loadDelimitedDataTruth(data.getInserter(unigramneg, trainPartition.get(cvSet)),
+			filename+"unigram_neg_negation.csv","\t");
+
 	InserterUtils.loadDelimitedDataTruth(data.getInserter(priorpos, trainPartition.get(cvSet)),
 			filename+"wordnet_negation_flipall_softpos.csv","\t");
 	InserterUtils.loadDelimitedDataTruth(data.getInserter(priorneg, trainPartition.get(cvSet)),
 			filename+"wordnet_negation_flipall_softneg.csv","\t");
+		
 	InserterUtils.loadDelimitedData(data.getInserter(all, trainPartition.get(cvSet)), filename+"allID.csv");
+	
 	InserterUtils.loadDelimitedData(data.getInserter(contrast, trainPartition.get(cvSet)),
 			filename+"contrast_ids.csv");
-
+	InserterUtils.loadDelimitedData(data.getInserter(noncontrast, trainPartition.get(cvSet)),
+			filename+"noncontrast_ids.csv");
+		
 	InserterUtils.loadDelimitedData(data.getInserter(negsentiment, trueDataPartition.get(cvSet)),
 			filename+"trueneg_other.csv");
 	InserterUtils.loadDelimitedData(data.getInserter(possentiment, trueDataPartition.get(cvSet)),
@@ -171,7 +198,6 @@ testSet = (cvSet+10)%10
 if(testSet==0) testSet = 10;
 filename = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold'+testSet+java.io.File.separator;
 
-InserterUtils.loadDelimitedData(data.getInserter(prev, testDataPartition.get(cvSet)), filename+"all_prev.csv");
 
 InserterUtils.loadDelimitedDataTruth(data.getInserter(subjectivitypos,
 		testDataPartition.get(cvSet)), filename+"subjectivity_pos.csv");
@@ -179,37 +205,42 @@ InserterUtils.loadDelimitedDataTruth(data.getInserter(subjectivitypos,
 InserterUtils.loadDelimitedDataTruth(data.getInserter(subjectivityneg,
 		testDataPartition.get(cvSet)), filename+"subjectivity_neg.csv");
 
+InserterUtils.loadDelimitedDataTruth(data.getInserter(unigrampos, testDataPartition.get(cvSet)),
+		filename+"unigram_pos_negation.csv","\t");
+InserterUtils.loadDelimitedDataTruth(data.getInserter(unigramneg, testDataPartition.get(cvSet)),
+		filename+"unigram_neg_negation.csv","\t");
+
 
 InserterUtils.loadDelimitedDataTruth(data.getInserter(nrclexiconpos, testDataPartition.get(cvSet)),
 		filename+"NRC_negation_pos.csv","\t");
 InserterUtils.loadDelimitedDataTruth(data.getInserter(nrclexiconneg, testDataPartition.get(cvSet)),
 		filename+"NRC_negation_neg.csv","\t");
+	
 InserterUtils.loadDelimitedDataTruth(data.getInserter(priorpos, testDataPartition.get(cvSet)),
 		filename+"wordnet_negation_flipall_softpos.csv","\t");
-
 InserterUtils.loadDelimitedDataTruth(data.getInserter(priorneg, testDataPartition.get(cvSet)),
 		filename+"wordnet_negation_flipall_softneg.csv","\t");
 
 InserterUtils.loadDelimitedData(data.getInserter(all, testDataPartition.get(cvSet)), filename+"allID.csv");
 
-InserterUtils.loadDelimitedData(data.getInserter(contrast, testDataPartition.get(cvSet)), 
-	filename+"contrast_ids.csv");
+InserterUtils.loadDelimitedData(data.getInserter(contrast, testDataPartition.get(cvSet)),
+		filename+"contrast_ids.csv");
+InserterUtils.loadDelimitedData(data.getInserter(noncontrast, testDataPartition.get(cvSet)),
+		filename+"noncontrast_ids.csv");
+	
+InserterUtils.loadDelimitedData(data.getInserter(possentiment, trueTestDataPartition.get(cvSet)),
+		filename+"truepos_other.csv");
 
-InserterUtils.loadDelimitedData(data.getInserter(possentiment, trueTestDataPartition.get(cvSet)), 
-	filename+"truepos_other.csv");
-
-InserterUtils.loadDelimitedData(data.getInserter(negsentiment, trueTestDataPartition.get(cvSet)), 
-	filename+"trueneg_other.csv");
+InserterUtils.loadDelimitedData(data.getInserter(negsentiment, trueTestDataPartition.get(cvSet)),
+		filename+"trueneg_other.csv");
 
 
 Database trainDB = data.getDatabase(trainPartition.get(cvSet),
-		[Contrast, Prev,Priorpos, Priorneg,Nrclexiconneg,Nrclexiconpos,Subjectivityneg,Subjectivitypos, All] as Set);
+		[Contrast, Noncontrast,Priorpos, Priorneg,Unigrampos, Unigramneg,
+			Nrclexiconneg,Nrclexiconpos,Subjectivityneg,Subjectivitypos, All] as Set);
 
 ResultList allGroundings1 = trainDB.executeQuery(Queries.getQueryForAllAtoms(contrast))
 println "groundings for contrast" +allGroundings1.size();
-allGroundings1 = trainDB.executeQuery(Queries.getQueryForAllAtoms(prev))
-println "groundings for prev" +allGroundings1.size();
-
 
 /*
  * Setting the predicates possentiment and negsentiment to an initial value for all groundings
@@ -248,7 +279,7 @@ println (m)
 /*Test database setup*/
 
 Database testDB = data.getDatabase(testDataPartition.get(cvSet),
-		[Contrast, Prev, Priorpos, Priorneg,Nrclexiconneg,Nrclexiconpos,Subjectivityneg,
+		[Contrast, Noncontrast, Priorpos, Priorneg,Unigrampos, Unigramneg,Nrclexiconneg,Nrclexiconpos,Subjectivityneg,
 			Subjectivitypos, All] as Set);
 ResultList groundings = testDB.executeQuery(Queries.getQueryForAllAtoms(all))
 print groundings.size();
@@ -269,7 +300,7 @@ inferenceApp.close();
 
 
 println "test results";
-file1.append("Partition:" + testDataPartition.get(cvSet)+"\n")
+//file1.append("Partition:" + testDataPartition.get(cvSet)+"\n")
 count = 0
 println "Inference results with hand-defined weights:"
 for (GroundAtom atom : Queries.getAllAtoms(testDB, possentiment)){
@@ -281,7 +312,7 @@ for (GroundAtom atom : Queries.getAllAtoms(testDB, possentiment)){
 println count
 
 count = 0
-file2.append("Partition:" + testDataPartition.get(cvSet)+"\n")
+//file2.append("Partition:" + testDataPartition.get(cvSet)+"\n")
 println "Inference results with hand-defined weights:"
 for (GroundAtom atom : Queries.getAllAtoms(testDB, negsentiment))
 {
@@ -304,42 +335,46 @@ groundings1 = Queries.getAllAtoms(trueTestDB, negsentiment)
 int totalNegTestExamples = groundings1.size()
 println "negsentiment total: "+totalNegTestExamples
 
-/*	def comparator = new SimpleRankingComparator(testDB)
- comparator.setBaseline(trueTestDB)
- file3.append("\n\n TEST RESULTS FOR TESTING ON FOLD "+(cvSet+1) +"\n")
- // Choosing what metrics to report
- def metrics = [ RankingScore.AUPRC, RankingScore.NegAUPRC,  RankingScore.AreaROC]
- double [] score = new double[metrics.size()]
- double [] score2 = new double[metrics.size()]
- try {
- for (j = 0; j < metrics.size(); j++) {
- comparator.setRankingScore(metrics.get(j))
- score[j] = comparator.compare(possentiment)
- }
- file3.append("\n \n Writing possentiment AUC scores"+"\n")
- file3.append("\nArea under positive-class PR curve: " + score[0]+"\n")
- file3.append("Area under negetive-class PR curve: " + score[1]+"\n")
- file3.append("Area under ROC curve: " + score[2]+"\n")
- }
- catch (ArrayIndexOutOfBoundsException e) {
- System.out.println("No evaluation data! Terminating!");
- }
- comparator.setBaseline(trueTestDB)
- // Choosing what metrics to report
- try {
- for (j = 0; j < metrics.size(); j++) {
- comparator.setRankingScore(metrics.get(j))
- score2[j] = comparator.compare(negsentiment)
- }
- file3.append("\nArea under positive-class PR curve: " + score2[0]+"\n")
- file3.append("Area under negetive-class PR curve: " + score2[1]+"\n")
- file3.append("Area under ROC curve: " + score2[2]+"\n")
- println "Written neg AUC to file3!! "
- }
- catch (ArrayIndexOutOfBoundsException e) {
- System.out.println("No evaluation data! Terminating!");
- }
- */
+//file4.append("Testfold" +"\t"+ "sentiment" +"\t"+ "AUPRC" +"\t"+ "NEGAUPRC"+"\t"+"AreaROC \n")
+def comparator = new SimpleRankingComparator(testDB)
+comparator.setBaseline(trueTestDB)
+
+// Choosing what metrics to report
+def metrics = [ RankingScore.AUPRC, RankingScore.NegAUPRC,  RankingScore.AreaROC]
+double [] score = new double[metrics.size()]
+double [] score2 = new double[metrics.size()]
+try {
+	for (j = 0; j < metrics.size(); j++) {
+		comparator.setRankingScore(metrics.get(j))
+		score[j] = comparator.compare(possentiment)
+		score2[j] = comparator.compare(negsentiment)	
+	}
+	file4.append(testSet +"\t"+ "possentiment" +"\t"+ score[0] +"\t"+ score[1]+"\t"+score[2]+"\n")
+	file4.append(testSet +"\t"+ "negsentiment" +"\t"+ score2[0] +"\t"+ score2[1]+"\t"+score2[2]+"\n")
+//	file3.append("\nArea under positive-class PR curve: " + score[0]+"\n")
+//	file3.append("Area under negetive-class PR curve: " + score[1]+"\n")
+//	file3.append("Area under ROC curve: " + score[2]+"\n")
+}
+catch (ArrayIndexOutOfBoundsException e) {
+	System.out.println("No evaluation data! Terminating!");
+}
+//comparator.setBaseline(trueTestDB)
+//// Choosing what metrics to report
+//try {
+//	for (j = 0; j < metrics.size(); j++) {
+//		comparator.setRankingScore(metrics.get(j))
+//		
+//	}
+//	
+////	file3.append("\nArea under positive-class PR curve: " + score2[0]+"\n")
+////	file3.append("Area under negetive-class PR curve: " + score2[1]+"\n")
+////	file3.append("Area under ROC curve: " + score2[2]+"\n")
+////	println "Written neg AUC to file3!! "
+//}
+//catch (ArrayIndexOutOfBoundsException e) {
+//	System.out.println("No evaluation data! Terminating!");
+//}
+
 Set<GroundAtom> groundings3 = Queries.getAllAtoms(trueTestDB, possentiment)
 int totalPosTestExamples3 = groundings3.size()
 
