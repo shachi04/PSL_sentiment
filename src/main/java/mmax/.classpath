@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/CMPS209C/Datasets/1.13.003/MMAX2/Libs/MMAX2.jar" sourcepath="/Users/girishsk/.m2/repository/net/sf/mmax2/mmax2/1.13.003b/mmax2-1.13.003b-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/CMPS209C/Datasets/1.13.003/MMAX2/Libs/annotationdiffplugin.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/CMPS209C/Datasets/1.13.003/MMAX2/Libs/batik-1.5.1/batik-awt-util.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/CMPS209C/Datasets/1.13.003/MMAX2/Libs/batik-1.5.1/batik-dom.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/CMPS209C/Datasets/1.13.003/MMAX2/Libs/batik-1.5.1/batik-svggen.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/CMPS209C/Datasets/1.13.003/MMAX2/Libs/batik-1.5.1/batik-util.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/CMPS209C/Datasets/1.13.003/MMAX2/Libs/batik-1.5.1/batik-xml.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/CMPS209C/Datasets/1.13.003/MMAX2/Libs/xerces-2_0_2/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/CMPS209C/Datasets/1.13.003/MMAX2/Libs/xerces-2_0_2/xmlParserAPIs.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/CMPS209C/Datasets/1.13.003/MMAX2/Libs/xalan-j_2_4_D1/xalan.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/CMPS209C/Datasets/1.13.003/MMAX2/Libs/xalan-j_2_4_D1/xml-apis.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/CMPS209C/Datasets/1.13.003/MMAX2/Libs/jakarta-oro-2.0.8/jakarta-oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/CMPS209C/discourse_parse_dist/tools/stanford_parser/stanford-parser.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/Documents/javacsv2.1/javacsv.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
