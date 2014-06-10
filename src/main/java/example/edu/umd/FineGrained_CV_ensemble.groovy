@@ -476,7 +476,6 @@ for (threshold in thresholdList)
 
 
 trueDataDB.close();
-
 trainDB.close();
 testDB.close();
 trueTestDB.close();

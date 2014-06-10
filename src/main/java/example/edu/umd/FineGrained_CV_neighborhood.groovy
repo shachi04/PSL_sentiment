@@ -245,17 +245,12 @@ InserterUtils.loadDelimitedData(data.getInserter(all, testDataPartition.get(cvSe
  * Load in the ground truth positive and negative segments
  */
 InserterUtils.loadDelimitedData(data.getInserter(possentiment, trueTestDataPartition.get(cvSet)), filename+"truepos_other.csv");
-
 InserterUtils.loadDelimitedData(data.getInserter(negsentiment, trueTestDataPartition.get(cvSet)), filename+"trueneg_other.csv");
 
 
 Database trainDB = data.getDatabase(trainPartition.get(cvSet), [ Prev,Tglpos, Tglneg, Priorpos, Priorneg,Unigramneg,
 	Unigrampos,Nrclexiconneg,Nrclexiconpos,Subjectivityneg,Subjectivitypos, All] as Set);
-//	[Contrast, Prev,Priorpos, Priorneg,Unigramneg, Unigrampos, All] as Set);
 
-
-//ResultList allGroundings1 = trainDB.executeQuery(Queries.getQueryForAllAtoms(contrast))
-//println "groundings for contrast" +allGroundings1.size();
 allGroundings1 = trainDB.executeQuery(Queries.getQueryForAllAtoms(prev))
 println "groundings for prev" +allGroundings1.size();
 
