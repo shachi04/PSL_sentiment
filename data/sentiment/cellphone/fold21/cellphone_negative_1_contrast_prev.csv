@@ -1,0 +1,255 @@
+1_cell_neg_1	negative	False	1_cell_neg_0	In summary , Microsoft 's software and T-Mobile 's service have ruined a brilliant design -LRB- although with a couple of flaws -RRB-
+1_cell_neg_2	negative	False	1_cell_neg_1	from HTC .
+1_cell_neg_3	negative	False	1_cell_neg_2	There are many pros and cons about this device and the service that it is shackled to .
+1_cell_neg_4	negative	False	1_cell_neg_3	I will break it down to Hardware , Software and Cell Phone Service Provider .
+1_cell_neg_5	positive	False	1_cell_neg_4	Hardware Pro 's :
+1_cell_neg_6	positive	False	1_cell_neg_5	A lot has been written about this aspect of the device , so I ` ll keep this to a minimum - The best form factor
+1_cell_neg_7	positive	False	1_cell_neg_6	I ` ve ever seen .
+1_cell_neg_8	positive	False	1_cell_neg_7	This device provides you the power of a Blackberry without the bulky hardware
+1_cell_neg_9	positive	False	1_cell_neg_8	so I can put it in my pocket comfortably
+1_cell_neg_10	positive	False	1_cell_neg_9	and not have to look like a geek with the belt holster .
+1_cell_neg_11	positive	False	1_cell_neg_10	- A key selling point for me was the combined Bluetooth , Wi-Fi and quad-band connectivity
+1_cell_neg_12	positive	False	1_cell_neg_11	that enabled me to connect a wireless headset , cruise web pages
+1_cell_neg_13	positive	False	1_cell_neg_12	and have access
+1_cell_neg_14	positive	False	1_cell_neg_13	to email
+1_cell_neg_15	positive	False	1_cell_neg_14	when in the US or Europe .
+1_cell_neg_16	positive	False	1_cell_neg_15	- The phone quality is excellent .
+1_cell_neg_17	positive	False	1_cell_neg_16	- The keyboard layout is excellent and easy to use for medium sized emails .
+1_cell_neg_18	positive	False	1_cell_neg_17	- The battery life is great
+1_cell_neg_19	positive	False	1_cell_neg_18	when Wi-Fi is not enabled and adequate
+1_cell_neg_20	positive	False	1_cell_neg_19	when it is .
+1_cell_neg_21	positive	False	1_cell_neg_20	-LRB- I ` ve rarely struggled with a dying battery . -RRB- Stand-by
+1_cell_neg_22	positive	False	1_cell_neg_21	power management appears to be excellent .
+1_cell_neg_23	positive	False	1_cell_neg_22	- Charging of the device is very quick .
+1_cell_neg_24	positive	False	1_cell_neg_23	- The display ,
+1_cell_neg_25	negative	False	1_cell_neg_24	while a little small ,
+1_cell_neg_26	positive	False	1_cell_neg_25	is crystal clear and surprisingly easy to use given its size .
+1_cell_neg_27	positive	False	1_cell_neg_26	- The camera is pretty good and it 's been really great
+1_cell_neg_28	positive	False	1_cell_neg_27	emailing photo 's to people as I 'm traveling around .
+1_cell_neg_29	negative	False	1_cell_neg_28	After all of the cons
+1_cell_neg_30	negative	False	1_cell_neg_29	that you ` ll read below you
+1_cell_neg_31	negative	False	1_cell_neg_30	` ll wonder
+1_cell_neg_32	negative	False	1_cell_neg_31	why I ever bought the device
+1_cell_neg_33	negative	False	1_cell_neg_32	and why I still use it .
+1_cell_neg_34	negative	False	1_cell_neg_33	Well here it is :
+1_cell_neg_35	negative	False	1_cell_neg_34	1 . T-Mobile locked me into a 2 year contract on a very expensive device .
+1_cell_neg_36	positive	False	1_cell_neg_35	2 . It has great hardware
+1_cell_neg_37	positive	False	1_cell_neg_36	that I can use in the US and Europe ,
+1_cell_neg_38	negative	False	1_cell_neg_37	I 'm just hoping
+1_cell_neg_39	negative	False	1_cell_neg_38	that Microsoft will finally get
+1_cell_neg_40	negative	False	1_cell_neg_39	it right .
+1_cell_neg_41	negative	False	1_cell_neg_40	Hardware Con 's
+1_cell_neg_42	negative	False	1_cell_neg_41	- The touch sensitive volume button is the most ill-conceived feature
+1_cell_neg_43	positive	False	1_cell_neg_42	I ` ve ever seen .
+1_cell_neg_44	negative	True	1_cell_neg_43	Even after playing around with various settings
+1_cell_neg_45	negative	False	1_cell_neg_44	it is still hard to quickly set the volume at the desired level .
+1_cell_neg_46	negative	False	1_cell_neg_45	Even worse ,
+1_cell_neg_47	negative	False	1_cell_neg_46	when using the phone your ear or finger can inadvertently hit the control
+1_cell_neg_48	negative	False	1_cell_neg_47	and randomly change the volume .
+1_cell_neg_49	negative	False	1_cell_neg_48	- The TI OMAP 850 at 201MHz is not beefy enough for the software
+1_cell_neg_50	negative	False	1_cell_neg_49	that is loaded onto the device .
+1_cell_neg_51	negative	False	1_cell_neg_50	However ,
+1_cell_neg_52	negative	False	1_cell_neg_51	the blame could well be laid at Microsoft 's door for writing inefficient code
+1_cell_neg_53	negative	False	1_cell_neg_52	and having poor scheduling software between tasks and applications .
+1_cell_neg_54	negative	False	1_cell_neg_53	Either way , performance is very slow for some basic functions
+1_cell_neg_55	negative	False	1_cell_neg_54	-LRB- see below -RRB-
+1_cell_neg_56	negative	False	1_cell_neg_55	and
+1_cell_neg_57	negative	False	1_cell_neg_56	I 'm afraid
+1_cell_neg_58	negative	False	1_cell_neg_57	some of the blame needs to be laid at the choice of processor .
+1_cell_neg_59	positive	False	1_cell_neg_58	Software Pro 's
+1_cell_neg_60	negative	False	1_cell_neg_59	- Not many
+1_cell_neg_61	negative	False	1_cell_neg_60	that really come to mind .
+1_cell_neg_62	negative	False	1_cell_neg_61	Software Con 's
+1_cell_neg_63	negative	False	1_cell_neg_62	-LRB- I hope
+1_cell_neg_64	negative	False	1_cell_neg_63	you ` re sitting comfortably -RRB-
+1_cell_neg_65	negative	False	1_cell_neg_64	-
+1_cell_neg_66	negative	False	1_cell_neg_65	When a call is on call
+1_cell_neg_67	negative	False	1_cell_neg_66	waiting the phone fails to give an option to the user to select which call to take and
+1_cell_neg_68	negative	False	1_cell_neg_67	which call to put on hold or drop\/ignore .
+1_cell_neg_69	negative	False	1_cell_neg_68	On the occasions
+1_cell_neg_70	negative	False	1_cell_neg_69	this problem has occurred with me the call
+1_cell_neg_71	negative	False	1_cell_neg_70	that is dropped\/kept appears random with a preference to switch to the incoming call no matter
+1_cell_neg_72	negative	False	1_cell_neg_71	what is depressed .
+1_cell_neg_73	negative	False	1_cell_neg_72	The other call is dropped and not put on hold .
+1_cell_neg_74	negative	False	1_cell_neg_73	-
+1_cell_neg_75	negative	False	1_cell_neg_74	When a call is incoming
+1_cell_neg_76	negative	False	1_cell_neg_75	and the keyboard is locked ,
+1_cell_neg_77	negative	False	1_cell_neg_76	if the user depresses the green phone key the call is dropped .
+1_cell_neg_78	negative	False	1_cell_neg_77	This is extremely counter intuitive .
+1_cell_neg_79	negative	False	1_cell_neg_78	"If the user presses anything other than the "" answer "" key the call is dropped and sometimes the call has been dropped even"
+1_cell_neg_80	negative	False	1_cell_neg_79	"when I have depressed the "" answer "" key ."
+1_cell_neg_81	negative	False	1_cell_neg_80	- The contacts database is extremely rudimentary with a very limited number of views and filters
+1_cell_neg_82	negative	False	1_cell_neg_81	that can be used .
+1_cell_neg_83	negative	False	1_cell_neg_82	Even worse , upon selection , the contacts database takes between 5 and 8 seconds
+1_cell_neg_84	negative	False	1_cell_neg_83	to open .
+1_cell_neg_85	negative	False	1_cell_neg_84	Now ,
+1_cell_neg_86	negative	True	1_cell_neg_85	I have what some would call a large database of contacts ,
+1_cell_neg_87	negative	False	1_cell_neg_86	but considering
+1_cell_neg_88	negative	False	1_cell_neg_87	that the Palm OS version responded immediately with a far more sophisticated use model this excuse does not wash .
+1_cell_neg_89	negative	False	1_cell_neg_88	It 's simply a poorly architected database .
+1_cell_neg_90	negative	False	1_cell_neg_89	- The user interface for entering a new contact is rudimentary
+1_cell_neg_91	negative	False	1_cell_neg_90	-LRB- as are all dialog windows on this device . -RRB-
+1_cell_neg_92	negative	False	1_cell_neg_91	- One of the most annoying aspects of this device is the alarm clock .
+1_cell_neg_93	negative	False	1_cell_neg_92	The user interface looks like it was written in 10 minutes
+1_cell_neg_94	negative	False	1_cell_neg_93	and was clearly not verified for correctness .
+1_cell_neg_95	negative	False	1_cell_neg_94	The digital watch I had in 1982 had the same degree of sophistication
+1_cell_neg_96	negative	False	1_cell_neg_95	but with a more intuitive use model
+1_cell_neg_97	negative	False	1_cell_neg_96	and was more thoroughly debugged .
+1_cell_neg_98	negative	False	1_cell_neg_97	First of all , the user only gets to select a time and if the alarm is on or off .
+1_cell_neg_99	negative	False	1_cell_neg_98	From the interface
+1_cell_neg_100	negative	False	1_cell_neg_99	you would assume you could only set a single alarm . . .
+1_cell_neg_101	negative	False	1_cell_neg_100	if only it were that obvious .
+1_cell_neg_102	negative	False	1_cell_neg_101	The best way to explain this buggy piece of software is with an example :
+1_cell_neg_103	negative	False	1_cell_neg_102	I set the alarm for 6am ;
+1_cell_neg_104	negative	False	1_cell_neg_103	the next day the alarm goes off at 6am .
+1_cell_neg_105	negative	False	1_cell_neg_104	That day I set the alarm for 7am -
+1_cell_neg_106	negative	False	1_cell_neg_105	the following day the alarm goes off at 6am and 7am .
+1_cell_neg_107	negative	False	1_cell_neg_106	The next day I set the alarm for 7:30 am and you guessed it ,
+1_cell_neg_108	negative	False	1_cell_neg_107	the alarm now goes off three times .
+1_cell_neg_109	negative	False	1_cell_neg_108	The best that I ` ve been able to deduce
+1_cell_neg_110	negative	False	1_cell_neg_109	-LRB- of course , this type of behavior
+1_cell_neg_111	negative	False	1_cell_neg_110	is not documented in the user manual
+1_cell_neg_112	negative	False	1_cell_neg_111	that comes with the device -RRB-
+1_cell_neg_113	negative	False	1_cell_neg_112	"is that the user has to actively select "" off "" for the current setting"
+1_cell_neg_114	negative	False	1_cell_neg_113	"before setting "" on "" for the new time ."
+1_cell_neg_115	negative	False	1_cell_neg_114	But there is no indication of what alarms are set , so after a while or a particularly busy week you can loose track of what 's set and what is n't . . . the only way to clear all of the alarms
+1_cell_neg_116	negative	False	1_cell_neg_115	that have been set is a hard re-boot .
+1_cell_neg_117	negative	False	1_cell_neg_116	- The calculator is a joke .
+1_cell_neg_118	negative	False	1_cell_neg_117	If this took an engineer 10 minutes to write they should be fired .
+1_cell_neg_119	positive	False	1_cell_neg_118	A calculator watch in the ' 80 's had more sophisticated features .
+1_cell_neg_120	negative	False	1_cell_neg_119	The user interface is so bad
+1_cell_neg_121	negative	False	1_cell_neg_120	it 's hard to describe it in words .
+1_cell_neg_122	negative	False	1_cell_neg_121	- Microsoft truly does not understand
+1_cell_neg_123	negative	False	1_cell_neg_122	how a user would like to use the device
+1_cell_neg_124	negative	False	1_cell_neg_123	and instead insists on using the same usage model
+1_cell_neg_125	negative	False	1_cell_neg_124	that they ` ve inflicted upon us since Windows 95 .
+1_cell_neg_126	negative	False	1_cell_neg_125	Most features or function have to be navigated through the Start menu button .
+1_cell_neg_127	negative	False	1_cell_neg_126	Applications are nested and features are hidden behind several annoying menu selections .
+1_cell_neg_128	negative	True	1_cell_neg_127	Some features are simply hard to find ,
+1_cell_neg_129	negative	False	1_cell_neg_128	but should it really take so many menu selections
+1_cell_neg_130	negative	False	1_cell_neg_129	to find common tools or applications ?
+1_cell_neg_131	negative	False	1_cell_neg_130	- The use of alarms or reminders is ambiguous -
+1_cell_neg_132	negative	False	1_cell_neg_131	"to put the device in "" Silent "" mode ,"
+1_cell_neg_133	negative	False	1_cell_neg_132	but leave alarms on
+1_cell_neg_134	negative	False	1_cell_neg_133	because you want to sleep and only want your alarm to wake
+1_cell_neg_135	negative	False	1_cell_neg_134	you
+1_cell_neg_136	negative	False	1_cell_neg_135	up , for example ,
+1_cell_neg_137	negative	False	1_cell_neg_136	does not work .
+1_cell_neg_138	negative	False	1_cell_neg_137	Calendar reminders will be active
+1_cell_neg_139	negative	False	1_cell_neg_138	as they are assigned the alarm property instead of their own or the notification property .
+1_cell_neg_140	negative	False	1_cell_neg_139	The only way around this is to cancel reminders for all day events . . .
+1_cell_neg_141	negative	False	1_cell_neg_140	otherwise
+1_cell_neg_142	negative	False	1_cell_neg_141	you get an alarm at midnight .
+1_cell_neg_143	positive	False	1_cell_neg_142	- So ,
+1_cell_neg_144	positive	False	1_cell_neg_143	on my Nokia phone a thousand years ago ,
+1_cell_neg_145	positive	False	1_cell_neg_144	when I went to Europe my phone would have a simple selection for the new frequency
+1_cell_neg_146	positive	False	1_cell_neg_145	I needed
+1_cell_neg_147	positive	False	1_cell_neg_146	once landed .
+1_cell_neg_148	positive	False	1_cell_neg_147	The phone would then automatically connect to the provider available .
+1_cell_neg_149	negative	True	1_cell_neg_148	It was n't completely automatic ,
+1_cell_neg_150	positive	False	1_cell_neg_149	but the user interaction was simple and intuitive .
+1_cell_neg_151	negative	False	1_cell_neg_150	Not with the Dash .
+1_cell_neg_152	negative	False	1_cell_neg_151	First of all T-Mobile does n't help by keeping a radio button on your online account that you have to select to enable international roaming .
+1_cell_neg_153	negative	False	1_cell_neg_152	The feature is free
+1_cell_neg_154	negative	False	1_cell_neg_153	so why not add a selection anyway ?
+1_cell_neg_155	negative	False	1_cell_neg_154	All you know
+1_cell_neg_156	negative	False	1_cell_neg_155	when you get to your destination is that your phone wo n't connect to the local network no matter
+1_cell_neg_157	negative	False	1_cell_neg_156	what you do .
+1_cell_neg_158	negative	False	1_cell_neg_157	Now ,
+1_cell_neg_159	negative	False	1_cell_neg_158	assuming
+1_cell_neg_160	negative	False	1_cell_neg_159	that you worked this out ,
+1_cell_neg_161	negative	False	1_cell_neg_160	you are now faced with the challenge of actually connecting to the local provider 's network .
+1_cell_neg_162	positive	True	1_cell_neg_161	On my Blackberry this was automatic ,
+1_cell_neg_163	negative	False	1_cell_neg_162	but of course with Microsoft
+1_cell_neg_164	negative	False	1_cell_neg_163	there are selections to make , searches to activate and various other contortions
+1_cell_neg_165	negative	False	1_cell_neg_164	that need to be gone through before you connect to the provider of choice .
+1_cell_neg_166	negative	False	1_cell_neg_165	Assuming that you get
+1_cell_neg_167	negative	False	1_cell_neg_166	connected at all .
+1_cell_neg_168	negative	False	1_cell_neg_167	- ActiveSync :
+1_cell_neg_169	negative	False	1_cell_neg_168	This is the most annoying piece of software in that it just does not work .
+1_cell_neg_170	negative	False	1_cell_neg_169	Worse still ,
+1_cell_neg_171	negative	False	1_cell_neg_170	when it does not work it gives a cryptic error message
+1_cell_neg_172	negative	False	1_cell_neg_171	stating that an error has occurred and some data will be lost next time you perform synchronization .
+1_cell_neg_173	negative	False	1_cell_neg_172	It does not provide you with a fix , a hint or a path so that you do n't lose data .
+1_cell_neg_174	negative	False	1_cell_neg_173	It does not even tell you the data
+1_cell_neg_175	negative	False	1_cell_neg_174	that was lost .
+1_cell_neg_176	positive	False	1_cell_neg_175	So ,
+1_cell_neg_177	negative	False	1_cell_neg_176	I 'm using a Microsoft Mobile OS with Microsoft XP and Microsoft Outlook
+1_cell_neg_178	negative	False	1_cell_neg_177	and they ca n't get that right ?
+1_cell_neg_179	negative	False	1_cell_neg_178	-LRB- OK ,
+1_cell_neg_180	negative	False	1_cell_neg_179	it maybe serves me right for signing up to so much Microsoft ,
+1_cell_neg_181	negative	True	1_cell_neg_180	but come on . -RRB-
+1_cell_neg_182	negative	False	1_cell_neg_181	This was another primary purchasing driver for me .
+1_cell_neg_183	negative	False	1_cell_neg_182	I am very busy and want to have my schedule up to date between my PC and PDA - all the time .
+1_cell_neg_184	negative	False	1_cell_neg_183	It 's the only way to keep organized .
+1_cell_neg_185	negative	False	1_cell_neg_184	I thought that with the same provider of all the software
+1_cell_neg_186	negative	False	1_cell_neg_185	I 'd be OK .
+1_cell_neg_187	negative	False	1_cell_neg_186	Also ,
+1_cell_neg_188	negative	False	1_cell_neg_187	as this feature has been around for over a decade from Palm
+1_cell_neg_189	negative	False	1_cell_neg_188	and perfected by Blackberry . . .
+1_cell_neg_190	negative	False	1_cell_neg_189	how hard can it be ?
+1_cell_neg_191	negative	True	1_cell_neg_190	There are probably annoying nits that I have with the software ,
+1_cell_neg_192	negative	False	1_cell_neg_191	but those are the major ones .
+1_cell_neg_193	negative	False	1_cell_neg_192	And they are major .
+1_cell_neg_194	negative	False	1_cell_neg_193	Considering this is Windows Mobile 5.0 what on earth were they
+1_cell_neg_195	negative	False	1_cell_neg_194	doing for 1.0 , 2.0 ,
+1_cell_neg_196	negative	False	1_cell_neg_195	etc . ?
+1_cell_neg_197	negative	False	1_cell_neg_196	Service Provider Pro
+1_cell_neg_198	negative	False	1_cell_neg_197	- T-Mobile is useful to me for traveling in Europe .
+1_cell_neg_199	negative	False	1_cell_neg_198	They have much better coverage over there than in the US
+1_cell_neg_200	negative	False	1_cell_neg_199	-LRB-
+1_cell_neg_201	negative	False	1_cell_neg_200	where I 'm actually paying -RRB- .
+1_cell_neg_202	negative	False	1_cell_neg_201	- Their package is competitive .
+1_cell_neg_203	negative	False	1_cell_neg_202	Service Provider Con :
+1_cell_neg_204	negative	False	1_cell_neg_203	- Coverage is not good enough .
+1_cell_neg_205	negative	False	1_cell_neg_204	I 'm in San Francisco
+1_cell_neg_206	negative	False	1_cell_neg_205	and I have dead spots in my house .
+1_cell_neg_207	negative	False	1_cell_neg_206	- Their back-end connectivity with your email providers is terribly buggy .
+1_cell_neg_208	negative	False	1_cell_neg_207	At random times
+1_cell_neg_209	negative	False	1_cell_neg_208	you will get cryptic messages
+1_cell_neg_210	negative	False	1_cell_neg_209	saying
+1_cell_neg_211	negative	False	1_cell_neg_210	that you must have something wrong with your connection
+1_cell_neg_212	negative	False	1_cell_neg_211	and emails ca n't be accessed .
+1_cell_neg_213	negative	False	1_cell_neg_212	But you know
+1_cell_neg_214	negative	False	1_cell_neg_213	there 's nothing
+1_cell_neg_215	negative	False	1_cell_neg_214	wrong with your connection
+1_cell_neg_216	negative	False	1_cell_neg_215	because you ` ve been on the browser .
+1_cell_neg_217	negative	False	1_cell_neg_216	Also ,
+1_cell_neg_218	negative	False	1_cell_neg_217	there was a whole day
+1_cell_neg_219	negative	False	1_cell_neg_218	that emails were not accessible .
+1_cell_neg_220	negative	False	1_cell_neg_219	Because of the many issues
+1_cell_neg_221	negative	False	1_cell_neg_220	that I 'd
+1_cell_neg_222	negative	False	1_cell_neg_221	had with email
+1_cell_neg_223	negative	False	1_cell_neg_222	set up
+1_cell_neg_224	negative	False	1_cell_neg_223	and maintaining a connection
+1_cell_neg_225	negative	False	1_cell_neg_224	I went through various debug routines
+1_cell_neg_226	negative	False	1_cell_neg_225	wondering what had failed .
+1_cell_neg_227	negative	False	1_cell_neg_226	When I finally called technical support
+1_cell_neg_228	negative	False	1_cell_neg_227	they told me
+1_cell_neg_229	negative	False	1_cell_neg_228	that their service was down - no apology , no notification , no nothing .
+1_cell_neg_230	negative	False	1_cell_neg_229	Certainly no minutes to make up for the inconvenience .
+1_cell_neg_231	negative	False	1_cell_neg_230	-LRB- So ,
+1_cell_neg_232	negative	False	1_cell_neg_231	why did n't I call technical support earlier ?
+1_cell_neg_233	negative	False	1_cell_neg_232	read below . . . -RRB-
+1_cell_neg_234	negative	False	1_cell_neg_233	- Their technical support structure is terrible .
+1_cell_neg_235	negative	False	1_cell_neg_234	"I have collectively wasted over 12 hours of my life on their "" help "" line ."
+1_cell_neg_236	negative	False	1_cell_neg_235	I 'm not going to go into details as it would just take too long .
+1_cell_neg_237	negative	False	1_cell_neg_236	Bottom line ,
+1_cell_neg_238	negative	False	1_cell_neg_237	if you have a problem with your phone say
+1_cell_neg_239	negative	False	1_cell_neg_238	"Dash "" at the prompt"
+1_cell_neg_240	negative	False	1_cell_neg_239	and
+1_cell_neg_241	negative	False	1_cell_neg_240	then ask for Tier Three Data support .
+1_cell_neg_242	negative	False	1_cell_neg_241	Everything you get
+1_cell_neg_243	negative	False	1_cell_neg_242	before that is a waste of your time as the technicians
+1_cell_neg_244	negative	False	1_cell_neg_243	you ` ll encounter have inadequate training .
+1_cell_neg_245	negative	False	1_cell_neg_244	If you are then put on hold and are given another number
+1_cell_neg_246	negative	False	1_cell_neg_245	to dial - DO NOT DO IT -
+1_cell_neg_247	negative	False	1_cell_neg_246	This cycles
+1_cell_neg_248	negative	False	1_cell_neg_247	you back around to Tier Two Data Support
+1_cell_neg_249	negative	False	1_cell_neg_248	and you have to go back to the back of the line for someone
+1_cell_neg_250	negative	False	1_cell_neg_249	that understands the device .
+1_cell_neg_251	negative	False	1_cell_neg_250	So , should you buy
+1_cell_neg_252	negative	False	1_cell_neg_251	it ?
+1_cell_neg_253	negative	False	1_cell_neg_252	Wait until Windows Mobile 6.0 comes out at least .
+1_cell_neg_254	negative	False	1_cell_neg_253	Maybe another provider will pick up the device by that time .
+1_cell_neg_255	negative	False	1_cell_neg_254	Then see what else is available

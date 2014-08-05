@@ -1,0 +1,4 @@
+Polarity	PolarityID
+negative	1
+positive	2
+neutral	3

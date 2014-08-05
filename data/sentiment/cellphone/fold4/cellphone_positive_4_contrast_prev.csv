@@ -1,0 +1,115 @@
+4_cell_pos_1	positive	False	4_cell_pos_0	There are many good reviews on 8525 positive features and most are fairly accurate .
+4_cell_pos_2	positive	False	4_cell_pos_1	Lots of good features in the 8525 .
+4_cell_pos_3	negative	False	4_cell_pos_2	My intent is to document some
+4_cell_pos_4	negative	False	4_cell_pos_3	of the shortcomings of the 8525
+4_cell_pos_5	negative	False	4_cell_pos_4	and Windows Mobile OS in the hope that MS and HTC will heed and correct in the future .
+4_cell_pos_6	positive	False	4_cell_pos_5	I am a business user
+4_cell_pos_7	positive	False	4_cell_pos_6	who wanted to combine my HP IPAQ 1945 and my Motorola V550 Cell phone into one device .
+4_cell_pos_8	positive	False	4_cell_pos_7	I use a Motorola H700 headset with my old devices and the 8525 .
+4_cell_pos_9	negative	False	4_cell_pos_8	My overall assessment is ;
+4_cell_pos_10	negative	False	4_cell_pos_9	Replacing my two 3 year
+4_cell_pos_11	negative	False	4_cell_pos_10	old devices resulted in me accepting some compromises
+4_cell_pos_12	negative	False	4_cell_pos_11	that I do n't think are necessary in terms of functionality and ease of use .
+4_cell_pos_13	positive	False	4_cell_pos_12	All the features I describe below were in the earlier Windows Mobile OS
+4_cell_pos_14	positive	False	4_cell_pos_13	used by my IPAQ 1945 or my Motorola flip phone .
+4_cell_pos_15	positive	False	4_cell_pos_14	If readers find that there is a way to perform any of the deficiencies
+4_cell_pos_16	positive	False	4_cell_pos_15	I describe please let me know .
+4_cell_pos_17	positive	False	4_cell_pos_16	My suggestions in rough order of priority :
+4_cell_pos_18	negative	False	4_cell_pos_17	1 -RRB- Blue tooth headsets .
+4_cell_pos_19	negative	False	4_cell_pos_18	Blue tooth audio should always come through the blue tooth headset regardless of the PDA volume setting .
+4_cell_pos_20	negative	False	4_cell_pos_19	To hear my voice commands repeated ,
+4_cell_pos_21	negative	False	4_cell_pos_20	I have to turn on the annoying sound of the PDA ,
+4_cell_pos_22	negative	True	4_cell_pos_21	so when I voice dial via my Blue tooth headset ,
+4_cell_pos_23	negative	False	4_cell_pos_22	I can hear my voice commands
+4_cell_pos_24	negative	False	4_cell_pos_23	repeated back .
+4_cell_pos_25	positive	False	4_cell_pos_24	I am
+4_cell_pos_26	positive	False	4_cell_pos_25	referring to the standard voice dial
+4_cell_pos_27	positive	False	4_cell_pos_26	that comes with the 8525 .
+4_cell_pos_28	positive	False	4_cell_pos_27	One quick solution would be to tie BT headset to the phone volume setting rather than the PDA .
+4_cell_pos_29	positive	False	4_cell_pos_28	Even nicer would be an upgrade
+4_cell_pos_30	positive	False	4_cell_pos_29	"that allows full audio with the "" VoiceCommand "" software"
+4_cell_pos_31	positive	False	4_cell_pos_30	-LRB- this is documented in many other reviews -RRB- .
+4_cell_pos_32	positive	False	4_cell_pos_31	Another nice feature of my Motorola cell phone was as soon as the BT was detected the phone volume
+4_cell_pos_33	positive	False	4_cell_pos_32	changed from vibrate
+4_cell_pos_34	positive	False	4_cell_pos_33	to audio if it was set to vibrate .
+4_cell_pos_35	negative	False	4_cell_pos_34	It changed back to the original audio
+4_cell_pos_36	negative	False	4_cell_pos_35	setting after turning off the BT headset .
+4_cell_pos_37	negative	True	4_cell_pos_36	1a -RRB- If I request voice dial via my blue tooth headset the screen should ALWAYS display the voice dial page .
+4_cell_pos_38	negative	False	4_cell_pos_37	"Instead the initial "" Owner Info "" page stays up"
+4_cell_pos_39	negative	False	4_cell_pos_38	and you ca n't see the name on the screen unless you reach down
+4_cell_pos_40	negative	False	4_cell_pos_39	and tap the screen .
+4_cell_pos_41	negative	False	4_cell_pos_40	Not desirable
+4_cell_pos_42	negative	False	4_cell_pos_41	when driving .
+4_cell_pos_43	negative	False	4_cell_pos_42	If you did n't set the PDA to its annoying noise level you ca n't hear the name
+4_cell_pos_44	negative	False	4_cell_pos_43	you requested
+4_cell_pos_45	positive	False	4_cell_pos_44	either .
+4_cell_pos_46	negative	False	4_cell_pos_45	2 -RRB- Need
+4_cell_pos_47	negative	False	4_cell_pos_46	to be able to control the PDA and phone volume independently for Audio , Vibrate or OFF .
+4_cell_pos_48	negative	False	4_cell_pos_47	For example need to be able to tie turn up the phone volume while keeping the PDA volume setting on OFF or vibrate .
+4_cell_pos_49	negative	False	4_cell_pos_48	3 -RRB- Need
+4_cell_pos_50	negative	False	4_cell_pos_49	to be able
+4_cell_pos_51	negative	False	4_cell_pos_50	to program how long the display stays on .
+4_cell_pos_52	negative	False	4_cell_pos_51	I am constantly groping to find the power button on the side to keep the display on as it turns off
+4_cell_pos_53	negative	False	4_cell_pos_52	when I need
+4_cell_pos_54	negative	False	4_cell_pos_53	to see something .
+4_cell_pos_55	negative	False	4_cell_pos_54	4 -RRB- I would buy a non Bluetooth headset if one was available for long drives
+4_cell_pos_56	negative	False	4_cell_pos_55	when my BT headset battery is dead .
+4_cell_pos_57	negative	False	4_cell_pos_56	Only solution I see is the 8525 stereo headphones and turning on the speaker
+4_cell_pos_58	negative	False	4_cell_pos_57	which is a little noisy for listeners
+4_cell_pos_59	negative	False	4_cell_pos_58	while driving on the freeway .
+4_cell_pos_60	positive	False	4_cell_pos_59	5 -RRB-
+4_cell_pos_61	negative	False	4_cell_pos_60	Provide a built in way to make the PTT and Comm Manager ,
+4_cell_pos_62	negative	False	4_cell_pos_61	and IE Quick key buttons programmable .
+4_cell_pos_63	negative	False	4_cell_pos_62	I would use them for many other functions ; such as PTT bringing up the volume control
+4_cell_pos_64	negative	False	4_cell_pos_63	so I can change it from vibrate to audio to speaker
+4_cell_pos_65	negative	False	4_cell_pos_64	-LRB- need to be able to select speaker here see below -RRB- .
+4_cell_pos_66	negative	False	4_cell_pos_65	6 -RRB- Give me a way to press an external button to toggle between speaker on
+4_cell_pos_67	negative	False	4_cell_pos_66	and off .
+4_cell_pos_68	negative	False	4_cell_pos_67	I ca n't easily push the speaker icon with my fingers .
+4_cell_pos_69	positive	False	4_cell_pos_68	Suggestion .
+4_cell_pos_70	positive	False	4_cell_pos_69	Add a radio button on the volume control
+4_cell_pos_71	positive	False	4_cell_pos_70	that allows you to select speaker phone .
+4_cell_pos_72	negative	True	4_cell_pos_71	Yes you can select the phone speaker soft button ,
+4_cell_pos_73	negative	False	4_cell_pos_72	but often the display has gone blank
+4_cell_pos_74	negative	False	4_cell_pos_73	and the keypad is showing .
+4_cell_pos_75	negative	False	4_cell_pos_74	Turning speaker on\/off should be easier .
+4_cell_pos_76	negative	False	4_cell_pos_75	7 -RRB- Provide option to save email attachments to storage card .
+4_cell_pos_77	positive	False	4_cell_pos_76	That was on my IPAQ Windows OS
+4_cell_pos_78	positive	False	4_cell_pos_77	and allowed me to capture lots of attachments without running out of memory .
+4_cell_pos_79	negative	False	4_cell_pos_78	8 -RRB- Remember
+4_cell_pos_80	negative	False	4_cell_pos_79	the Filter
+4_cell_pos_81	positive	False	4_cell_pos_80	setting
+4_cell_pos_82	negative	False	4_cell_pos_81	I selected for Tasks .
+4_cell_pos_83	negative	False	4_cell_pos_82	If I have filtered by a task category
+4_cell_pos_84	negative	False	4_cell_pos_83	during that session remember the filter
+4_cell_pos_85	negative	False	4_cell_pos_84	I selected .
+4_cell_pos_86	negative	True	4_cell_pos_85	Currently I have so many tasks
+4_cell_pos_87	negative	False	4_cell_pos_86	there is a 5 second delay to bring them all up
+4_cell_pos_88	negative	False	4_cell_pos_87	9 -RRB- Give me a way to turn off have the Internet browser
+4_cell_pos_89	negative	False	4_cell_pos_88	Quick Key
+4_cell_pos_90	negative	False	4_cell_pos_89	-LRB- or make this button programmable -RRB-
+4_cell_pos_91	positive	False	4_cell_pos_90	I
+4_cell_pos_92	negative	False	4_cell_pos_91	am always having to close the browser
+4_cell_pos_93	negative	False	4_cell_pos_92	because it gets hit\/selected
+4_cell_pos_94	negative	False	4_cell_pos_93	10 -RRB- Let
+4_cell_pos_95	negative	False	4_cell_pos_94	me Edit\/Paste with one step for notes , word , task notes etc .
+4_cell_pos_96	positive	False	4_cell_pos_95	"The IPAQ has "" Edit """
+4_cell_pos_97	positive	False	4_cell_pos_96	at the bottom .
+4_cell_pos_98	negative	False	4_cell_pos_97	With 8525 OS
+4_cell_pos_99	negative	False	4_cell_pos_98	you must select Menu ,
+4_cell_pos_100	negative	False	4_cell_pos_99	then Edit ,
+4_cell_pos_101	negative	False	4_cell_pos_100	then Copy .
+4_cell_pos_102	negative	False	4_cell_pos_101	Keep Edit on the bottom .
+4_cell_pos_103	positive	False	4_cell_pos_102	Question :
+4_cell_pos_104	positive	False	4_cell_pos_103	is there a key on the keypad to select CNTRL C for copy like what is done on a PC
+4_cell_pos_105	positive	False	4_cell_pos_104	-LRB- the letters are underlined in the menu , but I do n't see a CNTRL key on the keypad ?
+4_cell_pos_106	negative	False	4_cell_pos_105	11 -RRB- Allow the trackwheel to scroll up
+4_cell_pos_107	negative	False	4_cell_pos_106	to the icons on the top
+4_cell_pos_108	negative	False	4_cell_pos_107	and then use the nav button to move across the icons
+4_cell_pos_109	negative	False	4_cell_pos_108	-LRB- might be the way
+4_cell_pos_110	negative	False	4_cell_pos_109	to allow an external way
+4_cell_pos_111	negative	False	4_cell_pos_110	to set audio volume -RRB-
+4_cell_pos_112	negative	False	4_cell_pos_111	12 -RRB- If I power off the device have it remember my input selection .
+4_cell_pos_113	negative	False	4_cell_pos_112	For example
+4_cell_pos_114	positive	True	4_cell_pos_113	"I select "" Letter Recognizer "" ."
+4_cell_pos_115	negative	False	4_cell_pos_114	But I must reset each time I power 8525 off .

@@ -1,0 +1,53 @@
+7_cell_neg_1	positive	False	7_cell_neg_0	Prior to buying this phone
+7_cell_neg_2	positive	False	7_cell_neg_1	I had heard
+7_cell_neg_3	positive	False	7_cell_neg_2	a lot of people say
+7_cell_neg_4	positive	False	7_cell_neg_3	that Motorola 's hardware was very good ,
+7_cell_neg_5	negative	False	7_cell_neg_4	but that their software left a lot to be desired .
+7_cell_neg_6	positive	False	7_cell_neg_5	Nonetheless I decided to try this phone out
+7_cell_neg_7	positive	False	7_cell_neg_6	when it came time to start a new cell plan .
+7_cell_neg_8	positive	False	7_cell_neg_7	I had made the decision
+7_cell_neg_9	positive	False	7_cell_neg_8	to switch to T-mobile
+7_cell_neg_10	positive	False	7_cell_neg_9	and this looked like one of the best phone options .
+7_cell_neg_11	negative	False	7_cell_neg_10	Right off the bat
+7_cell_neg_12	negative	False	7_cell_neg_11	I found out
+7_cell_neg_13	negative	False	7_cell_neg_12	that the people who criticized Moto 's software were right on the money .
+7_cell_neg_14	negative	False	7_cell_neg_13	There are a host of poorly designed software aspects of this phone , not the least of which is the -- frankly -- idiotic way
+7_cell_neg_15	negative	False	7_cell_neg_14	the phone book is designed .
+7_cell_neg_16	positive	True	7_cell_neg_15	Eventually I made peace with all of the things
+7_cell_neg_17	positive	False	7_cell_neg_16	I disliked about the V360 since at least it seemed to work well enough as a phone .
+7_cell_neg_18	negative	False	7_cell_neg_17	As time went by I started noticing
+7_cell_neg_19	negative	False	7_cell_neg_18	that I was missing a lot of calls .
+7_cell_neg_20	negative	False	7_cell_neg_19	The phone would be in my bag or in my pocket or sitting on my desk
+7_cell_neg_21	negative	False	7_cell_neg_20	when suddenly it would ring with the voicemail notification from a message that I had received anywhere from minutes
+7_cell_neg_22	negative	False	7_cell_neg_21	to hours
+7_cell_neg_23	negative	False	7_cell_neg_22	before .
+7_cell_neg_24	negative	False	7_cell_neg_23	During the course of the last few months
+7_cell_neg_25	negative	False	7_cell_neg_24	-LRB- the phone is less than a year old -RRB-
+7_cell_neg_26	negative	False	7_cell_neg_25	I ` ve also found that it has begun
+7_cell_neg_27	negative	False	7_cell_neg_26	crashing .
+7_cell_neg_28	negative	False	7_cell_neg_27	A lot .
+7_cell_neg_29	negative	False	7_cell_neg_28	"Opening or closing it will result in a "" white screen of death . """
+7_cell_neg_30	negative	False	7_cell_neg_29	Putting it on the charger will cause it to switch back and forth between the messages that it is charging ,
+7_cell_neg_31	negative	False	7_cell_neg_30	that it is unable to charge and that it 's SIM card can not be found ,
+7_cell_neg_32	negative	False	7_cell_neg_31	after a few minutes
+7_cell_neg_33	negative	False	7_cell_neg_32	of which it will simply shut itself off .
+7_cell_neg_34	negative	False	7_cell_neg_33	With a full battery charge it will continually shut itself off .
+7_cell_neg_35	negative	False	7_cell_neg_34	At this point I am
+7_cell_neg_36	negative	False	7_cell_neg_35	forced to conclude
+7_cell_neg_37	negative	False	7_cell_neg_36	that this phone is an absolute piece of junk .
+7_cell_neg_38	negative	False	7_cell_neg_37	I am also forced to conclude
+7_cell_neg_39	negative	False	7_cell_neg_38	that it is n't the only model
+7_cell_neg_40	negative	False	7_cell_neg_39	which is .
+7_cell_neg_41	negative	False	7_cell_neg_40	None of my coworkers has ever had a good experience with a Motorola phone .
+7_cell_neg_42	negative	False	7_cell_neg_41	My wife 's Motorola has shown its own host of problems .
+7_cell_neg_43	negative	False	7_cell_neg_42	People working for T-mobile at several stores
+7_cell_neg_44	negative	False	7_cell_neg_43	I have visited have confided
+7_cell_neg_45	negative	False	7_cell_neg_44	that they never , ever recommend Motorola phones to anyone .
+7_cell_neg_46	negative	False	7_cell_neg_45	In fact
+7_cell_neg_47	negative	False	7_cell_neg_46	I ` ve had T-mobile employees urge
+7_cell_neg_48	negative	True	7_cell_neg_47	me to not buy any phones from them ,
+7_cell_neg_49	positive	False	7_cell_neg_48	but rather to shop for an unlocked Nokia online .
+7_cell_neg_50	positive	False	7_cell_neg_49	So that 's what I 'm going to do .
+7_cell_neg_51	negative	False	7_cell_neg_50	Until I can buy a new phone
+7_cell_neg_52	negative	False	7_cell_neg_51	all I can do is recharge this phone every night , restart it five or six times a day ,
+7_cell_neg_53	negative	False	7_cell_neg_52	and keep apologizing to my friends , family and employers for always missing their calls
