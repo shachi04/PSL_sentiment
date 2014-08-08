@@ -71,7 +71,9 @@
 	</classpathentry>
 	<classpathentry kind="var" path="M2_REPO/org/ujmp/ujmp-complete/0.2.4/ujmp-complete-0.2.4.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/psl/psl-groovy/target/psl-groovy-1.2-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="/Users/girishsk/Documents/Shachi/psl/psl-core/target/psl-core-1.2-SNAPSHOT.jar" sourcepath="/Users/girishsk/Documents/Shachi/psl/psl-core/target/psl-core-1.2-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/.m2/repository/edu/umd/cs/psl-groovy/1.1/psl-groovy-1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/.m2/repository/edu/umd/cs/psl-core/1.1/psl-core-1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/.m2/repository/edu/umd/cs/psl-core/1.1/psl-core-1.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/girishsk/.m2/repository/edu/umd/cs/psl-groovy/1.1/psl-groovy-1.1-sources.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

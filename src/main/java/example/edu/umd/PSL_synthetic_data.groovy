@@ -4,12 +4,13 @@ import edu.umd.cs.psl.application.inference.MPEInference;
 import edu.umd.cs.psl.application.learning.weight.maxlikelihood.MaxPseudoLikelihood;
 import edu.umd.cs.psl.application.learning.weight.maxlikelihood.LazyMaxLikelihoodMPE;
 import edu.umd.cs.psl.application.learning.weight.random.GroundSliceRandOM;
-import edu.umd.cs.psl.application.learning.weight.maxmargin.MaxMargin;
+import edu.umd.cs.psl.application.learning.weight.maxmargin.MaxMargin
 import edu.umd.cs.psl.application.learning.weight.maxlikelihood.MaxLikelihoodMPE;
 import edu.umd.cs.psl.application.learning.weight.maxmargin.PositiveMinNormProgram;
 import edu.umd.cs.psl.application.learning.weight.maxlikelihood.VotedPerceptron;
 import edu.umd.cs.psl.application.learning.weight.random.FirstOrderMetropolisRandOM
 import edu.umd.cs.psl.application.learning.weight.random.HardEMRandOM
+//import edu.umd.cs.psl.application.learning.weight.em.DualEM
 import edu.umd.cs.psl.config.*
 import edu.umd.cs.psl.database.DataStore
 import edu.umd.cs.psl.database.Database;
@@ -57,14 +58,13 @@ class PSL_synthetic_data{
 		 * Config bundle changed to accept String as UniqueID
 		 */
 		ConfigManager cm = ConfigManager.getManager()
-		ConfigBundle config = cm.getBundle("fine-grained")
+		ConfigBundle config = cm.getBundle("psl_mln")
 		String writefolder = System.getProperty("user.home") + "/Documents/Shachi/CMPS209C/reviews/Results/Synthetic_data/"
 		File file3 = new File(writefolder+"results.csv");
-
-
+		
 		/* Uses H2 as a DataStore and stores it in a temp. directory by default */
 		def defaultPath = System.getProperty("java.io.tmpdir")
-		String dbpath = config.getString("dbpath", defaultPath + File.separator + "fine-grained")
+		String dbpath = config.getString("dbpath", defaultPath + File.separator + "psl_mln")
 		DataStore data = new RDBMSDataStore(new H2DatabaseDriver(Type.Disk, dbpath, true), config)
 
 		/*
@@ -101,12 +101,12 @@ class PSL_synthetic_data{
 		/*
 		 * Rules for attribute features alone - sentiment lexicons as source
 		 */
-		m.add rule : (possentiment(A) ) >> ~negsentiment(A), weight :5, squared : true
+		m.add rule : (possentiment(A) ) >> negsentiment(A), weight :5, squared : true
 		//m.add rule : (negsentiment(A) ) >> ~possentiment(A), weight :5
-		m.add rule : (all(A) & ~negsentiment(A)) >> possentiment(A), weight :5, squared : true
+		m.add rule : (negsentiment(A)) >> possentiment(A), weight :5, squared : true
 
-		m.add rule : (priorneg(A) ) >> possentiment(A), weight :5, squared : true
-		m.add rule : (priorpos(A) ) >> negsentiment(A), weight :5, squared : true
+		m.add rule : (priorpos(A) ) >> possentiment(A), weight :5, squared : true
+		m.add rule : (priorneg(A) ) >> negsentiment(A), weight :5, squared : true
 
 //		m.add rule : possentiment(A) >> (priorpos(A) ) , weight :5, squared : false
 //		m.add rule : negsentiment(A) >> (priorneg(A) ) , weight :5, squared : false
@@ -354,9 +354,10 @@ class PSL_synthetic_data{
 		println "trudatapartition : "+trueDataPartition.get(cvSet)
 		Database trueDataDB = data.getDatabase(trueDataPartition.get(cvSet), [possentiment,negsentiment] as Set);
 		MaxLikelihoodMPE weightLearning = new MaxLikelihoodMPE(m, trainDB, trueDataDB, config);
-		//MaxMargin weightLearning = new MaxMargin(m, trainDB, trueDataDB, config);
-
-		//LazyMaxLikelihoodMPE weightLearning = new LazyMaxLikelihoodMPE(m, db, trueDataDB, config);
+//		MaxMargin weightLearning = new MaxMargin(m, trainDB, trueDataDB, config);
+//		MaxMargin weightLearning = new MaxMargin(m, trainDB, trueDataDB, config);
+//		DualEM weightLearning = new DualEM(m, trainDB, trueDataDB, config);
+//		LazyMaxLikelihoodMPE weightLearning = new LazyMaxLikelihoodMPE(m, trainDB, trueDataDB, config);
 		//MaxPseudoLikelihood weightLearning = new MaxPseudoLikelihood(m, trainDB, trueDataDB, config);
 		weightLearning.learn();
 		weightLearning.close();
@@ -418,9 +419,9 @@ class PSL_synthetic_data{
 		println count
 		println "Truetestdatapartition "+trueTestDataPartition.get(cvSet)
 		Database trueTestDB = data.getDatabase(trueTestDataPartition.get(cvSet), [possentiment, negsentiment] as Set);
-
-
-
+//
+//
+//
 		Set<GroundAtom> groundings1 = Queries.getAllAtoms(trueTestDB, possentiment)
 		int totalPosTestExamples = groundings1.size()
 		println "possentiment total: "+totalPosTestExamples
@@ -464,9 +465,9 @@ class PSL_synthetic_data{
 		int totalNegTrainExamples = groundings2.size()
 
 		int total =  totalNegTrainExamples+totalPosTestExamples3+totalNegTestExamples3+totalPosTrainExamples
-		println "Total ###"+total
-		println "Pos ###"+totalPosTrainExamples
-		println "Ned ###"+totalNegTrainExamples
+//		println "Total ###"+total
+//		println "Pos ###"+totalPosTrainExamples
+//		println "Ned ###"+totalNegTrainExamples
 
 		println ( "Learned model:\n")
 		println m

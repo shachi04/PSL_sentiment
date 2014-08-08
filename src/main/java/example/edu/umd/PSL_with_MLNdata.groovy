@@ -5,7 +5,7 @@ import edu.umd.cs.psl.application.learning.weight.maxlikelihood.MaxPseudoLikelih
 import edu.umd.cs.psl.application.learning.weight.maxlikelihood.LazyMaxLikelihoodMPE;
 import edu.umd.cs.psl.application.learning.weight.random.GroundSliceRandOM;
 import edu.umd.cs.psl.application.learning.weight.maxmargin.MaxMargin;
-import edu.umd.cs.psl.application.learning.weight.em.DualEM
+//import edu.umd.cs.psl.application.learning.weight.em.DualEM
 import edu.umd.cs.psl.application.learning.weight.maxlikelihood.MaxLikelihoodMPE;
 import edu.umd.cs.psl.application.learning.weight.maxmargin.PositiveMinNormProgram;
 import edu.umd.cs.psl.application.learning.weight.maxlikelihood.VotedPerceptron;

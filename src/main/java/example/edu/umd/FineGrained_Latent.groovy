@@ -10,7 +10,7 @@ import edu.umd.cs.psl.application.learning.weight.maxmargin.PositiveMinNormProgr
 import edu.umd.cs.psl.application.learning.weight.maxlikelihood.VotedPerceptron;
 import edu.umd.cs.psl.application.learning.weight.random.FirstOrderMetropolisRandOM
 import edu.umd.cs.psl.application.learning.weight.random.HardEMRandOM
-import edu.umd.cs.psl.application.learning.weight.em.DualEM
+//import edu.umd.cs.psl.application.learning.weight.em.DualEM
 import edu.umd.cs.psl.config.*
 import edu.umd.cs.psl.database.DataStore
 import edu.umd.cs.psl.database.Database;
@@ -256,8 +256,8 @@ class FineGrained_Latent {
 		 */
 		dbPop.populateFromDB(dummy_DB, hiddenpriorpos);
 		dbPop.populateFromDB(dummy_DB, hiddenpriorneg);
-		
-		DualEM weightLearning = new DualEM(m, distributionDB, truthDB, config);
+		MaxLikelihoodMPE weightLearning = new MaxLikelihoodMPE(m, distributionDB, truthDB, config);
+//		DualEM weightLearning = new DualEM(m, distributionDB, truthDB, config);
 		weightLearning.learn();
 		weightLearning.close();
 		

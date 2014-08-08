@@ -44,7 +44,7 @@ class Only_swn{
 
 	public static void main(String[] args)
 	{
-		for(int i = 0; i <1; ++i)
+		for(int i = 1; i <10; ++i)
 		{
 			Only_swn a = new Only_swn()
 			a.pslmodel(i);
@@ -58,7 +58,7 @@ class Only_swn{
 		 */
 		ConfigManager cm = ConfigManager.getManager()
 		ConfigBundle config = cm.getBundle("fine-grained")
-		String writefolder = System.getProperty("user.home") + "/Documents/Shachi/CMPS209C/reviews/Results/swn_tgl_nocontrastinprev/"
+		String writefolder = System.getProperty("user.home") + "/Documents/Shachi/CMPS209C/reviews/Results/using_document_label/"
 		File file3 = new File(writefolder+"results.csv");
 
 
@@ -92,6 +92,8 @@ class Only_swn{
 		m.add predicate: "unigramneg", types: [ArgumentType.UniqueID]
 		m.add predicate: "tglpos", types: [ArgumentType.UniqueID]
 		m.add predicate: "tglneg", types: [ArgumentType.UniqueID]
+		m.add predicate: "reviewneg", types: [ArgumentType.UniqueID]
+		m.add predicate: "reviewpos", types: [ArgumentType.UniqueID]
 
 
 		/*
@@ -107,6 +109,9 @@ class Only_swn{
 
 		m.add rule : (priorpos(A) ) >> possentiment(A), weight :5, squared : true
 		m.add rule : (priorneg(A) ) >> negsentiment(A), weight :5, squared : true
+		
+		m.add rule : reviewpos(A) >> possentiment(A) , weight :5, squared : true
+		m.add rule : reviewneg(A) >> negsentiment(A) , weight : 5, squared :true
 
 //		m.add rule : possentiment(A) >> (priorpos(A) ) , weight :5, squared : false
 //		m.add rule : negsentiment(A) >> (priorneg(A) ) , weight :5, squared : false
@@ -165,8 +170,8 @@ class Only_swn{
 		 * 
 		 * 
 		 */
-		m.add rule : (prev(A,B) &  ~contrast(A,B) & possentiment(B)) >> possentiment(A), weight :5, squared : true
-		m.add rule : (prev(A,B) &  ~contrast(A,B) & negsentiment(B)) >> negsentiment(A), weight :5, squared : true
+		m.add rule : (prev(A,B)  & possentiment(B)) >> possentiment(A), weight :5, squared : true
+		m.add rule : (prev(A,B) & negsentiment(B)) >> negsentiment(A), weight :5, squared : true
 
 		/*
 		 * Rules for contrast and non-contrast relation
@@ -224,6 +229,7 @@ class Only_swn{
 		File file1 = new File(filename1);
 		File file2 = new File(filename2);
 		File file4 = new File(writefolder+"auc.csv");
+		File file5 = new File(writefolder + "model.csv")
 		/*
 		 * Train data partition, each partition has 9 folders, one kept aside for testing... 
 		 * 
@@ -247,10 +253,16 @@ class Only_swn{
 //			InserterUtils.loadDelimitedDataTruth(data.getInserter(unigramneg, trainPartition.get(cvSet)),
 //					filename+"unigram_neg_negation_changed.csv","\t");
 //
+			InserterUtils.loadDelimitedDataTruth(data.getInserter(reviewpos, trainPartition.get(cvSet)),
+					filename+"review_pos.csv","\t");
+			InserterUtils.loadDelimitedDataTruth(data.getInserter(reviewneg, trainPartition.get(cvSet)),
+					filename+"review_neg.csv","\t");
+				
 			InserterUtils.loadDelimitedDataTruth(data.getInserter(tglpos, trainPartition.get(cvSet)),
 					filename+"TGL_pos_negation_changed.csv","\t");
 			InserterUtils.loadDelimitedDataTruth(data.getInserter(tglneg, trainPartition.get(cvSet)),
 					filename+"TGL_neg_negation_changed.csv","\t");
+
 //
 			InserterUtils.loadDelimitedData(data.getInserter(prev, trainPartition.get(cvSet)), filename+"all_prev.csv");
 //
@@ -312,6 +324,12 @@ class Only_swn{
 
 		InserterUtils.loadDelimitedDataTruth(data.getInserter(priorneg, testDataPartition.get(cvSet)),
 				filename+"wordnet_negation_changedneg.csv","\t");
+			
+		InserterUtils.loadDelimitedDataTruth(data.getInserter(reviewpos, testDataPartition.get(cvSet)),
+				filename+"review_pos.csv","\t");
+		InserterUtils.loadDelimitedDataTruth(data.getInserter(reviewneg, testDataPartition.get(cvSet)),
+				filename+"review_neg.csv","\t");
+
 
 		InserterUtils.loadDelimitedDataTruth(data.getInserter(tglpos, testDataPartition.get(cvSet)),
 				filename+"TGL_pos_negation_changed.csv","\t");
@@ -336,7 +354,7 @@ class Only_swn{
 
 
 		Database trainDB = data.getDatabase(trainPartition.get(cvSet), [Prev,Priorpos,Contrast, Noncontrast,
-			Priorneg,All,Tglpos,Tglneg,Subjectivityneg,Subjectivitypos] as Set);
+			Priorneg,All,Tglpos,Tglneg,Subjectivityneg,Subjectivitypos, Reviewpos, Reviewneg] as Set);
 
 //,Nrclexiconpos,Nrclexiconneg
 		/*
@@ -372,13 +390,17 @@ class Only_swn{
 		/*
 		 * Newly learned weights
 		 */
+		
+		file5.append(m)
+		file5.append("\n")
 		/*
 		 */
 
 		/*Test database setup*/
 
 		Database testDB = data.getDatabase(testDataPartition.get(cvSet),
-				[ Prev, Priorpos, Priorneg,Contrast,Noncontrast,All,Tglpos,Tglneg,Subjectivityneg,Subjectivitypos] as Set);
+				[ Prev, Priorpos, Priorneg,Contrast,Noncontrast,All,Tglpos,Tglneg,Subjectivityneg,
+					Subjectivitypos, Reviewpos, Reviewneg] as Set);
 
 		ResultList groundings = testDB.executeQuery(Queries.getQueryForAllAtoms(all))
 		print groundings.size();
