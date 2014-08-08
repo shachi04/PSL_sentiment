@@ -102,60 +102,27 @@ class PSL_cellphone{
 		 * Rules for attribute features alone - sentiment lexicons as source
 		 */
 		m.add rule : (possentiment(A) ) >> ~negsentiment(A), weight:5, squared : false
-		m.add rule : (negsentiment(A) ) >> ~possentiment(A), weight :5, squared : false
-		
-//		m.add rule : (all(A) & ~negsentiment(A)) >> possentiment(A), constraint:true
+		m.add rule : (all(A) & ~negsentiment(A)) >> possentiment(A), constraint:true
 
 		m.add rule : (priorpos(A) ) >> possentiment(A), weight :5, squared : false
 		m.add rule : (priorneg(A) ) >> negsentiment(A), weight :5, squared : false
-
-//		m.add rule : possentiment(A) >> (priorpos(A) ) , weight :5
-//		m.add rule : negsentiment(A) >> (priorneg(A) ) , weight :5
-
-//		m.add rule : (all(A) & ~(priorpos(A) )) >> ~possentiment(A), weight :5, squared : false
-//		m.add rule : (all(A) & ~(priorneg(A) )) >> ~negsentiment(A), weight :5, squared : false
 
 
 //		m.add rule : subjectivitypos(A) >> possentiment(A), weight : 5, squared : false
 //		m.add rule : subjectivityneg(A) >> negsentiment(A), weight : 5, squared : false
 //
-//		//m.add rule : possentiment(A) >> (subjectivitypos(A) ) , weight :5
-//		//m.add rule : negsentiment(A) >> (subjectivityneg(A) ) , weight :5
 //
-//		//m.add rule : (~subjectivitypos(A)) >> ~possentiment(A), weight : 5
-//		//m.add rule : ( ~subjectivityneg(A)) >> ~negsentiment(A), weight : 5
 //
 //		m.add rule : nrclexiconpos(A) >> possentiment(A), weight : 5, squared : false
 //		m.add rule : nrclexiconneg(A) >> negsentiment(A), weight : 5, squared : false
-
-//		m.add rule : possentiment(A) >> (nrclexiconpos(A) ) , weight :5
-//		m.add rule : negsentiment(A) >> (nrclexiconneg(A) ) , weight :5
-
-
-//		m.add rule : (all(A) & ~nrclexiconpos(A)) >> ~possentiment(A), weight : 5, squared : false
-//		m.add rule : (all(A) & ~nrclexiconneg(A)) >> ~negsentiment(A), weight : 5, squared : false
 
 
 		m.add rule : unigrampos(A) >> possentiment(A), weight : 5, squared : false
 		m.add rule : unigramneg(A) >> negsentiment(A), weight : 5, squared : false
 
-		//m.add rule : possentiment(A) >> (unigrampos(A) ) , weight :5
-		//m.add rule : negsentiment(A) >> (unigramneg(A) ) , weight :5
-
-
-		//m.add rule : ( ~unigrampos(A)) >> ~possentiment(A), weight : 5
-		//m.add rule : ( ~unigramneg(A)) >> ~negsentiment(A), weight : 5
-
 
 		m.add rule : tglpos(A) >> possentiment(A), weight : 5, squared : false
 		m.add rule : tglneg(A) >> negsentiment(A), weight : 5, squared : false
-
-		//m.add rule : possentiment(A) >> (tglpos(A) ) , weight :5
-		//m.add rule : negsentiment(A) >> (tglneg(A) ) , weight :5
-
-
-		//m.add rule : (~tglpos(A)) >> ~possentiment(A), weight : 5
-		//m.add rule : (~tglneg(A)) >> ~negsentiment(A), weight : 5
 
 
 		/*

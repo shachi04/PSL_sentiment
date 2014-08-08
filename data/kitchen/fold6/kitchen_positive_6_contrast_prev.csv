@@ -1,0 +1,105 @@
+6_kitchen_pos_1	negative	False	6_kitchen_pos_0	Using a Chemex requires water to be heated in a tea kettle prior to brewing ,
+6_kitchen_pos_2	negative	False	6_kitchen_pos_1	and it requires a finer ground than what auto-drip machines ask for .
+6_kitchen_pos_3	negative	True	6_kitchen_pos_2	After the water is brought to a boil ,
+6_kitchen_pos_4	negative	False	6_kitchen_pos_3	it 's important to wait for it to cool just slightly
+6_kitchen_pos_5	negative	False	6_kitchen_pos_4	-LRB- about 30 seconds -RRB-
+6_kitchen_pos_6	positive	False	6_kitchen_pos_5	and
+6_kitchen_pos_7	positive	False	6_kitchen_pos_6	then
+6_kitchen_pos_8	positive	False	6_kitchen_pos_7	you need
+6_kitchen_pos_9	negative	False	6_kitchen_pos_8	to wet the grounds in the filter , wait for them to drain ,
+6_kitchen_pos_10	negative	False	6_kitchen_pos_9	and then fill the pot with water .
+6_kitchen_pos_11	positive	False	6_kitchen_pos_10	Want more than a single cup of coffee ?
+6_kitchen_pos_12	negative	False	6_kitchen_pos_11	You wait for your first pour to brew ,
+6_kitchen_pos_13	negative	False	6_kitchen_pos_12	and then fill the filter again .
+6_kitchen_pos_14	positive	False	6_kitchen_pos_13	Some advantages over other forms of coffee brewing :
+6_kitchen_pos_15	positive	False	6_kitchen_pos_14	1 . Taste :
+6_kitchen_pos_16	positive	False	6_kitchen_pos_15	I do n't know
+6_kitchen_pos_17	positive	False	6_kitchen_pos_16	how it does it ,
+6_kitchen_pos_18	positive	True	6_kitchen_pos_17	but the filter does keep your coffee from being bitter .
+6_kitchen_pos_19	positive	False	6_kitchen_pos_18	2 . Cleanability :
+6_kitchen_pos_20	positive	False	6_kitchen_pos_19	Users can keep all necessary components clean
+6_kitchen_pos_21	positive	False	6_kitchen_pos_20	-LRB- anyone
+6_kitchen_pos_22	positive	False	6_kitchen_pos_21	who 's brewed water and vinegar through their coffee maker to kill off a bitter taste
+6_kitchen_pos_23	positive	False	6_kitchen_pos_22	that was n't there
+6_kitchen_pos_24	positive	False	6_kitchen_pos_23	when you bought
+6_kitchen_pos_25	positive	False	6_kitchen_pos_24	it understands this plight -RRB- .
+6_kitchen_pos_26	negative	False	6_kitchen_pos_25	Oftentimes , the most aggressive criticism of the Chemex is its ponderousness
+6_kitchen_pos_27	positive	False	6_kitchen_pos_26	to clean
+6_kitchen_pos_28	negative	False	6_kitchen_pos_27	because it 's not possible to get your hand into the reservoir .
+6_kitchen_pos_29	positive	False	6_kitchen_pos_28	Some people prefer
+6_kitchen_pos_30	positive	False	6_kitchen_pos_29	to add hot water and soap and give it a good rinse ,
+6_kitchen_pos_31	positive	False	6_kitchen_pos_30	which is fine if you clean the moment
+6_kitchen_pos_32	positive	False	6_kitchen_pos_31	you empty the pot ,
+6_kitchen_pos_33	negative	False	6_kitchen_pos_32	but if you ` re like me
+6_kitchen_pos_34	negative	False	6_kitchen_pos_33	and you let
+6_kitchen_pos_35	negative	False	6_kitchen_pos_34	the remaining sip or two sit
+6_kitchen_pos_36	negative	False	6_kitchen_pos_35	until a nice coffee stain is on the glass ,
+6_kitchen_pos_37	negative	False	6_kitchen_pos_36	then you need some good ' ol fashion friction
+6_kitchen_pos_38	positive	False	6_kitchen_pos_37	to get
+6_kitchen_pos_39	negative	False	6_kitchen_pos_38	it clean .
+6_kitchen_pos_40	positive	False	6_kitchen_pos_39	The best thing I ` ve found :
+6_kitchen_pos_41	positive	False	6_kitchen_pos_40	a baby bottle cleaner .
+6_kitchen_pos_42	positive	False	6_kitchen_pos_41	It 's narrow enough
+6_kitchen_pos_43	positive	False	6_kitchen_pos_42	to get into the reservoir
+6_kitchen_pos_44	positive	False	6_kitchen_pos_43	and the angle can be adjusted to scrap the walls , too .
+6_kitchen_pos_45	positive	False	6_kitchen_pos_44	Brilliant !
+6_kitchen_pos_46	positive	False	6_kitchen_pos_45	3 . Electricity Free :
+6_kitchen_pos_47	positive	False	6_kitchen_pos_46	As long as you can boil water ,
+6_kitchen_pos_48	positive	False	6_kitchen_pos_47	you can have coffee .
+6_kitchen_pos_49	negative	False	6_kitchen_pos_48	4 . Mud\/Sludge :
+6_kitchen_pos_50	negative	False	6_kitchen_pos_49	French press and stove-top
+6_kitchen_pos_51	negative	False	6_kitchen_pos_50	espresso-style brewing always leaves a thick slime at the bottom of an otherwise rich cup of coffee .
+6_kitchen_pos_52	positive	False	6_kitchen_pos_51	Do n't get
+6_kitchen_pos_53	positive	False	6_kitchen_pos_52	me wrong :
+6_kitchen_pos_54	positive	False	6_kitchen_pos_53	I think
+6_kitchen_pos_55	positive	False	6_kitchen_pos_54	that 's good
+6_kitchen_pos_56	positive	False	6_kitchen_pos_55	-LRB- I use a French Press
+6_kitchen_pos_57	positive	False	6_kitchen_pos_56	when I 'm in the mood -RRB- ,
+6_kitchen_pos_58	negative	True	6_kitchen_pos_57	but the cone on a Chemex does n't allow that at all .
+6_kitchen_pos_59	positive	False	6_kitchen_pos_58	5 . Style\/Size :
+6_kitchen_pos_60	positive	False	6_kitchen_pos_59	the Chemex coffee pot is a relic
+6_kitchen_pos_61	positive	False	6_kitchen_pos_60	-LRB- designed in the 40s -RRB-
+6_kitchen_pos_62	positive	False	6_kitchen_pos_61	and the wood cuff with rawhide tie screams simplicity and elegance
+6_kitchen_pos_63	positive	False	6_kitchen_pos_62	and it 's a wonderful , minimalist sight on any kitchen counter
+6_kitchen_pos_64	positive	False	6_kitchen_pos_63	-LRB- and unlike electric coffee makers , easy to move if you need the space -RRB- .
+6_kitchen_pos_65	negative	False	6_kitchen_pos_64	Some drawbacks any purchaser should consider :
+6_kitchen_pos_66	negative	False	6_kitchen_pos_65	1 . Time :
+6_kitchen_pos_67	negative	False	6_kitchen_pos_66	it does take 5
+6_kitchen_pos_68	positive	False	6_kitchen_pos_67	-
+6_kitchen_pos_69	negative	False	6_kitchen_pos_68	10 minutes of labor
+6_kitchen_pos_70	negative	False	6_kitchen_pos_69	to get the morning cup of coffee .
+6_kitchen_pos_71	negative	False	6_kitchen_pos_70	2 . Cones :
+6_kitchen_pos_72	negative	False	6_kitchen_pos_71	you ca n't run over to Wal-Mart
+6_kitchen_pos_73	negative	False	6_kitchen_pos_72	when you use the last filter ;
+6_kitchen_pos_74	positive	False	6_kitchen_pos_73	you need
+6_kitchen_pos_75	negative	False	6_kitchen_pos_74	to find a specialty store or go online ,
+6_kitchen_pos_76	negative	False	6_kitchen_pos_75	which means
+6_kitchen_pos_77	positive	False	6_kitchen_pos_76	you need
+6_kitchen_pos_78	negative	False	6_kitchen_pos_77	to plan ahead .
+6_kitchen_pos_79	negative	False	6_kitchen_pos_78	3 . Cold Coffee :
+6_kitchen_pos_80	positive	False	6_kitchen_pos_79	no electric hot plate
+6_kitchen_pos_81	positive	False	6_kitchen_pos_80	-LRB- thank god -RRB-
+6_kitchen_pos_82	negative	False	6_kitchen_pos_81	means coffee not poured and consumed immediately gets cold quickly .
+6_kitchen_pos_83	positive	False	6_kitchen_pos_82	You can buy a wire guard and a glass lid so your Chemex can be warmed on the stovetop .
+6_kitchen_pos_84	positive	False	6_kitchen_pos_83	I think
+6_kitchen_pos_85	negative	False	6_kitchen_pos_84	that 's more labor
+6_kitchen_pos_86	negative	False	6_kitchen_pos_85	added to an already laborious endeavor .
+6_kitchen_pos_87	positive	False	6_kitchen_pos_86	Just have a warmed thermos ready
+6_kitchen_pos_88	positive	False	6_kitchen_pos_87	and use that to store any unused coffee .
+6_kitchen_pos_89	negative	False	6_kitchen_pos_88	4 . Learning Curve :
+6_kitchen_pos_90	negative	False	6_kitchen_pos_89	It does take some time to get the grind right , the amount right
+6_kitchen_pos_91	negative	False	6_kitchen_pos_90	and the water level right to find a cup
+6_kitchen_pos_92	negative	False	6_kitchen_pos_91	which caters to your tongue .
+6_kitchen_pos_93	positive	False	6_kitchen_pos_92	5 .
+6_kitchen_pos_94	positive	False	6_kitchen_pos_93	Cleanability :
+6_kitchen_pos_95	positive	False	6_kitchen_pos_94	I know
+6_kitchen_pos_96	negative	False	6_kitchen_pos_95	this is in the advantages column , as well ,
+6_kitchen_pos_97	negative	False	6_kitchen_pos_96	but it 's worth
+6_kitchen_pos_98	negative	False	6_kitchen_pos_97	mentioning
+6_kitchen_pos_99	negative	False	6_kitchen_pos_98	that a lot of people hate
+6_kitchen_pos_100	negative	False	6_kitchen_pos_99	cleaning these things .
+6_kitchen_pos_101	negative	False	6_kitchen_pos_100	To submerge it does mean pulling off the wood cuff
+6_kitchen_pos_102	positive	False	6_kitchen_pos_101	-LRB-
+6_kitchen_pos_103	negative	False	6_kitchen_pos_102	which is a small pain -RRB-
+6_kitchen_pos_104	positive	False	6_kitchen_pos_103	else
+6_kitchen_pos_105	negative	False	6_kitchen_pos_104	it will get nasty over time

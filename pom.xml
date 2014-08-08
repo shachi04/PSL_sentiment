@@ -20,7 +20,7 @@
 	<groupId>edu.umd.cs</groupId>
 	<artifactId>psl-example</artifactId>
 	<name>psl-example</name>
-	<version>1.1</version>
+	<version>1.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<description>Examples of using the PSL software from the University of Maryland.</description>
 	<dependencies>

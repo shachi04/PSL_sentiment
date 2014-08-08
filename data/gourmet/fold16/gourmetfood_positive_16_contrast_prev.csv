@@ -1,0 +1,44 @@
+16_gourmet_pos_1	negative	False	16_gourmet_pos_0	\*\*\*\*
+16_gourmet_pos_2	positive	False	16_gourmet_pos_1	Tazo 's Lotus Decaffeinated Green Tea is one of my favorite Tazo teas .
+16_gourmet_pos_3	positive	False	16_gourmet_pos_2	The lotus flower flavor is pleasant and delightful .
+16_gourmet_pos_4	positive	False	16_gourmet_pos_3	This tea is not bitter or harsh in any way .
+16_gourmet_pos_5	positive	False	16_gourmet_pos_4	It is one of the most natural-tasting of the Tazo 's I ` ve tasted , very subtle ,
+16_gourmet_pos_6	positive	False	16_gourmet_pos_5	and much less artificial-tasting .
+16_gourmet_pos_7	positive	False	16_gourmet_pos_6	The ingredients in Lotus are :
+16_gourmet_pos_8	positive	False	16_gourmet_pos_7	naturally decaffeinated green tea , natural lotus flower flavor and other natural flavors .
+16_gourmet_pos_9	positive	False	16_gourmet_pos_8	Of course , this tea is caffeine-free .
+16_gourmet_pos_10	positive	False	16_gourmet_pos_9	Tazo is an interesting company
+16_gourmet_pos_11	positive	False	16_gourmet_pos_10	that makes only super premium teas .
+16_gourmet_pos_12	positive	True	16_gourmet_pos_11	They are socially responsible ,
+16_gourmet_pos_13	positive	False	16_gourmet_pos_12	"based in Portland , and have the motto , "" The Reincarnation of Tea "" ."
+16_gourmet_pos_14	positive	False	16_gourmet_pos_13	Tazo is owned by Starbucks .
+16_gourmet_pos_15	positive	False	16_gourmet_pos_14	Their web site is fun and quirky , with a Zen-type focus , definitely worth checking out .
+16_gourmet_pos_16	negative	False	16_gourmet_pos_15	It is unclear ,
+16_gourmet_pos_17	negative	False	16_gourmet_pos_16	though , from their web site ,
+16_gourmet_pos_18	negative	False	16_gourmet_pos_17	how many of their ingredients are organic or kosher ,
+16_gourmet_pos_19	negative	False	16_gourmet_pos_18	"and they do use some "" natural flavors """
+16_gourmet_pos_20	negative	False	16_gourmet_pos_19	in their teas
+16_gourmet_pos_21	positive	False	16_gourmet_pos_20	--
+16_gourmet_pos_22	negative	False	16_gourmet_pos_21	this wording seems a little vague for a super premium tea .
+16_gourmet_pos_23	positive	False	16_gourmet_pos_22	On the paper tea packet ,
+16_gourmet_pos_24	positive	False	16_gourmet_pos_23	Tazo writes ,
+16_gourmet_pos_25	positive	False	16_gourmet_pos_24	"delightfully subtle green tea with the inner radiance and essence of lotus flower . """
+16_gourmet_pos_26	positive	False	16_gourmet_pos_25	"On their web site , Tazo describes the flavor profile of Lotus as "" peach , nutty , flowery , overripe melon ."
+16_gourmet_pos_27	positive	False	16_gourmet_pos_26	"This surprisingly full-flavored yet delicately floral blend is clean and light-bodied , with an aroma reminiscent of freesia . """
+16_gourmet_pos_28	positive	False	16_gourmet_pos_27	"Tazo also describes the aroma as "" tropical fruit , green tea "" ."
+16_gourmet_pos_29	negative	False	16_gourmet_pos_28	Hmmm . . .
+16_gourmet_pos_30	negative	False	16_gourmet_pos_29	I do n't taste all of these various flavors ,
+16_gourmet_pos_31	positive	False	16_gourmet_pos_30	and
+16_gourmet_pos_32	negative	False	16_gourmet_pos_31	I suspect
+16_gourmet_pos_33	negative	False	16_gourmet_pos_32	that Tazo really pushes the creative writing limit .
+16_gourmet_pos_34	positive	False	16_gourmet_pos_33	I taste green tea ,
+16_gourmet_pos_35	positive	False	16_gourmet_pos_34	and a nice flowery flavor ,
+16_gourmet_pos_36	positive	False	16_gourmet_pos_35	which I 'm assuming is the lotus ,
+16_gourmet_pos_37	negative	False	16_gourmet_pos_36	but not the rest -- the peach , nuts , melon , freesia , tropical fruit --
+16_gourmet_pos_38	negative	False	16_gourmet_pos_37	they ` re missing from what I can discern here .
+16_gourmet_pos_39	positive	True	16_gourmet_pos_38	I would rate this tea , and Tazo in general , as good -- better than premium teas like Stash or Celestial Seasonings --
+16_gourmet_pos_40	negative	False	16_gourmet_pos_39	but not as good as Numi .
+16_gourmet_pos_41	positive	False	16_gourmet_pos_40	I 'm soooooo
+16_gourmet_pos_42	positive	False	16_gourmet_pos_41	spoiled by Numi teas ,
+16_gourmet_pos_43	negative	False	16_gourmet_pos_42	which is why Tazo Lotus gets only four stars .
+16_gourmet_pos_44	positive	False	16_gourmet_pos_43	\*\*\*

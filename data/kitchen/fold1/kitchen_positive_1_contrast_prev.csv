@@ -1,0 +1,168 @@
+1_kitchen_pos_1	negative	False	1_kitchen_pos_0	Apparently 3rd in the hierarchy of 4 models in the new S5 series of Miele vacuum cleaners , the features , price , and accessories are not exactly linear in transition from lower to higher models , nor even across series .
+1_kitchen_pos_2	negative	False	1_kitchen_pos_1	Many of the older series models have more features and a higher price than the newer ones .
+1_kitchen_pos_3	negative	False	1_kitchen_pos_2	They have fancy names like Capricorn , Red Velvet , and Champagne ,
+1_kitchen_pos_4	negative	False	1_kitchen_pos_3	leading to much confusion
+1_kitchen_pos_5	negative	False	1_kitchen_pos_4	and forcing you to compare each one similar to buying a car .
+1_kitchen_pos_6	positive	False	1_kitchen_pos_5	If your browser has tabbed browsing
+1_kitchen_pos_7	positive	False	1_kitchen_pos_6	-LRB- e. g . , Firefox -RRB- ,
+1_kitchen_pos_8	positive	False	1_kitchen_pos_7	the best way to figure out
+1_kitchen_pos_9	positive	False	1_kitchen_pos_8	which model is best for you is to go to Miele 's website
+1_kitchen_pos_10	positive	False	1_kitchen_pos_9	and open a tab for each model
+1_kitchen_pos_11	positive	False	1_kitchen_pos_10	you ` re interested in .
+1_kitchen_pos_12	positive	False	1_kitchen_pos_11	Flip back
+1_kitchen_pos_13	positive	False	1_kitchen_pos_12	and forth to see what text changes .
+1_kitchen_pos_14	positive	False	1_kitchen_pos_13	Callisto is the cheapest no frills model of the newest series
+1_kitchen_pos_15	positive	False	1_kitchen_pos_14	-LRB- newest technology motor ? -RRB-
+1_kitchen_pos_16	positive	False	1_kitchen_pos_15	that still comes with an electronically powered brush
+1_kitchen_pos_17	positive	False	1_kitchen_pos_16	-LRB- the 4th Pisces model is turbo -RRB- .
+1_kitchen_pos_18	positive	False	1_kitchen_pos_17	After 3 months of extensive use :
+1_kitchen_pos_19	positive	False	1_kitchen_pos_18	Pros :
+1_kitchen_pos_20	positive	False	1_kitchen_pos_19	"Agility - The 10 """
+1_kitchen_pos_21	positive	False	1_kitchen_pos_20	wide SEB217-3 electric powerbrush comes standard ,
+1_kitchen_pos_22	positive	False	1_kitchen_pos_21	and one of the reasons
+1_kitchen_pos_23	positive	False	1_kitchen_pos_22	I chose this model .
+1_kitchen_pos_24	positive	False	1_kitchen_pos_23	For me , smaller is better .
+1_kitchen_pos_25	positive	False	1_kitchen_pos_24	"While other vacuums advertise large 13 """
+1_kitchen_pos_26	positive	False	1_kitchen_pos_25	power brushes to cover more area in a single swipe ,
+1_kitchen_pos_27	positive	False	1_kitchen_pos_26	I do n't have much open carpet space .
+1_kitchen_pos_28	positive	False	1_kitchen_pos_27	Coffee tables , chairs , weight benches , and computers , all need
+1_kitchen_pos_29	positive	False	1_kitchen_pos_28	vacuuming around and under .
+1_kitchen_pos_30	positive	False	1_kitchen_pos_29	The powerbrush swivels well to get around corners .
+1_kitchen_pos_31	positive	False	1_kitchen_pos_30	Brush duster - The most commonly used attachment
+1_kitchen_pos_32	positive	False	1_kitchen_pos_31	-LRB- for me -RRB- ,
+1_kitchen_pos_33	positive	False	1_kitchen_pos_32	the brush duster is also small
+1_kitchen_pos_34	positive	False	1_kitchen_pos_33	-LRB- slightly larger in diameter than the hose -RRB-
+1_kitchen_pos_35	positive	False	1_kitchen_pos_34	and the bristles are durable .
+1_kitchen_pos_36	positive	True	1_kitchen_pos_35	It 's angled by default ,
+1_kitchen_pos_37	positive	False	1_kitchen_pos_36	but even this plastic piece swivels to straighten out .
+1_kitchen_pos_38	negative	False	1_kitchen_pos_37	This is not mentioned anywhere ;
+1_kitchen_pos_39	negative	False	1_kitchen_pos_38	you just have to figure this out for yourself .
+1_kitchen_pos_40	positive	False	1_kitchen_pos_39	On low power ,
+1_kitchen_pos_41	positive	False	1_kitchen_pos_40	I was able to vacuum places
+1_kitchen_pos_42	positive	False	1_kitchen_pos_41	that never got vacuumed before , like over the spider web of computer cables and telephone wires .
+1_kitchen_pos_43	positive	False	1_kitchen_pos_42	I even vacuumed the telephone itself
+1_kitchen_pos_44	positive	False	1_kitchen_pos_43	and other dust collecting objects on my desk .
+1_kitchen_pos_45	positive	True	1_kitchen_pos_44	Parquet floor brush - Initially ,
+1_kitchen_pos_46	positive	False	1_kitchen_pos_45	I wondered
+1_kitchen_pos_47	positive	False	1_kitchen_pos_46	why Miele would include this accessory
+1_kitchen_pos_48	positive	False	1_kitchen_pos_47	when the powerbrush was included ,
+1_kitchen_pos_49	positive	True	1_kitchen_pos_48	"but this "" wider brush duster """
+1_kitchen_pos_50	positive	False	1_kitchen_pos_49	actually does a better job on hard tiled floors than the powerbrush .
+1_kitchen_pos_51	positive	False	1_kitchen_pos_50	The powerbrush seems more
+1_kitchen_pos_52	positive	False	1_kitchen_pos_51	designed to churn up stuff from carpets ,
+1_kitchen_pos_53	positive	False	1_kitchen_pos_52	but the paraquet brush gathers and collects dust
+1_kitchen_pos_54	positive	False	1_kitchen_pos_53	stuck to hard surfaces better .
+1_kitchen_pos_55	negative	False	1_kitchen_pos_54	On the negative side ,
+1_kitchen_pos_56	negative	False	1_kitchen_pos_55	you might have to vacuum the brush
+1_kitchen_pos_57	negative	False	1_kitchen_pos_56	itself to unstuck the dust ,
+1_kitchen_pos_58	negative	False	1_kitchen_pos_57	and I wondered
+1_kitchen_pos_59	negative	False	1_kitchen_pos_58	"why they had to inconvenience the horse for "" genuine horse bristles "" ."
+1_kitchen_pos_60	negative	False	1_kitchen_pos_59	There is no permanent storage on the vacuum cleaner for the parquet brush , so you have to figure out
+1_kitchen_pos_61	negative	False	1_kitchen_pos_60	how to ensure the parts do n't get separated for life
+1_kitchen_pos_62	negative	False	1_kitchen_pos_61	-LRB- the powerbrush takes precedence -RRB- .
+1_kitchen_pos_63	positive	False	1_kitchen_pos_62	Cord rewind - The mechanical rewind
+1_kitchen_pos_64	positive	False	1_kitchen_pos_63	sucked in the entire length of cord every single time , something like 15 for 15 times !
+1_kitchen_pos_65	positive	False	1_kitchen_pos_64	-LRB- The manual says
+1_kitchen_pos_66	positive	False	1_kitchen_pos_65	to pull out the entire length of cord before use to help dissipate heat . -RRB-
+1_kitchen_pos_67	negative	False	1_kitchen_pos_66	Cons :
+1_kitchen_pos_68	negative	False	1_kitchen_pos_67	Price - After all ,
+1_kitchen_pos_69	negative	False	1_kitchen_pos_68	it 's just a vacuum cleaner .
+1_kitchen_pos_70	negative	False	1_kitchen_pos_69	There also seems to be price
+1_kitchen_pos_71	negative	False	1_kitchen_pos_70	fixing in the newer S5 series , at least
+1_kitchen_pos_72	negative	False	1_kitchen_pos_71	when I bought this .
+1_kitchen_pos_73	negative	False	1_kitchen_pos_72	Everywhere I checked
+1_kitchen_pos_74	negative	False	1_kitchen_pos_73	-LRB- maybe 10 websites -RRB- ,
+1_kitchen_pos_75	negative	False	1_kitchen_pos_74	the price was exactly $ 799 or $ 799.95 , with the only difference
+1_kitchen_pos_76	negative	False	1_kitchen_pos_75	being no tax and\/or free shipping .
+1_kitchen_pos_77	negative	False	1_kitchen_pos_76	"One website even advertised "" The lowest price"
+1_kitchen_pos_78	negative	False	1_kitchen_pos_77	"allowed ! """
+1_kitchen_pos_79	negative	False	1_kitchen_pos_78	What 's a Diamond Dealer ?
+1_kitchen_pos_80	negative	False	1_kitchen_pos_79	Is this Amway ?
+1_kitchen_pos_81	negative	False	1_kitchen_pos_80	Release buttons - The release buttons on the attachments and hose are counterintuitive ,
+1_kitchen_pos_82	negative	False	1_kitchen_pos_81	being on the part
+1_kitchen_pos_83	negative	False	1_kitchen_pos_82	"that "" comes off "" rather than on the part"
+1_kitchen_pos_84	negative	False	1_kitchen_pos_83	"that "" stays behind "" ."
+1_kitchen_pos_85	negative	False	1_kitchen_pos_84	Therefore ,
+1_kitchen_pos_86	negative	False	1_kitchen_pos_85	you
+1_kitchen_pos_87	negative	False	1_kitchen_pos_86	must squeeze the button with the same hand
+1_kitchen_pos_88	negative	False	1_kitchen_pos_87	you are pulling away with .
+1_kitchen_pos_89	negative	False	1_kitchen_pos_88	The hose extension button is particularly confusing .
+1_kitchen_pos_90	negative	False	1_kitchen_pos_89	It 's an oval shaped rocker button
+1_kitchen_pos_91	negative	False	1_kitchen_pos_90	"that "" rocks "" very little ."
+1_kitchen_pos_92	negative	False	1_kitchen_pos_91	To extend the stainless steel hose ,
+1_kitchen_pos_93	negative	False	1_kitchen_pos_92	you have to remember
+1_kitchen_pos_94	negative	False	1_kitchen_pos_93	which side of the button
+1_kitchen_pos_95	negative	False	1_kitchen_pos_94	-LRB- top or bottom -RRB-
+1_kitchen_pos_96	negative	False	1_kitchen_pos_95	to press .
+1_kitchen_pos_97	negative	False	1_kitchen_pos_96	There is no distinction on which side to press ,
+1_kitchen_pos_98	negative	False	1_kitchen_pos_97	and it 's always a matter
+1_kitchen_pos_99	negative	False	1_kitchen_pos_98	of trial and error as I yank and tug at the hose
+1_kitchen_pos_100	negative	False	1_kitchen_pos_99	while pressing top and bottom of the extension button .
+1_kitchen_pos_101	negative	False	1_kitchen_pos_100	Stiff no swivel hose -
+1_kitchen_pos_102	negative	False	1_kitchen_pos_101	The hose rotates at the top
+1_kitchen_pos_103	negative	False	1_kitchen_pos_102	-LRB- handle area -RRB- ,
+1_kitchen_pos_104	negative	False	1_kitchen_pos_103	but does not swivel at the base
+1_kitchen_pos_105	negative	False	1_kitchen_pos_104	where it connects to the machine .
+1_kitchen_pos_106	negative	False	1_kitchen_pos_105	Instead of disconnecting and reconnecting to get rid of twists ,
+1_kitchen_pos_107	negative	False	1_kitchen_pos_106	I 'd rather pick up the powerhead
+1_kitchen_pos_108	negative	False	1_kitchen_pos_107	and spin it around
+1_kitchen_pos_109	negative	False	1_kitchen_pos_108	to get out the twists .
+1_kitchen_pos_110	negative	False	1_kitchen_pos_109	The flex hose diameter is larger than I 'm used to ,
+1_kitchen_pos_111	negative	False	1_kitchen_pos_110	making the hose stiffer and difficult to store in the same closet
+1_kitchen_pos_112	negative	False	1_kitchen_pos_111	where I used to store my old vacuum cleaner .
+1_kitchen_pos_113	negative	False	1_kitchen_pos_112	Considering the price , an electrical slip ring would have been nice .
+1_kitchen_pos_114	positive	True	1_kitchen_pos_113	Bag full indicator
+1_kitchen_pos_115	negative	False	1_kitchen_pos_114	- The mechanical bag full indicator is actually an indicator of how much the vacuum cleaner is straining to suck .
+1_kitchen_pos_116	negative	False	1_kitchen_pos_115	Put your hand over the end
+1_kitchen_pos_117	negative	False	1_kitchen_pos_116	to block suction
+1_kitchen_pos_118	negative	False	1_kitchen_pos_117	and it will indicate bag full .
+1_kitchen_pos_119	negative	False	1_kitchen_pos_118	Right out of the box on short carpet ,
+1_kitchen_pos_120	negative	False	1_kitchen_pos_119	it indicated bag full on high power .
+1_kitchen_pos_121	negative	False	1_kitchen_pos_120	As I turned the power down ,
+1_kitchen_pos_122	negative	False	1_kitchen_pos_121	it indicated less full sequentially .
+1_kitchen_pos_123	negative	False	1_kitchen_pos_122	You have to read the instructions about using the floor tool with the tool slightly off the floor
+1_kitchen_pos_124	negative	False	1_kitchen_pos_123	to get an accurate reading from the indicator .
+1_kitchen_pos_125	negative	False	1_kitchen_pos_124	Even at that ,
+1_kitchen_pos_126	negative	False	1_kitchen_pos_125	there are caveats about fine dust or pet hair
+1_kitchen_pos_127	negative	False	1_kitchen_pos_126	that can fool the indicator .
+1_kitchen_pos_128	positive	False	1_kitchen_pos_127	Extra stuff ?
+1_kitchen_pos_129	negative	False	1_kitchen_pos_128	- The parquet brush comes attached with a short plastic extension
+1_kitchen_pos_130	negative	False	1_kitchen_pos_129	that was difficult to plug directly into the stainless steel hose
+1_kitchen_pos_131	negative	False	1_kitchen_pos_130	-LRB- button does n't easily click into place -RRB- .
+1_kitchen_pos_132	negative	False	1_kitchen_pos_131	The extension is n't needed to connect the parquet brush , so you have to remove it
+1_kitchen_pos_133	negative	False	1_kitchen_pos_132	and keep track of where you put it .
+1_kitchen_pos_134	negative	False	1_kitchen_pos_133	To this day ,
+1_kitchen_pos_135	negative	False	1_kitchen_pos_134	I still have n't figured out what the extension is for , other than to connect other attachments
+1_kitchen_pos_136	negative	False	1_kitchen_pos_135	that I might buy in the future .
+1_kitchen_pos_137	negative	False	1_kitchen_pos_136	This is yet another piece with no place to store on the vacuum cleaner that I must ensure does not get
+1_kitchen_pos_138	negative	False	1_kitchen_pos_137	separated for life
+1_kitchen_pos_139	negative	False	1_kitchen_pos_138	"-LRB- along with the parquet brush , "" normal "" filter cage , and replacement bags -RRB- ."
+1_kitchen_pos_140	negative	False	1_kitchen_pos_139	Symbol marking - The power symbol markings are not obvious at all , contrary to claims .
+1_kitchen_pos_141	negative	False	1_kitchen_pos_140	"Other than the symbols labels "" Min """
+1_kitchen_pos_142	negative	False	1_kitchen_pos_141	"and "" Max "" , you have to read the instructions to figure out what the other power symbols mean ."
+1_kitchen_pos_143	positive	False	1_kitchen_pos_142	At least the power seems to increase sequentially
+1_kitchen_pos_144	positive	False	1_kitchen_pos_143	as you turn the dial clockwise .
+1_kitchen_pos_145	negative	False	1_kitchen_pos_144	The Quite Mode is # 4 of 6 settings
+1_kitchen_pos_146	negative	False	1_kitchen_pos_145	-LRB- with 6 being the highest -RRB- ,
+1_kitchen_pos_147	negative	False	1_kitchen_pos_146	and is therefore not actually the quietest
+1_kitchen_pos_148	negative	False	1_kitchen_pos_147	"but intended to be the "" normal "" operating mode ."
+1_kitchen_pos_149	positive	False	1_kitchen_pos_148	I think
+1_kitchen_pos_150	positive	False	1_kitchen_pos_149	"most people will consider "" Max "" the default mode ."
+1_kitchen_pos_151	negative	False	1_kitchen_pos_150	Optional filter frame - This model comes with a HEPA filter , so
+1_kitchen_pos_152	negative	True	1_kitchen_pos_151	you do n't need the filter frame
+1_kitchen_pos_153	negative	True	1_kitchen_pos_152	"unless you ` re going to switch to the "" normal "" filters ,"
+1_kitchen_pos_154	negative	False	1_kitchen_pos_153	but brand-new right out of the box
+1_kitchen_pos_155	negative	False	1_kitchen_pos_154	the frame for the normal filters came with a broken cheap plastic handle ,
+1_kitchen_pos_156	negative	False	1_kitchen_pos_155	apparently due to the way
+1_kitchen_pos_157	negative	False	1_kitchen_pos_156	it was shipped with the handle
+1_kitchen_pos_158	negative	False	1_kitchen_pos_157	protruding out the cardboard wrapping .
+1_kitchen_pos_159	negative	False	1_kitchen_pos_158	You do n't even need the handle for the frame
+1_kitchen_pos_160	negative	False	1_kitchen_pos_159	to function properly ,
+1_kitchen_pos_161	negative	False	1_kitchen_pos_160	but for the kind of money I paid , nothing should be broken out of the box .
+1_kitchen_pos_162	positive	False	1_kitchen_pos_161	The vendor that I bought it from -LRB- Best Vacuum -RRB-
+1_kitchen_pos_163	positive	False	1_kitchen_pos_162	replaced
+1_kitchen_pos_164	positive	False	1_kitchen_pos_163	it for free .
+1_kitchen_pos_165	positive	False	1_kitchen_pos_164	So is it worth
+1_kitchen_pos_166	positive	False	1_kitchen_pos_165	$ 800 ?
+1_kitchen_pos_167	positive	True	1_kitchen_pos_166	It does a good job ,
+1_kitchen_pos_168	negative	True	1_kitchen_pos_167	but only time will tell . .

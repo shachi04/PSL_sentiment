@@ -1,0 +1,17 @@
+15_gourmet_neg_1	negative	False	15_gourmet_neg_0	As a vegan ,
+15_gourmet_neg_2	negative	False	15_gourmet_neg_1	I have tried just about every tofu product on the market , and nothing ever came close to the terrible texture of these noodles .
+15_gourmet_neg_3	negative	False	15_gourmet_neg_2	The smell
+15_gourmet_neg_4	negative	False	15_gourmet_neg_3	when you opened the bag was not pleasant ,
+15_gourmet_neg_5	positive	False	15_gourmet_neg_4	but if you wash them off
+15_gourmet_neg_6	positive	False	15_gourmet_neg_5	and parboil ,
+15_gourmet_neg_7	positive	False	15_gourmet_neg_6	that goes away ,
+15_gourmet_neg_8	negative	False	15_gourmet_neg_7	but is replaced with a slightly sweet smell that I disliked almost as much .
+15_gourmet_neg_9	positive	False	15_gourmet_neg_8	But I kept an open mind ,
+15_gourmet_neg_10	positive	False	15_gourmet_neg_9	cooked the noodles for a few minutes , added my favorite sauce and fresh ground pepper with some soy cheese
+15_gourmet_neg_11	positive	False	15_gourmet_neg_10	grated on top .
+15_gourmet_neg_12	negative	False	15_gourmet_neg_11	Whoever said
+15_gourmet_neg_13	negative	True	15_gourmet_neg_12	it was like eating rubber bands was exactly on target ,
+15_gourmet_neg_14	negative	False	15_gourmet_neg_13	they are incredibly chewy and just do n't taste that great either .
+15_gourmet_neg_15	negative	True	15_gourmet_neg_14	Even as a low calorie food ,
+15_gourmet_neg_16	negative	False	15_gourmet_neg_15	it seems like a waste
+15_gourmet_neg_17	negative	False	15_gourmet_neg_16	to spend 40 calories on these noodles .

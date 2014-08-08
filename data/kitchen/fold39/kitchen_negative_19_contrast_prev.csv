@@ -1,0 +1,36 @@
+19_kitchen_neg_1	positive	True	19_kitchen_neg_0	The vacuum has great suction .
+19_kitchen_neg_2	negative	True	19_kitchen_neg_1	However , suction is the only good quality about this vacuum .
+19_kitchen_neg_3	positive	False	19_kitchen_neg_2	I purchased this vacuum at Sears
+19_kitchen_neg_4	positive	False	19_kitchen_neg_3	and got a good discount during their vacuum sale .
+19_kitchen_neg_5	negative	False	19_kitchen_neg_4	But I have gone through 3 of these vacuums
+19_kitchen_neg_6	negative	False	19_kitchen_neg_5	and have returned or plan on returning each one .
+19_kitchen_neg_7	negative	False	19_kitchen_neg_6	The 1st vacuum got
+19_kitchen_neg_8	negative	False	19_kitchen_neg_7	so much dirt stuck behind and in the hepa filter , the vacuum started making a sound like it was going to break .
+19_kitchen_neg_9	negative	False	19_kitchen_neg_8	The 2nd vacuum had a handle
+19_kitchen_neg_10	negative	False	19_kitchen_neg_9	that was assembled badly so with each forward
+19_kitchen_neg_11	negative	False	19_kitchen_neg_10	and backward pass the handle felt like it was going to come off .
+19_kitchen_neg_12	negative	False	19_kitchen_neg_11	This vacuum is hard to push .
+19_kitchen_neg_13	negative	False	19_kitchen_neg_12	You have to put the carpet
+19_kitchen_neg_14	negative	False	19_kitchen_neg_13	setting at close to high for low carpeting .
+19_kitchen_neg_15	negative	False	19_kitchen_neg_14	On hard surfaces the vacuum is hard to push too !
+19_kitchen_neg_16	negative	False	19_kitchen_neg_15	This vacuum has a large dust cup with 2 sections .
+19_kitchen_neg_17	negative	False	19_kitchen_neg_16	"The small compartment in the back of the dust cup is -LRB- 1 """
+19_kitchen_neg_18	negative	False	19_kitchen_neg_17	"high X 5 """
+19_kitchen_neg_19	negative	False	19_kitchen_neg_18	"wide X 6 """
+19_kitchen_neg_20	negative	False	19_kitchen_neg_19	deep -RRB- for the dirt .
+19_kitchen_neg_21	negative	False	19_kitchen_neg_20	The large front section collects the hair , crumbs and other larger things you pick up off the floor in your home , however dirt and fine particulate dust is what I collect in my vacuum ,
+19_kitchen_neg_22	negative	False	19_kitchen_neg_21	and Hoover only gives you that little compartment for the dirt
+19_kitchen_neg_23	negative	False	19_kitchen_neg_22	so it gets caught in the vacuum behind the hepa filter .
+19_kitchen_neg_24	negative	False	19_kitchen_neg_23	You spend more time cleaning out the vacuum
+19_kitchen_neg_25	negative	False	19_kitchen_neg_24	than you do vacuuming your carpet .
+19_kitchen_neg_26	negative	False	19_kitchen_neg_25	Today I had to pick up the vacuum
+19_kitchen_neg_27	negative	False	19_kitchen_neg_26	and shake it over the trash
+19_kitchen_neg_28	negative	False	19_kitchen_neg_27	can to get most of the dirt out from behind the hepa filter .
+19_kitchen_neg_29	negative	False	19_kitchen_neg_28	Even my husband noticed that this vacuum takes too much time to empty and clean out .
+19_kitchen_neg_30	negative	False	19_kitchen_neg_29	Yes lots of dirt falls onto the vacuum
+19_kitchen_neg_31	negative	False	19_kitchen_neg_30	when you remove the dust cup
+19_kitchen_neg_32	negative	False	19_kitchen_neg_31	and is messy to clean up .
+19_kitchen_neg_33	negative	False	19_kitchen_neg_32	I have tried Kenmore , Eureka , and Fantom in the past .
+19_kitchen_neg_34	negative	False	19_kitchen_neg_33	I plan on returning the 3rd vacuum
+19_kitchen_neg_35	negative	False	19_kitchen_neg_34	once I get my Dyson
+19_kitchen_neg_36	negative	False	19_kitchen_neg_35	I purchased from HSN

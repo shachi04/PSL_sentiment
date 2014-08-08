@@ -44,7 +44,7 @@ class Only_swn{
 
 	public static void main(String[] args)
 	{
-		for(int i = 1; i <10; ++i)
+		for(int i = 0; i <10; ++i)
 		{
 			Only_swn a = new Only_swn()
 			a.pslmodel(i);
@@ -164,7 +164,7 @@ class Only_swn{
 //		//m.add rule : (~tglpos(A)) >> ~possentiment(A), weight : 5
 //		//m.add rule : (~tglneg(A)) >> ~negsentiment(A), weight : 5
 //
-
+		
 		/*  
 		 * Rules for Neighborhood relation
 		 * 

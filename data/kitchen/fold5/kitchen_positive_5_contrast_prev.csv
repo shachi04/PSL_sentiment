@@ -1,0 +1,77 @@
+5_kitchen_pos_1	positive	False	5_kitchen_pos_0	Le Creuset manufactures porcelain enameled cast iron cooking vessels as well as other quality products .
+5_kitchen_pos_2	positive	False	5_kitchen_pos_1	The enameled cookware is cast from molten iron
+5_kitchen_pos_3	positive	False	5_kitchen_pos_2	formed in sand moulds
+5_kitchen_pos_4	positive	False	5_kitchen_pos_3	which are used only once .
+5_kitchen_pos_5	negative	True	5_kitchen_pos_4	For this reason , one pan may look like another ,
+5_kitchen_pos_6	positive	False	5_kitchen_pos_5	but each is unique in its own way .
+5_kitchen_pos_7	positive	False	5_kitchen_pos_6	Cast iron is a highly efficient material
+5_kitchen_pos_8	positive	False	5_kitchen_pos_7	which absorbs and distributes heat efficiently .
+5_kitchen_pos_9	negative	False	5_kitchen_pos_8	For this reason ,
+5_kitchen_pos_10	positive	False	5_kitchen_pos_9	it is recommended to use on low to medium heat .
+5_kitchen_pos_11	positive	False	5_kitchen_pos_10	There are a few exceptions like boiling water
+5_kitchen_pos_12	positive	False	5_kitchen_pos_11	where cooking on high heat is appropriate and okay .
+5_kitchen_pos_13	negative	False	5_kitchen_pos_12	Otherwise , cooking with high heat may cause food
+5_kitchen_pos_14	negative	False	5_kitchen_pos_13	to stick , discolor the enamel coating , or cook the food unevenly .
+5_kitchen_pos_15	positive	False	5_kitchen_pos_14	Remove cast iron from the heat
+5_kitchen_pos_16	positive	False	5_kitchen_pos_15	and it does not cool off quickly .
+5_kitchen_pos_17	positive	False	5_kitchen_pos_16	This helps your food stay warm while serving .
+5_kitchen_pos_18	negative	False	5_kitchen_pos_17	Beware ;
+5_kitchen_pos_19	negative	False	5_kitchen_pos_18	iron tends to be heavy
+5_kitchen_pos_20	negative	False	5_kitchen_pos_19	so these cooking vessels tend to be heavy as well .
+5_kitchen_pos_21	positive	False	5_kitchen_pos_20	Cast iron is an effective material for cooking so why cover it with enamel ?
+5_kitchen_pos_22	positive	False	5_kitchen_pos_21	Iron tends to rust ;
+5_kitchen_pos_23	positive	False	5_kitchen_pos_22	iron oxide
+5_kitchen_pos_24	positive	False	5_kitchen_pos_23	-LRB- rust -RRB-
+5_kitchen_pos_25	positive	False	5_kitchen_pos_24	does n't add any complimentary flavors to your food .
+5_kitchen_pos_26	positive	False	5_kitchen_pos_25	If your cast iron cooking vessel was not enameled ,
+5_kitchen_pos_27	positive	False	5_kitchen_pos_26	you would have to season
+5_kitchen_pos_28	positive	False	5_kitchen_pos_27	and maintain it .
+5_kitchen_pos_29	positive	True	5_kitchen_pos_28	Adding the porcelain enamel not only looks good ,
+5_kitchen_pos_30	positive	False	5_kitchen_pos_29	but has multiple benefits .
+5_kitchen_pos_31	positive	False	5_kitchen_pos_30	The enamel ,
+5_kitchen_pos_32	positive	False	5_kitchen_pos_31	being a solid coating , is one of the most hygienic surfaces to cook on ,
+5_kitchen_pos_33	positive	False	5_kitchen_pos_32	does not stain , absorb odors , retain flavors ,
+5_kitchen_pos_34	positive	False	5_kitchen_pos_33	and is easy to clean .
+5_kitchen_pos_35	negative	False	5_kitchen_pos_34	The enamel can be damaged , so limit cooking tools to plastic or wood .
+5_kitchen_pos_36	positive	True	5_kitchen_pos_35	The benefits of cooking with Le Creuset cast iron are many ,
+5_kitchen_pos_37	positive	False	5_kitchen_pos_36	but lets get down to the roasting pan specifically .
+5_kitchen_pos_38	positive	False	5_kitchen_pos_37	This pan holds 5 1\/4 quarts of food , measures 9 3\/4 x 14 x 3 inches internally , and weighs 10.2 pounds .
+5_kitchen_pos_39	positive	False	5_kitchen_pos_38	5 1\/4 quarts will typically feed 8 - 10 people
+5_kitchen_pos_40	positive	False	5_kitchen_pos_39	when it comes to casseroles , so consider your recipes
+5_kitchen_pos_41	positive	False	5_kitchen_pos_40	when determining the size
+5_kitchen_pos_42	positive	False	5_kitchen_pos_41	you need .
+5_kitchen_pos_43	positive	False	5_kitchen_pos_42	Except for roasts , the roasting pan tends to do best if at least 3\/4 full .
+5_kitchen_pos_44	negative	False	5_kitchen_pos_43	Any less
+5_kitchen_pos_45	negative	False	5_kitchen_pos_44	and you may overwhelm your food with heat evenly dispersed in the pot .
+5_kitchen_pos_46	positive	False	5_kitchen_pos_45	I find that the cast iron adds a crispy texture to food
+5_kitchen_pos_47	positive	False	5_kitchen_pos_46	that may be desirable with a dish like mac-n-cheese ,
+5_kitchen_pos_48	negative	False	5_kitchen_pos_47	while not so desirable for other dishes .
+5_kitchen_pos_49	positive	False	5_kitchen_pos_48	Add the Le Creuset 9 x 11 1\/2 inch roasting rack for roasting chickens and pork loins
+5_kitchen_pos_50	positive	False	5_kitchen_pos_49	keeping them out of the grease .
+5_kitchen_pos_51	positive	False	5_kitchen_pos_50	Some other possibilities for this pan include casseroles , pork chops
+5_kitchen_pos_52	positive	False	5_kitchen_pos_51	covered with cornbread dressing , dinner rolls , baked squash , lasagna , scalloped potatoes , cobblers , pineapple upside down cake , or bread pudding .
+5_kitchen_pos_53	positive	False	5_kitchen_pos_52	The possibilities almost seem endless to your imagination .
+5_kitchen_pos_54	negative	False	5_kitchen_pos_53	One feature that people tend to complain about is the cost .
+5_kitchen_pos_55	negative	False	5_kitchen_pos_54	The cost does seem steep
+5_kitchen_pos_56	negative	False	5_kitchen_pos_55	compared to other pans
+5_kitchen_pos_57	negative	False	5_kitchen_pos_56	made from other materials .
+5_kitchen_pos_58	negative	False	5_kitchen_pos_57	Heck , cast iron does n't seem like it should be expensive
+5_kitchen_pos_59	negative	False	5_kitchen_pos_58	when comparing to that old cast iron pan past generations have used for cornbread and camping .
+5_kitchen_pos_60	positive	False	5_kitchen_pos_59	However the manufacturing process requires making a mould for each and every pan produced .
+5_kitchen_pos_61	positive	False	5_kitchen_pos_60	They then go through the enameling process
+5_kitchen_pos_62	positive	False	5_kitchen_pos_61	before shipping these heavy pans .
+5_kitchen_pos_63	positive	False	5_kitchen_pos_62	If you take what goes into making and distributing these high quality cast iron products ,
+5_kitchen_pos_64	positive	False	5_kitchen_pos_63	the cost tends to make sense .
+5_kitchen_pos_65	positive	False	5_kitchen_pos_64	Then consider that this pan will easily last a lifetime
+5_kitchen_pos_66	positive	False	5_kitchen_pos_65	when taken care of .
+5_kitchen_pos_67	positive	False	5_kitchen_pos_66	PROS :
+5_kitchen_pos_68	positive	False	5_kitchen_pos_67	Extremely versatile
+5_kitchen_pos_69	positive	False	5_kitchen_pos_68	Efficient absorption and distribution of heat
+5_kitchen_pos_70	positive	False	5_kitchen_pos_69	Hygienic enamel cooking surface
+5_kitchen_pos_71	positive	False	5_kitchen_pos_70	Does not stain , absorb odors , or retain flavors
+5_kitchen_pos_72	positive	False	5_kitchen_pos_71	Easy to clean
+5_kitchen_pos_73	positive	False	5_kitchen_pos_72	when not abused or misused
+5_kitchen_pos_74	positive	False	5_kitchen_pos_73	Can be transferred from stove top to the oven to the table
+5_kitchen_pos_75	positive	False	5_kitchen_pos_74	Can easily last a lifetime
+5_kitchen_pos_76	negative	False	5_kitchen_pos_75	CONS :
+5_kitchen_pos_77	negative	False	5_kitchen_pos_76	Its heavy , as cast iron tends to be weighing in at about 10.2 pounds

@@ -1,0 +1,41 @@
+16_kitchen_neg_1	positive	False	16_kitchen_neg_0	Okay ,
+16_kitchen_neg_2	positive	False	16_kitchen_neg_1	I bought for the price .
+16_kitchen_neg_3	positive	False	16_kitchen_neg_2	And it is effective enough .
+16_kitchen_neg_4	negative	False	16_kitchen_neg_3	But it is very clumsy and unergonomic ,
+16_kitchen_neg_5	negative	True	16_kitchen_neg_4	so that after a couple minutes of use
+16_kitchen_neg_6	negative	False	16_kitchen_neg_5	it is difficult to handle any longer .
+16_kitchen_neg_7	negative	False	16_kitchen_neg_6	The main problems are :
+16_kitchen_neg_8	negative	False	16_kitchen_neg_7	Balance of weight , and the switch .
+16_kitchen_neg_9	negative	False	16_kitchen_neg_8	First , the switch :
+16_kitchen_neg_10	negative	False	16_kitchen_neg_9	Because it is a cheap push-in button ,
+16_kitchen_neg_11	negative	False	16_kitchen_neg_10	which must be constantly depressed to keep the knife on ,
+16_kitchen_neg_12	negative	False	16_kitchen_neg_11	you lose optimum control quickly .
+16_kitchen_neg_13	negative	False	16_kitchen_neg_12	The handle is badly placed for this ,
+16_kitchen_neg_14	negative	False	16_kitchen_neg_13	as your thumb must always be on TOP of the handle and forward toward the front of it ,
+16_kitchen_neg_15	negative	False	16_kitchen_neg_14	but you ca n't hold your hand up there
+16_kitchen_neg_16	negative	False	16_kitchen_neg_15	because your wrist angle will be completely wrong for cutting .
+16_kitchen_neg_17	negative	False	16_kitchen_neg_16	In addition ,
+16_kitchen_neg_18	negative	False	16_kitchen_neg_17	keeping
+16_kitchen_neg_19	negative	False	16_kitchen_neg_18	that button depressed is difficult
+16_kitchen_neg_20	negative	False	16_kitchen_neg_19	not only because it does require a constant application of pressure
+16_kitchen_neg_21	negative	False	16_kitchen_neg_20	at a different direction from both the grasp
+16_kitchen_neg_22	negative	False	16_kitchen_neg_21	and the application of the knife , but because the button sinks deep into the handle , so your thumb is inside the handle as you ` re trying to hold and control the knife :
+16_kitchen_neg_23	negative	False	16_kitchen_neg_22	Quick cramp .
+16_kitchen_neg_24	negative	False	16_kitchen_neg_23	Moreover ,
+16_kitchen_neg_25	negative	False	16_kitchen_neg_24	as you ` re pushing it in ,
+16_kitchen_neg_26	negative	False	16_kitchen_neg_25	if the food you ` re cutting is moist
+16_kitchen_neg_27	negative	False	16_kitchen_neg_26	-LRB- like a turkey -RRB- ,
+16_kitchen_neg_28	negative	False	16_kitchen_neg_27	juices may run onto the handle , your thumb -- and into the hole into which you ` re pressing the button .
+16_kitchen_neg_29	negative	False	16_kitchen_neg_28	NOT safe .
+16_kitchen_neg_30	negative	False	16_kitchen_neg_29	A couple times I ` ve wondered whether that shooting pain in my thumb was from nerve torture or electric shock ;
+16_kitchen_neg_31	negative	False	16_kitchen_neg_30	either way ,
+16_kitchen_neg_32	negative	False	16_kitchen_neg_31	it was n't good .
+16_kitchen_neg_33	negative	False	16_kitchen_neg_32	Then the weight distribution of the knife is not very good .
+16_kitchen_neg_34	negative	False	16_kitchen_neg_33	Look at the huge bulk of the motor --
+16_kitchen_neg_35	negative	False	16_kitchen_neg_34	and then look at where the handle is located , and how it is designed .
+16_kitchen_neg_36	negative	False	16_kitchen_neg_35	There 's no way to hold this at a proper angle with the handle
+16_kitchen_neg_37	negative	False	16_kitchen_neg_36	shaped as it is .
+16_kitchen_neg_38	negative	False	16_kitchen_neg_37	Add in the need to be depressing the power button
+16_kitchen_neg_39	negative	False	16_kitchen_neg_38	as you ` re holding it awkwardly , and . . .
+16_kitchen_neg_40	positive	False	16_kitchen_neg_39	2 stars for effectiveness ;
+16_kitchen_neg_41	negative	False	16_kitchen_neg_40	minus 3 for bad functional design

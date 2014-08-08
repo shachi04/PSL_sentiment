@@ -1,0 +1,43 @@
+5_gourmet_neg_1	negative	False	5_gourmet_neg_0	The product description says
+5_gourmet_neg_2	negative	False	5_gourmet_neg_1	that this tea is ' slightly sweet ' as well as a bunch of other descriptors ,
+5_gourmet_neg_3	negative	False	5_gourmet_neg_2	but I did n't get any sweetness at all .
+5_gourmet_neg_4	positive	False	5_gourmet_neg_3	I was very optimistic
+5_gourmet_neg_5	positive	True	5_gourmet_neg_4	because I normally love everything Tazo offers ,
+5_gourmet_neg_6	negative	False	5_gourmet_neg_5	but this time I had my hopes
+5_gourmet_neg_7	negative	False	5_gourmet_neg_6	dashed .
+5_gourmet_neg_8	negative	False	5_gourmet_neg_7	I brewed up a mug of this tea
+5_gourmet_neg_9	negative	False	5_gourmet_neg_8	and was immediately alarmed at the bouquet .
+5_gourmet_neg_10	negative	True	5_gourmet_neg_9	The teabag smelled different ,
+5_gourmet_neg_11	negative	False	5_gourmet_neg_10	but once the hot water hit it the smell seemed to really magnify .
+5_gourmet_neg_12	negative	False	5_gourmet_neg_11	But I scooped in a few teaspoons of sugar
+5_gourmet_neg_13	negative	False	5_gourmet_neg_12	and hoped for the best .
+5_gourmet_neg_14	negative	False	5_gourmet_neg_13	I managed to choke down about a third of the cup
+5_gourmet_neg_15	negative	False	5_gourmet_neg_14	before I called it a day .
+5_gourmet_neg_16	negative	False	5_gourmet_neg_15	Life is too short to drink something
+5_gourmet_neg_17	negative	False	5_gourmet_neg_16	you do n't like .
+5_gourmet_neg_18	negative	False	5_gourmet_neg_17	However ,
+5_gourmet_neg_19	positive	False	5_gourmet_neg_18	I had read a review
+5_gourmet_neg_20	positive	False	5_gourmet_neg_19	that mentioned
+5_gourmet_neg_21	positive	False	5_gourmet_neg_20	how good and palatable this tea was
+5_gourmet_neg_22	positive	False	5_gourmet_neg_21	when combined with the Tazo Lotus .
+5_gourmet_neg_23	negative	False	5_gourmet_neg_22	I figured
+5_gourmet_neg_24	negative	False	5_gourmet_neg_23	it was worth a shot , otherwise
+5_gourmet_neg_25	negative	False	5_gourmet_neg_24	I 'd have to throw out this tea altogether .
+5_gourmet_neg_26	negative	False	5_gourmet_neg_25	The Lotus smelled great ,
+5_gourmet_neg_27	negative	False	5_gourmet_neg_26	so I was excited .
+5_gourmet_neg_28	negative	False	5_gourmet_neg_27	I blended the two bags
+5_gourmet_neg_29	negative	False	5_gourmet_neg_28	-LRB- one Lotus and one Wild Sweet Orange -RRB-
+5_gourmet_neg_30	negative	False	5_gourmet_neg_29	in a large mug ,
+5_gourmet_neg_31	negative	False	5_gourmet_neg_30	then removed the Wild Sweet Orange after a minute .
+5_gourmet_neg_32	negative	False	5_gourmet_neg_31	I left the Lotus in for another minute or two
+5_gourmet_neg_33	negative	False	5_gourmet_neg_32	-LRB- yeah , definitely two -RRB- .
+5_gourmet_neg_34	positive	True	5_gourmet_neg_33	The result was a very unusual ,
+5_gourmet_neg_35	positive	True	5_gourmet_neg_34	but not unappealing ,
+5_gourmet_neg_36	positive	False	5_gourmet_neg_35	beverage .
+5_gourmet_neg_37	negative	False	5_gourmet_neg_36	Would I drink this more than once a day ?
+5_gourmet_neg_38	negative	False	5_gourmet_neg_37	No .
+5_gourmet_neg_39	positive	False	5_gourmet_neg_38	Was it very interesting and something that
+5_gourmet_neg_40	positive	False	5_gourmet_neg_39	I ` ll try again ?
+5_gourmet_neg_41	positive	False	5_gourmet_neg_40	Yes .
+5_gourmet_neg_42	negative	False	5_gourmet_neg_41	Live and learn ,
+5_gourmet_neg_43	negative	False	5_gourmet_neg_42	I guess .

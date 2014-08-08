@@ -1,0 +1,50 @@
+14_gourmet_pos_1	positive	False	14_gourmet_pos_0	I have been using a Chemex 10-cup coffee maker for almost a year
+14_gourmet_pos_2	positive	False	14_gourmet_pos_1	and have never had such good coffee before in my life .
+14_gourmet_pos_3	positive	False	14_gourmet_pos_2	I am constantly looking forward to my next pot of coffee !
+14_gourmet_pos_4	negative	False	14_gourmet_pos_3	There is a downside to this coffee maker :
+14_gourmet_pos_5	negative	False	14_gourmet_pos_4	it is a more manual procedure than what you are used to ,
+14_gourmet_pos_6	negative	False	14_gourmet_pos_5	and it also takes a couple of pots
+14_gourmet_pos_7	negative	False	14_gourmet_pos_6	to learn
+14_gourmet_pos_8	negative	False	14_gourmet_pos_7	how to use this most efficiently .
+14_gourmet_pos_9	negative	True	14_gourmet_pos_8	The first time I tried to use mine ,
+14_gourmet_pos_10	negative	False	14_gourmet_pos_9	I had ground my coffee way too finely and it just took forever !
+14_gourmet_pos_11	negative	False	14_gourmet_pos_10	The big time consumers :
+14_gourmet_pos_12	negative	False	14_gourmet_pos_11	you have to boil your water separately
+14_gourmet_pos_13	negative	False	14_gourmet_pos_12	-LRB- you do have a water kettle right ? -RRB-
+14_gourmet_pos_14	negative	False	14_gourmet_pos_13	and then you have to gradually pour the boiled water through the Chemex .
+14_gourmet_pos_15	negative	False	14_gourmet_pos_14	This means that while the coffee is brewing ,
+14_gourmet_pos_16	negative	False	14_gourmet_pos_15	you are pouring , or watching , or giving the filter area a bit of a stir .
+14_gourmet_pos_17	positive	False	14_gourmet_pos_16	Now the up side :
+14_gourmet_pos_18	positive	False	14_gourmet_pos_17	you will never ever ever drink a better cup of coffee .
+14_gourmet_pos_19	positive	False	14_gourmet_pos_18	I use filtered water , freshly ground home roasted beans , and this Chemex to produce the finest coffee
+14_gourmet_pos_20	positive	False	14_gourmet_pos_19	I have ever had the pleasure of drinking .
+14_gourmet_pos_21	positive	False	14_gourmet_pos_20	And this coffee is a pleasure !
+14_gourmet_pos_22	positive	False	14_gourmet_pos_21	In fact ,
+14_gourmet_pos_23	positive	False	14_gourmet_pos_22	I ` ve totally given up using cream and sugar
+14_gourmet_pos_24	positive	False	14_gourmet_pos_23	because my coffee no longer has anything to hide .
+14_gourmet_pos_25	positive	False	14_gourmet_pos_24	Another up side :
+14_gourmet_pos_26	positive	False	14_gourmet_pos_25	clean up means
+14_gourmet_pos_27	positive	False	14_gourmet_pos_26	swishing the Chemex with warm water
+14_gourmet_pos_28	positive	False	14_gourmet_pos_27	and tossing the water down the drain .
+14_gourmet_pos_29	positive	True	14_gourmet_pos_28	You can also wash with a bottle brush
+14_gourmet_pos_30	positive	False	14_gourmet_pos_29	but this is rarely necessary .
+14_gourmet_pos_31	positive	False	14_gourmet_pos_30	A brief swish is really all
+14_gourmet_pos_32	positive	False	14_gourmet_pos_31	it takes to get your Chemex
+14_gourmet_pos_33	positive	False	14_gourmet_pos_32	looking factory new .
+14_gourmet_pos_34	positive	False	14_gourmet_pos_33	Try that with your electric drip machine !
+14_gourmet_pos_35	positive	False	14_gourmet_pos_34	Ha !
+14_gourmet_pos_36	negative	False	14_gourmet_pos_35	That thing will NEVER look brand new !
+14_gourmet_pos_37	positive	False	14_gourmet_pos_36	Oh , here 's a final upside :
+14_gourmet_pos_38	positive	False	14_gourmet_pos_37	this Chemex brews the best coffee
+14_gourmet_pos_39	positive	False	14_gourmet_pos_38	you ` ll ever drink ,
+14_gourmet_pos_40	positive	False	14_gourmet_pos_39	and it costs less than just about anything .
+14_gourmet_pos_41	negative	False	14_gourmet_pos_40	You are probably already spending more money than this every month at Starbucks !
+14_gourmet_pos_42	positive	False	14_gourmet_pos_41	Go ahead
+14_gourmet_pos_43	positive	False	14_gourmet_pos_42	and buy yourself one of these .
+14_gourmet_pos_44	positive	False	14_gourmet_pos_43	If necessary , wake up 10 minutes earlier to make your coffee .
+14_gourmet_pos_45	positive	False	14_gourmet_pos_44	Better yet , wake up 20 minutes earlier .
+14_gourmet_pos_46	positive	False	14_gourmet_pos_45	And
+14_gourmet_pos_47	positive	False	14_gourmet_pos_46	when your coffee is ready , instead of dumping it into a travel cup
+14_gourmet_pos_48	positive	False	14_gourmet_pos_47	and bolting out the door , sit down
+14_gourmet_pos_49	positive	False	14_gourmet_pos_48	and enjoy your first cup for the next 10 minutes .
+14_gourmet_pos_50	positive	False	14_gourmet_pos_49	You deserve it

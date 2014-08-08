@@ -1,0 +1,108 @@
+1_gourmet_pos_1	positive	False	1_gourmet_pos_0	Once you see the book
+1_gourmet_pos_2	positive	False	1_gourmet_pos_1	that accompanies this starter kit ,
+1_gourmet_pos_3	positive	False	1_gourmet_pos_2	you will realize two things .
+1_gourmet_pos_4	negative	False	1_gourmet_pos_3	You wo n't be making sushi anytime soon without a few more items .
+1_gourmet_pos_5	positive	False	1_gourmet_pos_4	Not only do
+1_gourmet_pos_6	positive	False	1_gourmet_pos_5	you need fresh ingredients ,
+1_gourmet_pos_7	positive	False	1_gourmet_pos_6	you need things
+1_gourmet_pos_8	positive	False	1_gourmet_pos_7	that are listed in the recipes to make Miso ,
+1_gourmet_pos_9	positive	False	1_gourmet_pos_8	to make Number-one Dashi and Number-two Dashi .
+1_gourmet_pos_10	positive	False	1_gourmet_pos_9	You need Bonito flakes and kombu ,
+1_gourmet_pos_11	positive	False	1_gourmet_pos_10	you need things like bamboo leaves too .
+1_gourmet_pos_12	positive	False	1_gourmet_pos_11	OK ,
+1_gourmet_pos_13	positive	True	1_gourmet_pos_12	so you do n't need bamboo leaves ,
+1_gourmet_pos_14	positive	False	1_gourmet_pos_13	but having a bamboo plant around the house would n't hurt .
+1_gourmet_pos_15	positive	True	1_gourmet_pos_14	The book is especially helpful ,
+1_gourmet_pos_16	negative	False	1_gourmet_pos_15	but to make the sushi rice professionally ,
+1_gourmet_pos_17	negative	False	1_gourmet_pos_16	you do need to also order a rice-cooling tub
+1_gourmet_pos_18	negative	False	1_gourmet_pos_17	-LRB- hangiri -RRB- .
+1_gourmet_pos_19	negative	True	1_gourmet_pos_18	A square omelet pan is needed ,
+1_gourmet_pos_20	positive	False	1_gourmet_pos_19	but not essential .
+1_gourmet_pos_21	positive	False	1_gourmet_pos_20	You can adapt by using a regular pan .
+1_gourmet_pos_22	negative	False	1_gourmet_pos_21	Just add your fresh ingredients is the understatement of the year .
+1_gourmet_pos_23	negative	False	1_gourmet_pos_22	You do get a sushi press , a sushi mat and Nishiki Sushi rice .
+1_gourmet_pos_24	positive	False	1_gourmet_pos_23	The sushi Nori is essential
+1_gourmet_pos_25	positive	False	1_gourmet_pos_24	as is the ginger , wassabi , soy sauce , rice vinegar , sweet wine
+1_gourmet_pos_26	positive	False	1_gourmet_pos_25	-LRB- mirin -RRB-
+1_gourmet_pos_27	positive	False	1_gourmet_pos_26	and white sesame seeds .
+1_gourmet_pos_28	positive	False	1_gourmet_pos_27	Other items you will want to have on hand
+1_gourmet_pos_29	positive	False	1_gourmet_pos_28	when this arrives :
+1_gourmet_pos_30	positive	False	1_gourmet_pos_29	Chopsticks
+1_gourmet_pos_31	positive	False	1_gourmet_pos_30	Ginger Grater
+1_gourmet_pos_32	positive	False	1_gourmet_pos_31	Chopping Board
+1_gourmet_pos_33	positive	False	1_gourmet_pos_32	Fish Knives
+1_gourmet_pos_34	positive	False	1_gourmet_pos_33	-LRB- sushi knives -RRB-
+1_gourmet_pos_35	positive	False	1_gourmet_pos_34	Plates for serving Sushi
+1_gourmet_pos_36	positive	False	1_gourmet_pos_35	-LRB- not essential but make
+1_gourmet_pos_37	positive	False	1_gourmet_pos_36	it more interesting -RRB-
+1_gourmet_pos_38	positive	False	1_gourmet_pos_37	Skewers - for when you cook shrimp
+1_gourmet_pos_39	positive	False	1_gourmet_pos_38	Rice Maker
+1_gourmet_pos_40	positive	False	1_gourmet_pos_39	Stainless Steel Colander
+1_gourmet_pos_41	positive	False	1_gourmet_pos_40	Wooden Rice Paddle - or you can use a wooden spoon
+1_gourmet_pos_42	positive	False	1_gourmet_pos_41	Ingredients :
+1_gourmet_pos_43	positive	False	1_gourmet_pos_42	Avocados
+1_gourmet_pos_44	positive	False	1_gourmet_pos_43	Cucumber
+1_gourmet_pos_45	positive	False	1_gourmet_pos_44	Carrots
+1_gourmet_pos_46	positive	False	1_gourmet_pos_45	Asparagus
+1_gourmet_pos_47	positive	False	1_gourmet_pos_46	Chives
+1_gourmet_pos_48	positive	False	1_gourmet_pos_47	Eggplant
+1_gourmet_pos_49	positive	False	1_gourmet_pos_48	Daikon Radish
+1_gourmet_pos_50	positive	False	1_gourmet_pos_49	Fresh Shiitake mushrooms
+1_gourmet_pos_51	positive	False	1_gourmet_pos_50	Lotus Root
+1_gourmet_pos_52	positive	False	1_gourmet_pos_51	Kombu
+1_gourmet_pos_53	positive	False	1_gourmet_pos_52	Miso paste
+1_gourmet_pos_54	positive	False	1_gourmet_pos_53	Ocha - tea
+1_gourmet_pos_55	positive	False	1_gourmet_pos_54	Sake
+1_gourmet_pos_56	positive	False	1_gourmet_pos_55	Shiso - an aromatic herb
+1_gourmet_pos_57	positive	False	1_gourmet_pos_56	Snow Peas
+1_gourmet_pos_58	positive	False	1_gourmet_pos_57	Sushi Vinegar called Awasezu
+1_gourmet_pos_59	positive	False	1_gourmet_pos_58	Tofu - various types but Japanese Silken is recommended
+1_gourmet_pos_60	positive	False	1_gourmet_pos_59	Wakame Seaweed
+1_gourmet_pos_61	positive	False	1_gourmet_pos_60	Recommended Seafood selections include :
+1_gourmet_pos_62	positive	False	1_gourmet_pos_61	Mackerel , Salmon ,
+1_gourmet_pos_63	positive	False	1_gourmet_pos_62	Crabs , Blue-Eye Cod , Tuna , Herring , Sea Bass and numerous other selections .
+1_gourmet_pos_64	positive	False	1_gourmet_pos_63	I will be making mine with cooked fish for the most part and many of the recipes indicate
+1_gourmet_pos_65	positive	False	1_gourmet_pos_64	cooking the shrimp .
+1_gourmet_pos_66	positive	False	1_gourmet_pos_65	The book gives excellent full-color picture step-by-step instructions for preparing
+1_gourmet_pos_67	positive	False	1_gourmet_pos_66	seafood .
+1_gourmet_pos_68	positive	False	1_gourmet_pos_67	Everything from cleaning squid to angled cuts for sahimi .
+1_gourmet_pos_69	positive	False	1_gourmet_pos_68	Prepare to learn an ancient art form .
+1_gourmet_pos_70	positive	False	1_gourmet_pos_69	This is serious
+1_gourmet_pos_71	positive	False	1_gourmet_pos_70	cooking with gourmet appeal .
+1_gourmet_pos_72	positive	False	1_gourmet_pos_71	There are instructions for making garnishes and dipping sauces .
+1_gourmet_pos_73	positive	False	1_gourmet_pos_72	The Tuna Rolls are probably going to be one of the first items to make
+1_gourmet_pos_74	positive	False	1_gourmet_pos_73	because they have few ingredients
+1_gourmet_pos_75	positive	False	1_gourmet_pos_74	and you do n't need anything except a rice cooker , sushi vinegar and the rolling mat .
+1_gourmet_pos_76	positive	False	1_gourmet_pos_75	The California-roll-style Temaki-zushi also look fairly tame .
+1_gourmet_pos_77	positive	False	1_gourmet_pos_76	The Nigiri-Zushi
+1_gourmet_pos_78	positive	False	1_gourmet_pos_77	made in sushi bars seem a little more complex .
+1_gourmet_pos_79	positive	False	1_gourmet_pos_78	To make a simple Inari-Zushi
+1_gourmet_pos_80	positive	False	1_gourmet_pos_79	you need tofu
+1_gourmet_pos_81	positive	False	1_gourmet_pos_80	and there are extensive instructions for how to make the little packets or pouches for rice .
+1_gourmet_pos_82	positive	False	1_gourmet_pos_81	These seem very interesting and I ` ve tasted them before
+1_gourmet_pos_83	positive	False	1_gourmet_pos_82	and definitely look forward to trying to make them .
+1_gourmet_pos_84	positive	False	1_gourmet_pos_83	The idea of a Chirashi-Zushi rice bowl is interesting
+1_gourmet_pos_85	positive	False	1_gourmet_pos_84	and does not require a great deal of artistic application .
+1_gourmet_pos_86	negative	False	1_gourmet_pos_85	So ,
+1_gourmet_pos_87	negative	False	1_gourmet_pos_86	if you want to make a full sushi meal ,
+1_gourmet_pos_88	negative	False	1_gourmet_pos_87	it gets a little more complex ,
+1_gourmet_pos_89	positive	False	1_gourmet_pos_88	but you can try out various recipes
+1_gourmet_pos_90	positive	False	1_gourmet_pos_89	"and master the "" dashi """
+1_gourmet_pos_91	positive	False	1_gourmet_pos_90	which is like a fish stock\/soup
+1_gourmet_pos_92	positive	False	1_gourmet_pos_91	made with kombu and bonito flakes .
+1_gourmet_pos_93	positive	False	1_gourmet_pos_92	This knowledge is of course
+1_gourmet_pos_94	positive	False	1_gourmet_pos_93	needed to make the sushi rice ,
+1_gourmet_pos_95	positive	False	1_gourmet_pos_94	which leads me right back to needing a hangiri .
+1_gourmet_pos_96	positive	False	1_gourmet_pos_95	I suppose you can use a glass bowl instead .
+1_gourmet_pos_97	negative	False	1_gourmet_pos_96	This sushi kit is truly only a brief start to an artistic journey .
+1_gourmet_pos_98	negative	False	1_gourmet_pos_97	Even after ordering this you may find you need a few more items
+1_gourmet_pos_99	negative	False	1_gourmet_pos_98	before you can start taking steps in the direction of actually making sushi .
+1_gourmet_pos_100	positive	False	1_gourmet_pos_99	I will report back
+1_gourmet_pos_101	positive	False	1_gourmet_pos_100	as I try various recipes
+1_gourmet_pos_102	positive	False	1_gourmet_pos_101	and all
+1_gourmet_pos_103	negative	False	1_gourmet_pos_102	I can say
+1_gourmet_pos_104	positive	False	1_gourmet_pos_103	is this will require an adventurous spirit and a few more Amazon orders .
+1_gourmet_pos_105	positive	False	1_gourmet_pos_104	Once you have the Sushi book ,
+1_gourmet_pos_106	positive	False	1_gourmet_pos_105	things start to become more clear and you can make a list of things
+1_gourmet_pos_107	positive	False	1_gourmet_pos_106	to order .
+1_gourmet_pos_108	positive	False	1_gourmet_pos_107	~ The Rebecca Review

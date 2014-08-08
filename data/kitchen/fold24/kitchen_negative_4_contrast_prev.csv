@@ -1,0 +1,47 @@
+4_kitchen_neg_1	negative	False	4_kitchen_neg_0	I returned the Honeywell 6011i humidifier
+4_kitchen_neg_2	negative	False	4_kitchen_neg_1	because the product had 2 defects
+4_kitchen_neg_3	negative	False	4_kitchen_neg_2	and the product was very poorly designed .
+4_kitchen_neg_4	negative	False	4_kitchen_neg_3	The 6011i humidifier had 2 defects right out of the box .
+4_kitchen_neg_5	negative	True	4_kitchen_neg_4	The first was that the 6011i humidifier would not run on the High speed setting
+4_kitchen_neg_6	negative	True	4_kitchen_neg_5	but did run on the low and medium speed settings .
+4_kitchen_neg_7	negative	False	4_kitchen_neg_6	The second defect was that the cap for one water container had no rubber
+4_kitchen_neg_8	negative	False	4_kitchen_neg_7	o-ring seal and the water bottle leaked
+4_kitchen_neg_9	negative	False	4_kitchen_neg_8	when upright in its normal operating position .
+4_kitchen_neg_10	negative	False	4_kitchen_neg_9	The fact that this 6011i humidifier had 2 defects
+4_kitchen_neg_11	negative	False	4_kitchen_neg_10	says
+4_kitchen_neg_12	negative	False	4_kitchen_neg_11	that the quality control for this product must be very low and implies this product suffers from an above average failure rate .
+4_kitchen_neg_13	negative	False	4_kitchen_neg_12	The 6011i humidifier has major design defects
+4_kitchen_neg_14	negative	False	4_kitchen_neg_13	that make
+4_kitchen_neg_15	negative	False	4_kitchen_neg_14	it difficult to operate and maintain the 6011i humidifier .
+4_kitchen_neg_16	negative	False	4_kitchen_neg_15	The design defects are so
+4_kitchen_neg_17	negative	False	4_kitchen_neg_16	major
+4_kitchen_neg_18	negative	False	4_kitchen_neg_17	that the person
+4_kitchen_neg_19	negative	False	4_kitchen_neg_18	-LRB- s -RRB-
+4_kitchen_neg_20	negative	False	4_kitchen_neg_19	that
+4_kitchen_neg_21	negative	False	4_kitchen_neg_20	designed and approved the design of the
+4_kitchen_neg_22	negative	False	4_kitchen_neg_21	6011i humidifier should be shot or at least
+4_kitchen_neg_23	negative	False	4_kitchen_neg_22	fired !
+4_kitchen_neg_24	negative	False	4_kitchen_neg_23	The first major design defect is that the water bottles will not stand up by themselves
+4_kitchen_neg_25	negative	False	4_kitchen_neg_24	in my sink .
+4_kitchen_neg_26	negative	False	4_kitchen_neg_25	Because of this I must hold the water containers vertically with my hand
+4_kitchen_neg_27	negative	False	4_kitchen_neg_26	and still can not completely fill the water container to the top .
+4_kitchen_neg_28	negative	False	4_kitchen_neg_27	The screw-on caps for the water containers are so large
+4_kitchen_neg_29	negative	False	4_kitchen_neg_28	they are difficult for my wife with small hands to screw on
+4_kitchen_neg_30	negative	False	4_kitchen_neg_29	while holding the water container vertically upright .
+4_kitchen_neg_31	negative	False	4_kitchen_neg_30	The next design defect is that one can not at a glance check the water level in the water containers
+4_kitchen_neg_32	negative	False	4_kitchen_neg_31	but must pick up the water containers
+4_kitchen_neg_33	negative	False	4_kitchen_neg_32	and turn them over to check the water level in the container .
+4_kitchen_neg_34	positive	False	4_kitchen_neg_33	One can see if the water container is empty or nearly empty at a glance ,
+4_kitchen_neg_35	negative	False	4_kitchen_neg_34	but this is of no use if one wants to quickly see if there is enough water in the water containers to last until one returns home from work or will last through the night .
+4_kitchen_neg_36	negative	False	4_kitchen_neg_35	"The last design defect of the 6011i humidifier is that the water containers and humidifier fan housing do not just "" drop into place "" on the base ."
+4_kitchen_neg_37	negative	False	4_kitchen_neg_36	One must use one hand as a guide for the water container and then still fiddle with the position\/angle of the water container to get it to seat properly .
+4_kitchen_neg_38	negative	False	4_kitchen_neg_37	This is even more difficult if both water containers are removed for filling at the same time .
+4_kitchen_neg_39	negative	False	4_kitchen_neg_38	I bought this 6011i humidifier
+4_kitchen_neg_40	negative	False	4_kitchen_neg_39	to replace a Honeywell humidifier
+4_kitchen_neg_41	negative	False	4_kitchen_neg_40	that finally failed after many years of faithful service .
+4_kitchen_neg_42	positive	False	4_kitchen_neg_41	I also selected the 6011i Humidifier
+4_kitchen_neg_43	positive	False	4_kitchen_neg_42	because of its many desirable features .
+4_kitchen_neg_44	negative	False	4_kitchen_neg_43	However the positive product features were significantly outweighed by the poor quality control and the poor design of the 6011i Humidifier .
+4_kitchen_neg_45	negative	False	4_kitchen_neg_44	I believe
+4_kitchen_neg_46	negative	False	4_kitchen_neg_45	that a humidifier should be designed for usability first and esthetics second , not the other way around as is the case with the 6011i humidifier .
+4_kitchen_neg_47	negative	False	4_kitchen_neg_46	Thus I returned the 6011i humidifier
