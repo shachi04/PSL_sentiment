@@ -40,13 +40,13 @@ import edu.umd.cs.psl.evaluation.statistics.filter.MaxValueFilter
 
 
 
-class Only_swn{
+class PSL_synthetic_data{
 
 	public static void main(String[] args)
 	{
 		for(int i = 0; i <1; ++i)
 		{
-			Only_swn a = new Only_swn()
+			PSL_synthetic_data a = new PSL_synthetic_data()
 			a.pslmodel(i);
 		}
 	}
@@ -58,7 +58,7 @@ class Only_swn{
 		 */
 		ConfigManager cm = ConfigManager.getManager()
 		ConfigBundle config = cm.getBundle("fine-grained")
-		String writefolder = System.getProperty("user.home") + "/Documents/Shachi/CMPS209C/reviews/Results/swn_tgl_nocontrastinprev/"
+		String writefolder = System.getProperty("user.home") + "/Documents/Shachi/CMPS209C/reviews/Results/Synthetic_data/"
 		File file3 = new File(writefolder+"results.csv");
 
 
@@ -105,8 +105,8 @@ class Only_swn{
 		//m.add rule : (negsentiment(A) ) >> ~possentiment(A), weight :5
 		m.add rule : (all(A) & ~negsentiment(A)) >> possentiment(A), weight :5, squared : true
 
-		m.add rule : (priorpos(A) ) >> possentiment(A), weight :5, squared : true
-		m.add rule : (priorneg(A) ) >> negsentiment(A), weight :5, squared : true
+		m.add rule : (priorneg(A) ) >> possentiment(A), weight :5, squared : true
+		m.add rule : (priorpos(A) ) >> negsentiment(A), weight :5, squared : true
 
 //		m.add rule : possentiment(A) >> (priorpos(A) ) , weight :5, squared : false
 //		m.add rule : negsentiment(A) >> (priorneg(A) ) , weight :5, squared : false
@@ -165,8 +165,8 @@ class Only_swn{
 		 * 
 		 * 
 		 */
-		m.add rule : (prev(A,B) &  ~contrast(A,B) & possentiment(B)) >> possentiment(A), weight :5, squared : true
-		m.add rule : (prev(A,B) &  ~contrast(A,B) & negsentiment(B)) >> negsentiment(A), weight :5, squared : true
+		m.add rule : (prev(A,B) & possentiment(B)) >> possentiment(A), weight :5, squared : true
+		m.add rule : (prev(A,B) & negsentiment(B)) >> negsentiment(A), weight :5, squared : true
 
 		/*
 		 * Rules for contrast and non-contrast relation
@@ -224,6 +224,7 @@ class Only_swn{
 		File file1 = new File(filename1);
 		File file2 = new File(filename2);
 		File file4 = new File(writefolder+"auc.csv");
+		File file5 = new File(writefolder+"model.csv");
 		/*
 		 * Train data partition, each partition has 9 folders, one kept aside for testing... 
 		 * 
@@ -231,13 +232,13 @@ class Only_swn{
 		 */
 		String filename
 		Integer trainSet
-		for (trainSet = 1 ; trainSet<=9;++trainSet)
-		{
-			Integer dirToUse = 0;
-			dirToUse = (cvSet+trainSet)%10
-			if(dirToUse==0) dirToUse = 10;
+//		for (trainSet = 1 ; trainSet<=9;++trainSet)
+//		{
+//			Integer dirToUse = 0;
+//			dirToUse = (cvSet+trainSet)%10
+//			if(dirToUse==0) dirToUse = 10;
 
-			filename = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold'+dirToUse+java.io.File.separator;
+			filename = 'data'+java.io.File.separator+'sentiment/synthetic_data/train/'
 //			InserterUtils.loadDelimitedDataTruth(data.getInserter(nrclexiconpos, trainPartition.get(cvSet)),
 //					filename+"NRC_negation_pos_changed.csv","\t");
 //			InserterUtils.loadDelimitedDataTruth(data.getInserter(nrclexiconneg, trainPartition.get(cvSet)),
@@ -248,37 +249,32 @@ class Only_swn{
 //					filename+"unigram_neg_negation_changed.csv","\t");
 //
 			InserterUtils.loadDelimitedDataTruth(data.getInserter(tglpos, trainPartition.get(cvSet)),
-					filename+"TGL_pos_negation_changed.csv","\t");
+					filename+"pos_tgl.csv","\t");
 			InserterUtils.loadDelimitedDataTruth(data.getInserter(tglneg, trainPartition.get(cvSet)),
-					filename+"TGL_neg_negation_changed.csv","\t");
+					filename+"neg_tgl.csv","\t");
 //
 			InserterUtils.loadDelimitedData(data.getInserter(prev, trainPartition.get(cvSet)), filename+"all_prev.csv");
 //
-			InserterUtils.loadDelimitedDataTruth(data.getInserter(subjectivitypos, trainPartition.get(cvSet)),
-					filename+"subjectivity_pos.csv");
-
-			InserterUtils.loadDelimitedDataTruth(data.getInserter(subjectivityneg, trainPartition.get(cvSet)),
-					filename+"subjectivity_neg.csv");
 //
 			InserterUtils.loadDelimitedDataTruth(data.getInserter(priorpos, trainPartition.get(cvSet)),
-					filename+"wordnet_negation_changedpos.csv","\t");
+					filename+"pos_swn.csv","\t");
 			InserterUtils.loadDelimitedDataTruth(data.getInserter(priorneg, trainPartition.get(cvSet)),
-					filename+"wordnet_negation_changedneg.csv","\t");
+					filename+"neg_swn.csv","\t");
 			InserterUtils.loadDelimitedData(data.getInserter(all, trainPartition.get(cvSet)), filename+"allID.csv");
 //
-			InserterUtils.loadDelimitedData(data.getInserter(contrast, trainPartition.get(cvSet)),
-					filename+"contrast_ids.csv");
-			InserterUtils.loadDelimitedData(data.getInserter(noncontrast, trainPartition.get(cvSet)),
-					filename+"noncontrast_ids.csv");
+//			InserterUtils.loadDelimitedData(data.getInserter(contrast, trainPartition.get(cvSet)),
+//					filename+"contrast_ids.csv");
+//			InserterUtils.loadDelimitedData(data.getInserter(noncontrast, trainPartition.get(cvSet)),
+//					filename+"noncontrast_ids.csv");
 
 			/*
 			 * Load in the ground truth positive and negative segments
 			 */
 			InserterUtils.loadDelimitedData(data.getInserter(negsentiment, trueDataPartition.get(cvSet)), 
-				filename+"trueneg_other.csv");
+				filename+"trueneg.csv");
 			InserterUtils.loadDelimitedData(data.getInserter(possentiment, trueDataPartition.get(cvSet)), 
-				filename+"truepos_other.csv");
-		}
+				filename+"truepos.csv");
+//		}
 
 
 		/*
@@ -287,15 +283,10 @@ class Only_swn{
 		Integer testSet = 0;
 		testSet = (cvSet+10)%10
 		if(testSet==0) testSet = 10;
-		filename = 'data'+java.io.File.separator+'sentiment'+java.io.File.separator+'fold'+testSet+java.io.File.separator;
+		filename = 'data'+java.io.File.separator+'sentiment/synthetic_data/test/';
 
 		InserterUtils.loadDelimitedData(data.getInserter(prev, testDataPartition.get(cvSet)), filename+"all_prev.csv");
 
-		InserterUtils.loadDelimitedDataTruth(data.getInserter(subjectivitypos,
-				testDataPartition.get(cvSet)), filename+"subjectivity_pos.csv");
-
-		InserterUtils.loadDelimitedDataTruth(data.getInserter(subjectivityneg,
-				testDataPartition.get(cvSet)), filename+"subjectivity_neg.csv");
 //
 //		InserterUtils.loadDelimitedDataTruth(data.getInserter(unigrampos,
 //				testDataPartition.get(cvSet)), filename+"unigram_pos_negation_changed.csv");
@@ -308,35 +299,35 @@ class Only_swn{
 //		InserterUtils.loadDelimitedDataTruth(data.getInserter(nrclexiconneg, testDataPartition.get(cvSet)),
 //				filename+"NRC_negation_neg_changed.csv","\t");
 		InserterUtils.loadDelimitedDataTruth(data.getInserter(priorpos, testDataPartition.get(cvSet)),
-				filename+"wordnet_negation_changedpos.csv","\t");
+				filename+"pos_swn.csv","\t");
 
 		InserterUtils.loadDelimitedDataTruth(data.getInserter(priorneg, testDataPartition.get(cvSet)),
-				filename+"wordnet_negation_changedneg.csv","\t");
+				filename+"neg_swn.csv","\t");
 
 		InserterUtils.loadDelimitedDataTruth(data.getInserter(tglpos, testDataPartition.get(cvSet)),
-				filename+"TGL_pos_negation_changed.csv","\t");
+				filename+"pos_tgl.csv","\t");
 		InserterUtils.loadDelimitedDataTruth(data.getInserter(tglneg, testDataPartition.get(cvSet)),
-				filename+"TGL_neg_negation_changed.csv","\t");
+				filename+"neg_tgl.csv","\t");
 
 		InserterUtils.loadDelimitedData(data.getInserter(all, testDataPartition.get(cvSet)), filename+"allID.csv");
 
-		InserterUtils.loadDelimitedData(data.getInserter(contrast, testDataPartition.get(cvSet)),
-				filename+"contrast_ids.csv");
-		InserterUtils.loadDelimitedData(data.getInserter(noncontrast, testDataPartition.get(cvSet)),
-				filename+"noncontrast_ids.csv");
+//		InserterUtils.loadDelimitedData(data.getInserter(contrast, testDataPartition.get(cvSet)),
+//				filename+"contrast_ids.csv");
+//		InserterUtils.loadDelimitedData(data.getInserter(noncontrast, testDataPartition.get(cvSet)),
+//				filename+"noncontrast_ids.csv");
 
 		/*
 		 * Load in the ground truth positive and negative segments
 		 */
 		InserterUtils.loadDelimitedData(data.getInserter(possentiment, trueTestDataPartition.get(cvSet)), 
-			filename+"truepos_other.csv");
+			filename+"truepos.csv");
 
 		InserterUtils.loadDelimitedData(data.getInserter(negsentiment, trueTestDataPartition.get(cvSet)), 
-			filename+"trueneg_other.csv");
+			filename+"trueneg.csv");
 
 
-		Database trainDB = data.getDatabase(trainPartition.get(cvSet), [Prev,Priorpos,Contrast, Noncontrast,
-			Priorneg,All,Tglpos,Tglneg,Subjectivityneg,Subjectivitypos] as Set);
+		Database trainDB = data.getDatabase(trainPartition.get(cvSet), [Prev,Priorpos,
+			Priorneg,All,Tglpos,Tglneg] as Set);
 
 //,Nrclexiconpos,Nrclexiconneg
 		/*
@@ -372,13 +363,17 @@ class Only_swn{
 		/*
 		 * Newly learned weights
 		 */
+		file5.append(cvSet)
+		file5.append("\n")
+		file5.append(m)
+		file5.append("\n")
 		/*
 		 */
 
 		/*Test database setup*/
 
 		Database testDB = data.getDatabase(testDataPartition.get(cvSet),
-				[ Prev, Priorpos, Priorneg,Contrast,Noncontrast,All,Tglpos,Tglneg,Subjectivityneg,Subjectivitypos] as Set);
+				[ Prev, Priorpos, Priorneg,All,Tglpos,Tglneg] as Set);
 
 		ResultList groundings = testDB.executeQuery(Queries.getQueryForAllAtoms(all))
 		print groundings.size();

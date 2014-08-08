@@ -46,7 +46,7 @@ class PSL_with_MLNdata
 
 	public static void main(String[] args)
 	{
-		for(int i = 2; i <5; ++i)
+		for(int i = 1; i <3; ++i)
 		{
 			PSL_with_MLNdata a = new PSL_with_MLNdata()
 			a.pslmodel(i);
@@ -98,8 +98,8 @@ class PSL_with_MLNdata
 		/*
 		 * Rules for attribute features alone - sentiment lexicons as source
 		 */
-		m.add rule : (possentiment(A) ) >> ~negsentiment(A), weight:1
-		m.add rule : (all(A) & ~negsentiment(A)) >> possentiment(A), weight:1
+		m.add rule : (possentiment(A) ) >> ~negsentiment(A), weight:1, squared :true
+		m.add rule : (all(A) & ~negsentiment(A)) >> possentiment(A), weight:1, squared :true
 				
 		m.add rule : (priorpos(A) ) >> possentiment(A), weight :1, squared : false
 		m.add rule : (priorneg(A) ) >> negsentiment(A), weight :1, squared : false
@@ -271,11 +271,11 @@ class PSL_with_MLNdata
 		inferenceApp.close();
 		println "trudatapartition : "+trueDataPartition
 		Database trueDataDB = data.getDatabase(trueDataPartition, [possentiment,negsentiment] as Set);
-//		MaxLikelihoodMPE weightLearning = new MaxLikelihoodMPE(m, trainDB, trueDataDB, config);
+		MaxLikelihoodMPE weightLearning = new MaxLikelihoodMPE(m, trainDB, trueDataDB, config);
 		//MaxMargin weightLearning = new MaxMargin(m, trainDB, trueDataDB, config);
 //		DualEM weightLearning = new DualEM(m, trainDB, trueDataDB, config)
 //		LazyMaxLikelihoodMPE weightLearning = new LazyMaxLikelihoodMPE(m, trainDB, trueDataDB, config);
-		MaxPseudoLikelihood weightLearning = new MaxPseudoLikelihood(m, trainDB, trueDataDB, config);
+//		MaxPseudoLikelihood weightLearning = new MaxPseudoLikelihood(m, trainDB, trueDataDB, config);
 		weightLearning.learn();
 		weightLearning.close();
 		
